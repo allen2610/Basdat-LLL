@@ -1,7 +1,7 @@
 CREATE TABLE OrderSpecialContent (
     id_order	VARCHAR(3) PRIMARY KEY,
-    id_suporter	INT,
-    id_creator	VARCHAR(512),
+    id_suporter	VARCHAR(3),
+    id_creator	VARCHAR(3),
     judul	VARCHAR(512),
     deskripsi	VARCHAR(512),
     harga_dasar	INT,
