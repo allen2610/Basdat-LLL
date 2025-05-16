@@ -6,7 +6,7 @@ with open("Patra.sql", "r") as file:
 try:
     conn = mariadb.connect(
         user="root",
-        password="password_sendiri",
+        password="space43",
         host="localhost",
         port=3306
     )
