@@ -1,4 +1,4 @@
-CREATE TABLE subscribe (
+CREATE TABLE Komentar (
     id_komentar	VARCHAR(5),
     id_supporter VARCHAR(3),
     id_konten	VARCHAR(4),
