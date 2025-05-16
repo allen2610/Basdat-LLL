@@ -2163,7 +2163,6 @@ INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, 
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('22', '799', '18', '17-07-2024', '746316', 'Debit Card');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('22', '146', '15', '31-05-2024', '269235', 'Credit Card');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('10', '379', '24', '5-12-2024', '451200', 'E-Wallet');
---INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('14', '515', '5', '12-9-2024', '234895', 'Bank Transfer');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('7', '854', '14', '13-09-2024', '203686', 'Debit Card');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('18', '999', '15', '11-2-2025', '107880', 'E-Wallet');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('7', '101', '13', '6-6-2024', '62413', 'Bank Transfer');
@@ -2256,7 +2255,6 @@ INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, 
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('23', '663', '12', '16-02-2025', '449616', 'Credit Card');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('25', '153', '4', '20-07-2024', '1569840', 'Credit Card');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('10', '359', '23', '12-10-2024', '401166', 'Bank Transfer');
---INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('2', '560', '23', '23-09-2024', '878761', 'E-Wallet');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('15', '335', '21', '11-11-2024', '666708', 'Credit Card');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('13', '779', '12', '10-2-2025', '190956', 'Bank Transfer');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('12', '537', '4', '3-1-2025', '109792', 'Cash');
