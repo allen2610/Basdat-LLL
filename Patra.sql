@@ -1673,88 +1673,88 @@ MODIFY COLUMN tanggal_penyelesaian DATE;
 -- Tier
 CREATE TABLE Tier (
     id_creator	VARCHAR(4) NOT NULL,
-    nama	VARCHAR(30) NOT NULL,
+    nama_tier	VARCHAR(30) NOT NULL,
     deskripsi	VARCHAR(512),
     harga	INT,
-    PRIMARY KEY (id_creator, nama),
+    PRIMARY KEY (id_creator, nama_tier),
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
 );
 
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('AGT', 'Pahlawan Seni', 'Untuk pecinta penulisan, \'Pahlawan Seni\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '787448');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('AGT', 'Champion Chums', 'Untuk pecinta penulisan, \'Champion Chums\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '212540');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('AGT', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia penulisan, bersama sang kreator hebat.', '134877');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('ATT', 'Champion Chums', 'Bergabunglah sebagai \'Champion Chums\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '694174');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('ATT', 'Legendary Patron', '\'Legendary Patron\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Mengemas cerita bermakna menjadi tayangan visual yang memikat dan penuh emosi.', '47946');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('ATT', 'Mitra Kreatif', 'Dapatkan akses premium ke konten eksklusif seputar video bersama \'Mitra Kreatif\', dirancang untuk para pendukung sejati.', '316815');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('BRS', 'Supreme Benefactor', 'Untuk pecinta seni visual, \'Supreme Benefactor\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '815025');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('BRS', 'Mega Fanatic', 'Bergabunglah sebagai \'Mega Fanatic\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia seni visual.', '911779');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('BRS', 'Elite', 'Dengan tier \'Elite\', Anda mendukung kreator yang menginspirasi lewat seni visual.', '271298');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('CTD', 'Legendary Loyalists', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Legendary Loyalists\', dirancang untuk para pendukung sejati.', '792419');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('CTD', 'Mega Fanatic', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Mega Fanatic\', dirancang untuk para pendukung sejati.', '744922');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('CTD', 'Master Supporter', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Master Supporter\', dirancang untuk para pendukung sejati.', '142033');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DHM', 'Diamond', '\'Diamond\' adalah pilihan tepat bagi yang ingin mendalami video dan menghargai karya kreator ini.', '555462');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DHM', 'Creative Crew', 'Dengan tier \'Creative Crew\', Anda mendukung kreator yang menginspirasi lewat video.', '792021');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DHM', 'Mega Fanatic', 'Dengan tier \'Mega Fanatic\', Anda mendukung kreator yang menginspirasi lewat video.', '297013');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DNS', 'Legendary Patron', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Legendary Patron\', dirancang untuk para pendukung sejati.', '439193');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DNS', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia podcast, bersama sang kreator hebat.', '318649');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DNS', 'Master Supporter', '\'Master Supporter\' adalah pilihan tepat bagi yang ingin mendalami podcast dan menghargai karya kreator ini.', '969360');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DWP', 'Creative Crew', '\'Creative Crew\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menghadirkan musik sebagai media terapi, hiburan, dan ekspresi personal.', '145042');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DWP', 'Silver', 'Dapatkan akses premium ke konten eksklusif seputar musik bersama \'Silver\', dirancang untuk para pendukung sejati.', '701563');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('DWP', 'Inovator Hebat', 'Dengan tier \'Inovator Hebat\', Anda mendukung kreator yang menginspirasi lewat musik.', '831555');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JJK', 'Super Subscribers', 'Tingkat \'Super Subscribers\' memberikan Anda pengalaman mendalam dalam dunia musik, bersama sang kreator hebat.', '817924');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JJK', 'Epic Champion', '\'Epic Champion\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '975586');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JJK', 'Bronze', 'Dengan tier \'Bronze\', Anda mendukung kreator yang menginspirasi lewat musik.', '692871');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JLN', 'Epic Enthusiasts', '\'Epic Enthusiasts\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Membuat cover, remix, dan original track dengan gaya khas dan unik.', '883405');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JLN', 'Master Supporter', 'Dapatkan akses premium ke konten eksklusif seputar musik bersama \'Master Supporter\', dirancang untuk para pendukung sejati.', '859943');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JLN', 'Silver', 'Untuk pecinta musik, \'Silver\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '528193');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JNL', 'Super Supporter', 'Tingkat \'Super Supporter\' memberikan Anda pengalaman mendalam dalam dunia game, bersama sang kreator hebat.', '282850');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JNL', 'Platinum', 'Bergabunglah sebagai \'Platinum\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia game.', '722994');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('JNL', 'Legendary Patron', 'Dengan tier \'Legendary Patron\', Anda mendukung kreator yang menginspirasi lewat game.', '420420');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('LCL', 'Champion Chums', 'Dengan tier \'Champion Chums\', Anda mendukung kreator yang menginspirasi lewat game.', '362141');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('LCL', 'Champion of Creativity', 'Bergabunglah sebagai \'Champion of Creativity\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia game.', '463940');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('LCL', 'Supreme Benefactor', 'Dengan tier \'Supreme Benefactor\', Anda mendukung kreator yang menginspirasi lewat game.', '534216');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('LDV', 'Mega', 'Bergabunglah sebagai \'Mega\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia seni visual.', '426532');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('LDV', 'Pahlawan Seni', 'Untuk pecinta seni visual, \'Pahlawan Seni\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '57159');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('LDV', 'Mega Members', 'Untuk pecinta seni visual, \'Mega Members\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '84378');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('MRB', 'Ultimate Superstar', 'Bergabunglah sebagai \'Ultimate Superstar\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '746935');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('MRB', 'Elite Backer', 'Bergabunglah sebagai \'Elite Backer\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '249800');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('MRB', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia video, bersama sang kreator hebat.', '255157');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('PDB', 'Champion of Creativity', 'Dengan tier \'Champion of Creativity\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '620066');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('PDB', 'Pahlawan Seni', 'Bergabunglah sebagai \'Pahlawan Seni\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia penulisan.', '72485');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('PDB', 'Super Supporter', 'Dengan tier \'Super Supporter\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '661116');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('RBC', 'Diamond', 'Dapatkan akses premium ke konten eksklusif seputar game bersama \'Diamond\', dirancang untuk para pendukung sejati.', '994232');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('RBC', 'Mega Fanatic', 'Tingkat \'Mega Fanatic\' memberikan Anda pengalaman mendalam dalam dunia game, bersama sang kreator hebat.', '194167');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('RBC', 'Fan Garis Keras', '\'Fan Garis Keras\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Membangun narasi dan karakter dalam dunia virtual dengan pendekatan storytelling.', '890761');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('RTM', 'Ultimate Superstar', '\'Ultimate Superstar\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menghadirkan narasumber inspiratif dan diskusi yang membuka perspektif baru.', '837890');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('RTM', 'Champion of Creativity', '\'Champion of Creativity\' adalah pilihan tepat bagi yang ingin mendalami podcast dan menghargai karya kreator ini.', '325519');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('RTM', 'Champion Chums', 'Dengan tier \'Champion Chums\', Anda mendukung kreator yang menginspirasi lewat podcast.', '751164');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SKP', 'Sahabat Berkarya', 'Tingkat \'Sahabat Berkarya\' memberikan Anda pengalaman mendalam dalam dunia penulisan, bersama sang kreator hebat.', '116154');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SKP', 'Supreme', 'Dengan tier \'Supreme\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '966581');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SKP', 'Epic Champion', 'Bergabunglah sebagai \'Epic Champion\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia penulisan.', '262549');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SMS', 'Supreme Benefactor', '\'Supreme Benefactor\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Fokus pada produksi audio berkualitas tinggi dan storytelling yang engaging.', '382145');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SMS', 'Super Subscribers', 'Untuk pecinta podcast, \'Super Subscribers\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '259670');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SMS', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia podcast, bersama sang kreator hebat.', '172387');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SSS', 'Champion of Creativity', '\'Champion of Creativity\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Mengembangkan konsep video mulai dari script hingga post-produksi dengan gaya khas.', '650943');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SSS', 'Epic Enthusiasts', 'Bergabunglah sebagai \'Epic Enthusiasts\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '553810');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('SSS', 'Legendary Patron', 'Untuk pecinta video, \'Legendary Patron\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '723874');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TRL', 'Pahlawan Seni', 'Tingkat \'Pahlawan Seni\' memberikan Anda pengalaman mendalam dalam dunia penulisan, bersama sang kreator hebat.', '17680');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TRL', 'Supreme Benefactor', '\'Supreme Benefactor\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Mengolah kata menjadi narasi yang menyentuh dan menggugah pembaca.', '166900');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TRL', 'Champion of Creativity', 'Dengan tier \'Champion of Creativity\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '899186');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TTS', 'Gold', 'Dapatkan akses premium ke konten eksklusif seputar seni visual bersama \'Gold\', dirancang untuk para pendukung sejati.', '484038');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TTS', 'Platinum', 'Dapatkan akses premium ke konten eksklusif seputar seni visual bersama \'Platinum\', dirancang untuk para pendukung sejati.', '835336');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TTS', 'Mega Members', '\'Mega Members\' adalah pilihan tepat bagi yang ingin mendalami seni visual dan menghargai karya kreator ini.', '683442');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TVS', 'Silver', '\'Silver\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '231275');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TVS', 'Master Supporter', '\'Master Supporter\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '816204');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TVS', 'Mitra Kreatif', '\'Mitra Kreatif\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '143734');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TXT', 'Supreme Benefactor', 'Dapatkan akses premium ke konten eksklusif seputar musik bersama \'Supreme Benefactor\', dirancang untuk para pendukung sejati.', '188501');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TXT', 'Diamond', 'Bergabunglah sebagai \'Diamond\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia musik.', '699399');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('TXT', 'Mega Fanatic', '\'Mega Fanatic\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Kolaborasi dengan musisi lain dalam proyek lintas genre dan budaya.', '519597');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('WDB', 'Inovator Hebat', 'Tingkat \'Inovator Hebat\' memberikan Anda pengalaman mendalam dalam dunia game, bersama sang kreator hebat.', '614887');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('WDB', 'Silver', '\'Silver\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menyajikan insight dunia game dari sudut pandang kreator dan pemain aktif.', '485653');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('WDB', 'Supreme Benefactor', 'Dapatkan akses premium ke konten eksklusif seputar game bersama \'Supreme Benefactor\', dirancang untuk para pendukung sejati.', '948138');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('ZHC', 'Master Supporter', 'Untuk pecinta seni visual, \'Master Supporter\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '122553');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('ZHC', 'Silver', 'Dapatkan akses premium ke konten eksklusif seputar seni visual bersama \'Silver\', dirancang untuk para pendukung sejati.', '541499');
-INSERT INTO Tier (id_creator, nama, deskripsi, harga) VALUES ('ZHC', 'Ultimate', 'Untuk pecinta seni visual, \'Ultimate\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '907941');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Pahlawan Seni', 'Untuk pecinta penulisan, \'Pahlawan Seni\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '787448');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Champion Chums', 'Untuk pecinta penulisan, \'Champion Chums\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '212540');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia penulisan, bersama sang kreator hebat.', '134877');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ATT', 'Champion Chums', 'Bergabunglah sebagai \'Champion Chums\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '694174');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ATT', 'Legendary Patron', '\'Legendary Patron\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Mengemas cerita bermakna menjadi tayangan visual yang memikat dan penuh emosi.', '47946');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ATT', 'Mitra Kreatif', 'Dapatkan akses premium ke konten eksklusif seputar video bersama \'Mitra Kreatif\', dirancang untuk para pendukung sejati.', '316815');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('BRS', 'Supreme Benefactor', 'Untuk pecinta seni visual, \'Supreme Benefactor\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '815025');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('BRS', 'Mega Fanatic', 'Bergabunglah sebagai \'Mega Fanatic\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia seni visual.', '911779');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('BRS', 'Elite', 'Dengan tier \'Elite\', Anda mendukung kreator yang menginspirasi lewat seni visual.', '271298');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('CTD', 'Legendary Loyalists', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Legendary Loyalists\', dirancang untuk para pendukung sejati.', '792419');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('CTD', 'Mega Fanatic', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Mega Fanatic\', dirancang untuk para pendukung sejati.', '744922');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('CTD', 'Master Supporter', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Master Supporter\', dirancang untuk para pendukung sejati.', '142033');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DHM', 'Diamond', '\'Diamond\' adalah pilihan tepat bagi yang ingin mendalami video dan menghargai karya kreator ini.', '555462');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DHM', 'Creative Crew', 'Dengan tier \'Creative Crew\', Anda mendukung kreator yang menginspirasi lewat video.', '792021');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DHM', 'Mega Fanatic', 'Dengan tier \'Mega Fanatic\', Anda mendukung kreator yang menginspirasi lewat video.', '297013');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DNS', 'Legendary Patron', 'Dapatkan akses premium ke konten eksklusif seputar podcast bersama \'Legendary Patron\', dirancang untuk para pendukung sejati.', '439193');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DNS', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia podcast, bersama sang kreator hebat.', '318649');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DNS', 'Master Supporter', '\'Master Supporter\' adalah pilihan tepat bagi yang ingin mendalami podcast dan menghargai karya kreator ini.', '969360');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DWP', 'Creative Crew', '\'Creative Crew\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menghadirkan musik sebagai media terapi, hiburan, dan ekspresi personal.', '145042');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DWP', 'Silver', 'Dapatkan akses premium ke konten eksklusif seputar musik bersama \'Silver\', dirancang untuk para pendukung sejati.', '701563');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('DWP', 'Inovator Hebat', 'Dengan tier \'Inovator Hebat\', Anda mendukung kreator yang menginspirasi lewat musik.', '831555');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JJK', 'Super Subscribers', 'Tingkat \'Super Subscribers\' memberikan Anda pengalaman mendalam dalam dunia musik, bersama sang kreator hebat.', '817924');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JJK', 'Epic Champion', '\'Epic Champion\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '975586');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JJK', 'Bronze', 'Dengan tier \'Bronze\', Anda mendukung kreator yang menginspirasi lewat musik.', '692871');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JLN', 'Epic Enthusiasts', '\'Epic Enthusiasts\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Membuat cover, remix, dan original track dengan gaya khas dan unik.', '883405');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JLN', 'Master Supporter', 'Dapatkan akses premium ke konten eksklusif seputar musik bersama \'Master Supporter\', dirancang untuk para pendukung sejati.', '859943');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JLN', 'Silver', 'Untuk pecinta musik, \'Silver\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '528193');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JNL', 'Super Supporter', 'Tingkat \'Super Supporter\' memberikan Anda pengalaman mendalam dalam dunia game, bersama sang kreator hebat.', '282850');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JNL', 'Platinum', 'Bergabunglah sebagai \'Platinum\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia game.', '722994');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('JNL', 'Legendary Patron', 'Dengan tier \'Legendary Patron\', Anda mendukung kreator yang menginspirasi lewat game.', '420420');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('LCL', 'Champion Chums', 'Dengan tier \'Champion Chums\', Anda mendukung kreator yang menginspirasi lewat game.', '362141');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('LCL', 'Champion of Creativity', 'Bergabunglah sebagai \'Champion of Creativity\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia game.', '463940');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('LCL', 'Supreme Benefactor', 'Dengan tier \'Supreme Benefactor\', Anda mendukung kreator yang menginspirasi lewat game.', '534216');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('LDV', 'Mega', 'Bergabunglah sebagai \'Mega\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia seni visual.', '426532');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('LDV', 'Pahlawan Seni', 'Untuk pecinta seni visual, \'Pahlawan Seni\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '57159');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('LDV', 'Mega Members', 'Untuk pecinta seni visual, \'Mega Members\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '84378');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('MRB', 'Ultimate Superstar', 'Bergabunglah sebagai \'Ultimate Superstar\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '746935');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('MRB', 'Elite Backer', 'Bergabunglah sebagai \'Elite Backer\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '249800');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('MRB', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia video, bersama sang kreator hebat.', '255157');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('PDB', 'Champion of Creativity', 'Dengan tier \'Champion of Creativity\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '620066');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('PDB', 'Pahlawan Seni', 'Bergabunglah sebagai \'Pahlawan Seni\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia penulisan.', '72485');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('PDB', 'Super Supporter', 'Dengan tier \'Super Supporter\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '661116');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RBC', 'Diamond', 'Dapatkan akses premium ke konten eksklusif seputar game bersama \'Diamond\', dirancang untuk para pendukung sejati.', '994232');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RBC', 'Mega Fanatic', 'Tingkat \'Mega Fanatic\' memberikan Anda pengalaman mendalam dalam dunia game, bersama sang kreator hebat.', '194167');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RBC', 'Fan Garis Keras', '\'Fan Garis Keras\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Membangun narasi dan karakter dalam dunia virtual dengan pendekatan storytelling.', '890761');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RTM', 'Ultimate Superstar', '\'Ultimate Superstar\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menghadirkan narasumber inspiratif dan diskusi yang membuka perspektif baru.', '837890');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RTM', 'Champion of Creativity', '\'Champion of Creativity\' adalah pilihan tepat bagi yang ingin mendalami podcast dan menghargai karya kreator ini.', '325519');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RTM', 'Champion Chums', 'Dengan tier \'Champion Chums\', Anda mendukung kreator yang menginspirasi lewat podcast.', '751164');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SKP', 'Sahabat Berkarya', 'Tingkat \'Sahabat Berkarya\' memberikan Anda pengalaman mendalam dalam dunia penulisan, bersama sang kreator hebat.', '116154');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SKP', 'Supreme', 'Dengan tier \'Supreme\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '966581');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SKP', 'Epic Champion', 'Bergabunglah sebagai \'Epic Champion\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia penulisan.', '262549');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SMS', 'Supreme Benefactor', '\'Supreme Benefactor\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Fokus pada produksi audio berkualitas tinggi dan storytelling yang engaging.', '382145');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SMS', 'Super Subscribers', 'Untuk pecinta podcast, \'Super Subscribers\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '259670');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SMS', 'Creative Crew', 'Tingkat \'Creative Crew\' memberikan Anda pengalaman mendalam dalam dunia podcast, bersama sang kreator hebat.', '172387');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SSS', 'Champion of Creativity', '\'Champion of Creativity\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Mengembangkan konsep video mulai dari script hingga post-produksi dengan gaya khas.', '650943');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SSS', 'Epic Enthusiasts', 'Bergabunglah sebagai \'Epic Enthusiasts\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia video.', '553810');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SSS', 'Legendary Patron', 'Untuk pecinta video, \'Legendary Patron\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '723874');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TRL', 'Pahlawan Seni', 'Tingkat \'Pahlawan Seni\' memberikan Anda pengalaman mendalam dalam dunia penulisan, bersama sang kreator hebat.', '17680');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TRL', 'Supreme Benefactor', '\'Supreme Benefactor\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Mengolah kata menjadi narasi yang menyentuh dan menggugah pembaca.', '166900');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TRL', 'Champion of Creativity', 'Dengan tier \'Champion of Creativity\', Anda mendukung kreator yang menginspirasi lewat penulisan.', '899186');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TTS', 'Gold', 'Dapatkan akses premium ke konten eksklusif seputar seni visual bersama \'Gold\', dirancang untuk para pendukung sejati.', '484038');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TTS', 'Platinum', 'Dapatkan akses premium ke konten eksklusif seputar seni visual bersama \'Platinum\', dirancang untuk para pendukung sejati.', '835336');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TTS', 'Mega Members', '\'Mega Members\' adalah pilihan tepat bagi yang ingin mendalami seni visual dan menghargai karya kreator ini.', '683442');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TVS', 'Silver', '\'Silver\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '231275');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TVS', 'Master Supporter', '\'Master Supporter\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '816204');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TVS', 'Mitra Kreatif', '\'Mitra Kreatif\' adalah pilihan tepat bagi yang ingin mendalami musik dan menghargai karya kreator ini.', '143734');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TXT', 'Supreme Benefactor', 'Dapatkan akses premium ke konten eksklusif seputar musik bersama \'Supreme Benefactor\', dirancang untuk para pendukung sejati.', '188501');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TXT', 'Diamond', 'Bergabunglah sebagai \'Diamond\' dan nikmati pengalaman unik, konten spesial, serta apresiasi di dunia musik.', '699399');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('TXT', 'Mega Fanatic', '\'Mega Fanatic\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Kolaborasi dengan musisi lain dalam proyek lintas genre dan budaya.', '519597');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('WDB', 'Inovator Hebat', 'Tingkat \'Inovator Hebat\' memberikan Anda pengalaman mendalam dalam dunia game, bersama sang kreator hebat.', '614887');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('WDB', 'Silver', '\'Silver\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menyajikan insight dunia game dari sudut pandang kreator dan pemain aktif.', '485653');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('WDB', 'Supreme Benefactor', 'Dapatkan akses premium ke konten eksklusif seputar game bersama \'Supreme Benefactor\', dirancang untuk para pendukung sejati.', '948138');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ZHC', 'Master Supporter', 'Untuk pecinta seni visual, \'Master Supporter\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '122553');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ZHC', 'Silver', 'Dapatkan akses premium ke konten eksklusif seputar seni visual bersama \'Silver\', dirancang untuk para pendukung sejati.', '541499');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ZHC', 'Ultimate', 'Untuk pecinta seni visual, \'Ultimate\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '907941');
 
 -- Manfaat
 CREATE TABLE Manfaat (
@@ -1762,10 +1762,7 @@ CREATE TABLE Manfaat (
     nama_tier VARCHAR(30) NOT NULL,
     id_konten CHAR(4) NOT NULL,
     PRIMARY KEY (id_creator, nama_tier, id_konten),
-    FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    FOREIGN KEY (nama_tier) REFERENCES Tier(nama)
+    FOREIGN KEY (id_creator, nama_tier) REFERENCES Tier(id_creator,nama_tier)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (id_konten) REFERENCES Konten(id_konten)
@@ -1929,193 +1926,200 @@ INSERT INTO Manfaat (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Ultimate'
 
 -- Subscribe
 CREATE TABLE Subscribe (
-    id_creator     VARCHAR(4)    NOT NULL,
-    id_suporter   VARCHAR(3)    NOT NULL,
-    nama_tier      VARCHAR(30)   NOT NULL,
-    tanggal_mulai  DATE          NOT NULL,
+    id_creator     VARCHAR(4)  NOT NULL,
+    id_suporter   VARCHAR(3)   NOT NULL,
+    nama_tier      VARCHAR(30) NOT NULL,
+    tanggal_mulai  VARCHAR(10) NOT NULL,
     status         VARCHAR(15) NOT NULL,
     metode_bayar   VARCHAR(15) NOT NULL,
     jumlah         INT NOT NULL,
-    tanggal_bayar  DATE NOT NULL,
+    tanggal_bayar  VARCHAR(10) NOT NULL,
     PRIMARY KEY (id_suporter, id_creator, nama_tier),
-    FOREIGN KEY (id_suporter)  REFERENCES Suporter(id_suporter) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (id_creator)    REFERENCES Tier(id_creator) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (nama_tier)     REFERENCES Tier(nama) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_suporter) REFERENCES Suporter(id_suporter) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_creator, nama_tier) REFERENCES Tier(id_creator, nama_tier) ON DELETE CASCADE ON UPDATE CASCADE,
     CHECK (tanggal_bayar >= tanggal_mulai)
 );
 
 
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DWP', '9', 'Silver', '2024-09-26', 'paused', 'bank_transfer', '701563', '2024-10-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('PDB', '25', 'Champion of Creativity', '2024-09-26', 'cancelled', 'paypal', '620066', '2024-10-06');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JJK', '8', 'Super Subscribers', '2024-11-12', 'active', 'credit_card', '817924', '2024-12-02');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DNS', '17', 'Creative Crew', '2024-09-28', 'active', 'gopay', '318649', '2024-10-15');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('BRS', '13', 'Elite', '2023-12-29', 'paused', 'bank_transfer', '271298', '2024-01-05');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RTM', '1', 'Ultimate Superstar', '2024-10-26', 'active', 'credit_card', '837890', '2024-11-19');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '20', 'Super Subscribers', '2024-11-23', 'cancelled', 'credit_card', '259670', '2024-12-05');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TTS', '2', 'Gold', '2023-10-03', 'active', 'credit_card', '484038', '2023-10-14');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TTS', '13', 'Platinum', '2024-11-01', 'cancelled', 'bank_transfer', '835336', '2024-11-30');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JNL', '5', 'Legendary Patron', '2024-02-14', 'cancelled', 'credit_card', '420420', '2024-03-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SSS', '13', 'Epic Enthusiasts', '2023-09-24', 'active', 'paypal', '553810', '2023-10-17');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JJK', '22', 'Bronze', '2024-08-31', 'paused', 'credit_card', '692871', '2024-09-20');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '11', 'Sahabat Berkarya', '2025-03-25', 'cancelled', 'paypal', '116154', '2025-04-08');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LCL', '4', 'Supreme Benefactor', '2024-09-04', 'paused', 'paypal', '534216', '2024-09-25');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('MRB', '11', 'Elite Backer', '2025-03-25', 'paused', 'gopay', '249800', '2025-04-18');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DWP', '14', 'Inovator Hebat', '2024-06-12', 'cancelled', 'gopay', '831555', '2024-06-14');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '6', 'Supreme Benefactor', '2024-08-08', 'active', 'credit_card', '188501', '2024-08-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('PDB', '19', 'Champion of Creativity', '2024-01-05', 'active', 'credit_card', '620066', '2024-01-28');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '12', 'Super Subscribers', '2024-12-24', 'paused', 'paypal', '259670', '2025-01-23');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '24', 'Supreme Benefactor', '2025-05-07', 'active', 'credit_card', '948138', '2025-05-20');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TRL', '3', 'Champion of Creativity', '2024-10-26', 'cancelled', 'credit_card', '899186', '2024-11-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DHM', '3', 'Mega Fanatic', '2024-12-19', 'active', 'credit_card', '297013', '2025-01-17');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DNS', '7', 'Creative Crew', '2025-04-17', 'active', 'gopay', '318649', '2025-04-27');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RTM', '18', 'Ultimate Superstar', '2023-10-15', 'cancelled', 'paypal', '837890', '2023-11-06');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '8', 'Supreme Benefactor', '2024-10-25', 'cancelled', 'bank_transfer', '382145', '2024-11-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TRL', '16', 'Champion of Creativity', '2024-12-05', 'cancelled', 'credit_card', '899186', '2024-12-10');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '14', 'Inovator Hebat', '2024-08-27', 'cancelled', 'paypal', '614887', '2024-09-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DHM', '23', 'Creative Crew', '2024-06-16', 'cancelled', 'credit_card', '792021', '2024-07-02');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '19', 'Diamond', '2024-04-18', 'active', 'bank_transfer', '699399', '2024-05-17');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '13', 'Diamond', '2023-12-31', 'active', 'bank_transfer', '699399', '2024-01-13');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('BRS', '9', 'Supreme Benefactor', '2024-04-29', 'active', 'paypal', '815025', '2024-05-12');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('MRB', '23', 'Creative Crew', '2024-09-10', 'active', 'paypal', '255157', '2024-09-12');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '17', 'Inovator Hebat', '2024-12-13', 'active', 'bank_transfer', '614887', '2024-12-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JJK', '19', 'Bronze', '2024-11-22', 'paused', 'gopay', '692871', '2024-12-14');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '25', 'Mega Fanatic', '2024-11-12', 'cancelled', 'credit_card', '519597', '2024-11-25');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JNL', '24', 'Super Supporter', '2025-05-07', 'active', 'paypal', '282850', '2025-05-13');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TVS', '3', 'Silver', '2024-12-21', 'cancelled', 'credit_card', '231275', '2025-01-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RBC', '9', 'Fan Garis Keras', '2023-09-16', 'cancelled', 'paypal', '890761', '2023-10-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('PDB', '1', 'Pahlawan Seni', '2024-12-05', 'cancelled', 'gopay', '72485', '2024-12-31');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TVS', '2', 'Silver', '2023-09-16', 'active', 'bank_transfer', '231275', '2023-10-05');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '14', 'Mitra Kreatif', '2024-11-19', 'cancelled', 'gopay', '316815', '2024-11-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '4', 'Super Subscribers', '2023-09-19', 'paused', 'paypal', '259670', '2023-10-05');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('MRB', '13', 'Ultimate Superstar', '2024-07-01', 'paused', 'gopay', '746935', '2024-07-13');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DWP', '23', 'Creative Crew', '2024-08-03', 'paused', 'gopay', '145042', '2024-08-31');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '5', 'Diamond', '2024-07-26', 'cancelled', 'bank_transfer', '699399', '2024-08-19');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('CTD', '15', 'Master Supporter', '2025-01-21', 'paused', 'paypal', '142033', '2025-01-30');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '14', 'Diamond', '2023-11-10', 'paused', 'gopay', '699399', '2023-11-19');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LDV', '21', 'Pahlawan Seni', '2024-05-04', 'cancelled', 'paypal', '57159', '2024-05-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('AGT', '13', 'Pahlawan Seni', '2024-09-27', 'cancelled', 'gopay', '787448', '2024-10-08');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DWP', '2', 'Creative Crew', '2023-11-04', 'paused', 'paypal', '145042', '2023-12-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SSS', '12', 'Legendary Patron', '2024-11-28', 'paused', 'bank_transfer', '723874', '2024-12-17');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '18', 'Epic Enthusiasts', '2024-05-11', 'paused', 'gopay', '883405', '2024-05-27');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('BRS', '3', 'Elite', '2024-04-07', 'paused', 'paypal', '271298', '2024-04-11');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LCL', '14', 'Champion Chums', '2023-11-08', 'paused', 'paypal', '362141', '2023-11-12');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TTS', '10', 'Platinum', '2023-05-18', 'paused', 'gopay', '835336', '2023-05-25');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DNS', '18', 'Master Supporter', '2024-04-16', 'paused', 'credit_card', '969360', '2024-05-06');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '8', 'Supreme Benefactor', '2024-12-07', 'active', 'bank_transfer', '188501', '2024-12-20');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DNS', '16', 'Legendary Patron', '2024-07-01', 'cancelled', 'bank_transfer', '439193', '2024-07-10');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TTS', '16', 'Mega Members', '2024-10-24', 'paused', 'gopay', '683442', '2024-10-29');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DHM', '4', 'Creative Crew', '2024-07-14', 'active', 'gopay', '792021', '2024-08-04');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RBC', '23', 'Fan Garis Keras', '2024-03-17', 'cancelled', 'paypal', '890761', '2024-03-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('BRS', '2', 'Supreme Benefactor', '2024-04-03', 'active', 'bank_transfer', '815025', '2024-04-24');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TVS', '23', 'Master Supporter', '2024-08-16', 'paused', 'credit_card', '816204', '2024-08-23');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RTM', '6', 'Champion Chums', '2024-11-26', 'paused', 'bank_transfer', '751164', '2024-12-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LCL', '7', 'Champion Chums', '2025-04-17', 'active', 'credit_card', '362141', '2025-05-13');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '10', 'Mitra Kreatif', '2023-02-17', 'paused', 'bank_transfer', '316815', '2023-03-12');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('BRS', '19', 'Elite', '2023-12-14', 'paused', 'credit_card', '271298', '2023-12-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '18', 'Silver', '2024-05-19', 'active', 'bank_transfer', '485653', '2024-06-11');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('PDB', '12', 'Pahlawan Seni', '2024-12-24', 'active', 'bank_transfer', '72485', '2025-01-07');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '7', 'Silver', '2025-04-17', 'cancelled', 'credit_card', '541499', '2025-04-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '10', 'Inovator Hebat', '2023-07-04', 'paused', 'paypal', '614887', '2023-07-09');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('AGT', '17', 'Pahlawan Seni', '2024-09-08', 'paused', 'paypal', '787448', '2024-09-11');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RTM', '21', 'Champion of Creativity', '2023-11-23', 'cancelled', 'gopay', '325519', '2023-12-04');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('PDB', '3', 'Super Supporter', '2024-03-30', 'paused', 'gopay', '661116', '2024-04-22');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '15', 'Supreme Benefactor', '2025-01-21', 'cancelled', 'paypal', '188501', '2025-02-06');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '1', 'Supreme Benefactor', '2024-11-11', 'paused', 'bank_transfer', '382145', '2024-11-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '22', 'Diamond', '2024-11-07', 'active', 'credit_card', '699399', '2024-11-08');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '16', 'Supreme', '2024-12-13', 'cancelled', 'paypal', '966581', '2024-12-19');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LDV', '18', 'Mega Members', '2024-02-24', 'paused', 'bank_transfer', '84378', '2024-03-14');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '11', 'Legendary Patron', '2025-03-25', 'cancelled', 'gopay', '47946', '2025-04-16');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '20', 'Supreme Benefactor', '2024-10-06', 'active', 'credit_card', '382145', '2024-11-01');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TTS', '4', 'Platinum', '2023-06-19', 'paused', 'bank_transfer', '835336', '2023-06-29');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '20', 'Master Supporter', '2024-11-30', 'active', 'gopay', '122553', '2024-12-06');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JNL', '17', 'Legendary Patron', '2024-09-13', 'cancelled', 'gopay', '420420', '2024-09-24');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '3', 'Sahabat Berkarya', '2024-06-01', 'cancelled', 'credit_card', '116154', '2024-07-01');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '13', 'Legendary Patron', '2024-12-01', 'cancelled', 'paypal', '47946', '2024-12-05');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '20', 'Supreme Benefactor', '2024-08-10', 'cancelled', 'credit_card', '948138', '2024-08-19');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '5', 'Silver', '2023-12-29', 'cancelled', 'paypal', '528193', '2024-01-22');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '16', 'Supreme Benefactor', '2024-10-25', 'cancelled', 'bank_transfer', '948138', '2024-10-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '1', 'Diamond', '2024-10-09', 'cancelled', 'bank_transfer', '699399', '2024-11-07');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '10', 'Supreme Benefactor', '2024-07-01', 'paused', 'bank_transfer', '948138', '2024-07-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RTM', '1', 'Champion of Creativity', '2024-11-19', 'active', 'credit_card', '325519', '2024-11-29');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TTS', '7', 'Platinum', '2025-04-17', 'active', 'bank_transfer', '835336', '2025-04-28');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TVS', '15', 'Mitra Kreatif', '2025-01-21', 'cancelled', 'credit_card', '143734', '2025-01-28');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JJK', '13', 'Epic Champion', '2024-12-03', 'cancelled', 'paypal', '975586', '2024-12-15');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('PDB', '9', 'Super Supporter', '2024-01-07', 'active', 'credit_card', '661116', '2024-02-04');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RTM', '20', 'Champion Chums', '2024-07-22', 'active', 'credit_card', '751164', '2024-08-02');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '11', 'Super Subscribers', '2025-03-25', 'cancelled', 'credit_card', '259670', '2025-04-04');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TRL', '12', 'Pahlawan Seni', '2024-11-13', 'cancelled', 'credit_card', '17680', '2024-11-14');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('CTD', '24', 'Legendary Loyalists', '2025-05-07', 'paused', 'bank_transfer', '792419', '2025-05-19');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '8', 'Master Supporter', '2024-10-30', 'active', 'bank_transfer', '859943', '2024-11-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LCL', '9', 'Supreme Benefactor', '2023-06-18', 'active', 'paypal', '534216', '2023-07-10');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '15', 'Epic Enthusiasts', '2025-01-21', 'cancelled', 'credit_card', '883405', '2025-01-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '9', 'Sahabat Berkarya', '2024-07-13', 'active', 'paypal', '116154', '2024-07-13');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RBC', '2', 'Fan Garis Keras', '2024-07-26', 'cancelled', 'bank_transfer', '890761', '2024-08-22');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SSS', '22', 'Legendary Patron', '2024-10-01', 'paused', 'paypal', '723874', '2024-10-09');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '25', 'Silver', '2024-09-18', 'paused', 'bank_transfer', '485653', '2024-10-04');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TRL', '20', 'Supreme Benefactor', '2024-12-06', 'cancelled', 'paypal', '166900', '2024-12-20');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('WDB', '12', 'Supreme Benefactor', '2024-12-27', 'paused', 'paypal', '948138', '2025-01-08');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('BRS', '16', 'Mega Fanatic', '2024-12-17', 'paused', 'credit_card', '911779', '2025-01-01');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('BRS', '11', 'Supreme Benefactor', '2025-03-25', 'cancelled', 'paypal', '815025', '2025-03-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LCL', '2', 'Supreme Benefactor', '2023-12-05', 'cancelled', 'paypal', '534216', '2023-12-09');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '16', 'Epic Champion', '2024-10-22', 'paused', 'paypal', '262549', '2024-11-04');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JNL', '15', 'Super Supporter', '2025-01-21', 'active', 'credit_card', '282850', '2025-01-30');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RBC', '12', 'Diamond', '2024-11-03', 'active', 'gopay', '994232', '2024-11-20');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LDV', '22', 'Mega Members', '2024-09-03', 'active', 'bank_transfer', '84378', '2024-09-10');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RBC', '19', 'Fan Garis Keras', '2024-03-25', 'cancelled', 'credit_card', '890761', '2024-03-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '7', 'Master Supporter', '2025-04-17', 'active', 'credit_card', '122553', '2025-05-16');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('MRB', '20', 'Ultimate Superstar', '2024-10-03', 'paused', 'paypal', '746935', '2024-10-10');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('PDB', '7', 'Pahlawan Seni', '2025-04-17', 'active', 'gopay', '72485', '2025-04-28');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '5', 'Champion Chums', '2024-05-13', 'paused', 'bank_transfer', '694174', '2024-05-17');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('CTD', '3', 'Mega Fanatic', '2024-06-25', 'cancelled', 'bank_transfer', '744922', '2024-07-23');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '22', 'Ultimate', '2024-08-25', 'active', 'bank_transfer', '907941', '2024-08-30');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '17', 'Silver', '2024-12-06', 'cancelled', 'gopay', '541499', '2025-01-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TRL', '25', 'Pahlawan Seni', '2024-11-05', 'active', 'gopay', '17680', '2024-11-10');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '8', 'Silver', '2024-11-04', 'paused', 'bank_transfer', '528193', '2024-11-12');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RBC', '5', 'Mega Fanatic', '2024-05-13', 'paused', 'gopay', '194167', '2024-06-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '18', 'Sahabat Berkarya', '2023-07-17', 'cancelled', 'credit_card', '116154', '2023-08-07');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '5', 'Mitra Kreatif', '2024-07-04', 'paused', 'paypal', '316815', '2024-07-28');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('CTD', '23', 'Mega Fanatic', '2023-08-16', 'cancelled', 'bank_transfer', '744922', '2023-08-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '5', 'Mega Fanatic', '2024-07-18', 'active', 'bank_transfer', '519597', '2024-08-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TVS', '10', 'Mitra Kreatif', '2024-11-11', 'cancelled', 'credit_card', '143734', '2024-11-22');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TRL', '7', 'Pahlawan Seni', '2025-04-17', 'paused', 'credit_card', '17680', '2025-04-27');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('DNS', '9', 'Creative Crew', '2024-12-01', 'active', 'paypal', '318649', '2024-12-01');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TVS', '17', 'Silver', '2024-09-04', 'paused', 'paypal', '231275', '2024-10-02');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SMS', '3', 'Creative Crew', '2024-11-27', 'paused', 'gopay', '172387', '2024-12-16');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '13', 'Mega Fanatic', '2024-07-30', 'active', 'gopay', '519597', '2024-08-17');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '4', 'Mega Fanatic', '2023-09-21', 'cancelled', 'credit_card', '519597', '2023-09-24');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '23', 'Supreme', '2024-09-19', 'paused', 'paypal', '966581', '2024-09-24');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '19', 'Epic Champion', '2024-09-30', 'cancelled', 'paypal', '262549', '2024-10-22');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '2', 'Mitra Kreatif', '2024-02-02', 'cancelled', 'bank_transfer', '316815', '2024-02-27');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JJK', '5', 'Bronze', '2024-03-25', 'cancelled', 'gopay', '692871', '2024-04-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SKP', '20', 'Supreme', '2024-10-13', 'cancelled', 'paypal', '966581', '2024-10-21');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JNL', '8', 'Platinum', '2024-12-25', 'paused', 'bank_transfer', '722994', '2025-01-18');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '7', 'Ultimate', '2025-04-17', 'cancelled', 'credit_card', '907941', '2025-05-05');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SSS', '17', 'Epic Enthusiasts', '2024-11-09', 'cancelled', 'credit_card', '553810', '2024-12-08');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LCL', '8', 'Champion of Creativity', '2024-11-07', 'cancelled', 'gopay', '463940', '2024-11-29');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TXT', '21', 'Supreme Benefactor', '2023-10-07', 'paused', 'gopay', '188501', '2023-11-02');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LDV', '14', 'Mega', '2024-05-13', 'active', 'bank_transfer', '426532', '2024-06-08');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SSS', '8', 'Legendary Patron', '2024-12-24', 'active', 'gopay', '723874', '2025-01-06');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '24', 'Champion Chums', '2025-05-07', 'cancelled', 'gopay', '694174', '2025-05-07');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SSS', '17', 'Champion of Creativity', '2024-10-09', 'active', 'gopay', '650943', '2024-10-16');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '8', 'Master Supporter', '2024-12-01', 'active', 'paypal', '122553', '2024-12-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TTS', '11', 'Platinum', '2025-03-25', 'cancelled', 'paypal', '835336', '2025-04-23');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('AGT', '4', 'Champion Chums', '2023-05-04', 'paused', 'paypal', '212540', '2023-05-25');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '11', 'Silver', '2025-03-25', 'cancelled', 'paypal', '528193', '2025-04-03');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LDV', '16', 'Mega', '2024-07-15', 'paused', 'gopay', '426532', '2024-08-14');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('SSS', '13', 'Champion of Creativity', '2024-05-10', 'cancelled', 'bank_transfer', '650943', '2024-05-25');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('MRB', '16', 'Ultimate Superstar', '2024-09-01', 'cancelled', 'paypal', '746935', '2024-09-17');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RTM', '13', 'Ultimate Superstar', '2023-10-27', 'paused', 'paypal', '837890', '2023-11-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '11', 'Master Supporter', '2025-03-25', 'cancelled', 'credit_card', '859943', '2025-04-09');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('LCL', '10', 'Supreme Benefactor', '2024-10-10', 'active', 'gopay', '534216', '2024-10-15');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('RBC', '17', 'Mega Fanatic', '2024-12-11', 'active', 'gopay', '194167', '2024-12-14');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JJK', '9', 'Epic Champion', '2023-02-26', 'cancelled', 'bank_transfer', '975586', '2023-03-24');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ATT', '8', 'Champion Chums', '2024-12-20', 'active', 'credit_card', '694174', '2024-12-28');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('JLN', '3', 'Epic Enthusiasts', '2024-12-10', 'active', 'gopay', '883405', '2024-12-31');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('MRB', '3', 'Creative Crew', '2024-08-30', 'paused', 'gopay', '255157', '2024-09-28');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('MRB', '18', 'Elite Backer', '2024-11-15', 'cancelled', 'bank_transfer', '249800', '2024-11-26');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('TRL', '24', 'Supreme Benefactor', '2025-05-07', 'active', 'bank_transfer', '166900', '2025-05-23');
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal bayar) VALUES ('ZHC', '17', 'Ultimate', '2024-10-13', 'paused', 'credit_card', '907941', '2024-10-23');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DWP', '9', 'Silver', '2024-09-26', 'paused', 'bank_transfer', '701563', '2024-10-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '25', 'Champion of Creativity', '2024-09-26', 'cancelled', 'paypal', '620066', '2024-10-06');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JJK', '8', 'Super Subscribers', '2024-11-12', 'active', 'credit_card', '817924', '2024-12-02');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DNS', '17', 'Creative Crew', '2024-09-28', 'active', 'gopay', '318649', '2024-10-15');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('BRS', '13', 'Elite', '2023-12-29', 'paused', 'bank_transfer', '271298', '2024-01-05');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RTM', '1', 'Ultimate Superstar', '2024-10-26', 'active', 'credit_card', '837890', '2024-11-19');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '20', 'Super Subscribers', '2024-11-23', 'cancelled', 'credit_card', '259670', '2024-12-05');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TTS', '2', 'Gold', '2023-10-03', 'active', 'credit_card', '484038', '2023-10-14');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TTS', '13', 'Platinum', '2024-11-01', 'cancelled', 'bank_transfer', '835336', '2024-11-30');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JNL', '5', 'Legendary Patron', '2024-02-14', 'cancelled', 'credit_card', '420420', '2024-03-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SSS', '13', 'Epic Enthusiasts', '2023-09-24', 'active', 'paypal', '553810', '2023-10-17');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JJK', '22', 'Bronze', '2024-08-31', 'paused', 'credit_card', '692871', '2024-09-20');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '11', 'Sahabat Berkarya', '2025-03-25', 'cancelled', 'paypal', '116154', '2025-04-08');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LCL', '4', 'Supreme Benefactor', '2024-09-04', 'paused', 'paypal', '534216', '2024-09-25');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '11', 'Elite Backer', '2025-03-25', 'paused', 'gopay', '249800', '2025-04-18');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DWP', '14', 'Inovator Hebat', '2024-06-12', 'cancelled', 'gopay', '831555', '2024-06-14');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '6', 'Supreme Benefactor', '2024-08-08', 'active', 'credit_card', '188501', '2024-08-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '19', 'Champion of Creativity', '2024-01-05', 'active', 'credit_card', '620066', '2024-01-28');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '12', 'Super Subscribers', '2024-12-24', 'paused', 'paypal', '259670', '2025-01-23');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '24', 'Supreme Benefactor', '2025-05-07', 'active', 'credit_card', '948138', '2025-05-20');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '3', 'Champion of Creativity', '2024-10-26', 'cancelled', 'credit_card', '899186', '2024-11-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DHM', '3', 'Mega Fanatic', '2024-12-19', 'active', 'credit_card', '297013', '2025-01-17');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DNS', '7', 'Creative Crew', '2025-04-17', 'active', 'gopay', '318649', '2025-04-27');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RTM', '18', 'Ultimate Superstar', '2023-10-15', 'cancelled', 'paypal', '837890', '2023-11-06');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '8', 'Supreme Benefactor', '2024-10-25', 'cancelled', 'bank_transfer', '382145', '2024-11-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '16', 'Champion of Creativity', '2024-12-05', 'cancelled', 'credit_card', '899186', '2024-12-10');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '14', 'Inovator Hebat', '2024-08-27', 'cancelled', 'paypal', '614887', '2024-09-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DHM', '23', 'Creative Crew', '2024-06-16', 'cancelled', 'credit_card', '792021', '2024-07-02');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '19', 'Diamond', '2024-04-18', 'active', 'bank_transfer', '699399', '2024-05-17');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '13', 'Diamond', '2023-12-31', 'active', 'bank_transfer', '699399', '2024-01-13');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('BRS', '9', 'Supreme Benefactor', '2024-04-29', 'active', 'paypal', '815025', '2024-05-12');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '23', 'Creative Crew', '2024-09-10', 'active', 'paypal', '255157', '2024-09-12');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '17', 'Inovator Hebat', '2024-12-13', 'active', 'bank_transfer', '614887', '2024-12-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JJK', '19', 'Bronze', '2024-11-22', 'paused', 'gopay', '692871', '2024-12-14');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '25', 'Mega Fanatic', '2024-11-12', 'cancelled', 'credit_card', '519597', '2024-11-25');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JNL', '24', 'Super Supporter', '2025-05-07', 'active', 'paypal', '282850', '2025-05-13');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TVS', '3', 'Silver', '2024-12-21', 'cancelled', 'credit_card', '231275', '2025-01-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RBC', '9', 'Fan Garis Keras', '2023-09-16', 'cancelled', 'paypal', '890761', '2023-10-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '1', 'Pahlawan Seni', '2024-12-05', 'cancelled', 'gopay', '72485', '2024-12-31');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TVS', '2', 'Silver', '2023-09-16', 'active', 'bank_transfer', '231275', '2023-10-05');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '14', 'Mitra Kreatif', '2024-11-19', 'cancelled', 'gopay', '316815', '2024-11-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '4', 'Super Subscribers', '2023-09-19', 'paused', 'paypal', '259670', '2023-10-05');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '13', 'Ultimate Superstar', '2024-07-01', 'paused', 'gopay', '746935', '2024-07-13');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DWP', '23', 'Creative Crew', '2024-08-03', 'paused', 'gopay', '145042', '2024-08-31');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '5', 'Diamond', '2024-07-26', 'cancelled', 'bank_transfer', '699399', '2024-08-19');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('CTD', '15', 'Master Supporter', '2025-01-21', 'paused', 'paypal', '142033', '2025-01-30');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '14', 'Diamond', '2023-11-10', 'paused', 'gopay', '699399', '2023-11-19');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LDV', '21', 'Pahlawan Seni', '2024-05-04', 'cancelled', 'paypal', '57159', '2024-05-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('AGT', '13', 'Pahlawan Seni', '2024-09-27', 'cancelled', 'gopay', '787448', '2024-10-08');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DWP', '2', 'Creative Crew', '2023-11-04', 'paused', 'paypal', '145042', '2023-12-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SSS', '12', 'Legendary Patron', '2024-11-28', 'paused', 'bank_transfer', '723874', '2024-12-17');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '18', 'Epic Enthusiasts', '2024-05-11', 'paused', 'gopay', '883405', '2024-05-27');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('BRS', '3', 'Elite', '2024-04-07', 'paused', 'paypal', '271298', '2024-04-11');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LCL', '14', 'Champion Chums', '2023-11-08', 'paused', 'paypal', '362141', '2023-11-12');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TTS', '10', 'Platinum', '2023-05-18', 'paused', 'gopay', '835336', '2023-05-25');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DNS', '18', 'Master Supporter', '2024-04-16', 'paused', 'credit_card', '969360', '2024-05-06');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '8', 'Supreme Benefactor', '2024-12-07', 'active', 'bank_transfer', '188501', '2024-12-20');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DNS', '16', 'Legendary Patron', '2024-07-01', 'cancelled', 'bank_transfer', '439193', '2024-07-10');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TTS', '16', 'Mega Members', '2024-10-24', 'paused', 'gopay', '683442', '2024-10-29');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DHM', '4', 'Creative Crew', '2024-07-14', 'active', 'gopay', '792021', '2024-08-04');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RBC', '23', 'Fan Garis Keras', '2024-03-17', 'cancelled', 'paypal', '890761', '2024-03-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('BRS', '2', 'Supreme Benefactor', '2024-04-03', 'active', 'bank_transfer', '815025', '2024-04-24');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TVS', '23', 'Master Supporter', '2024-08-16', 'paused', 'credit_card', '816204', '2024-08-23');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RTM', '6', 'Champion Chums', '2024-11-26', 'paused', 'bank_transfer', '751164', '2024-12-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LCL', '7', 'Champion Chums', '2025-04-17', 'active', 'credit_card', '362141', '2025-05-13');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '10', 'Mitra Kreatif', '2023-02-17', 'paused', 'bank_transfer', '316815', '2023-03-12');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('BRS', '19', 'Elite', '2023-12-14', 'paused', 'credit_card', '271298', '2023-12-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '18', 'Silver', '2024-05-19', 'active', 'bank_transfer', '485653', '2024-06-11');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '12', 'Pahlawan Seni', '2024-12-24', 'active', 'bank_transfer', '72485', '2025-01-07');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '7', 'Silver', '2025-04-17', 'cancelled', 'credit_card', '541499', '2025-04-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '10', 'Inovator Hebat', '2023-07-04', 'paused', 'paypal', '614887', '2023-07-09');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('AGT', '17', 'Pahlawan Seni', '2024-09-08', 'paused', 'paypal', '787448', '2024-09-11');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RTM', '21', 'Champion of Creativity', '2023-11-23', 'cancelled', 'gopay', '325519', '2023-12-04');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '3', 'Super Supporter', '2024-03-30', 'paused', 'gopay', '661116', '2024-04-22');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '15', 'Supreme Benefactor', '2025-01-21', 'cancelled', 'paypal', '188501', '2025-02-06');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '1', 'Supreme Benefactor', '2024-11-11', 'paused', 'bank_transfer', '382145', '2024-11-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '22', 'Diamond', '2024-11-07', 'active', 'credit_card', '699399', '2024-11-08');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '16', 'Supreme', '2024-12-13', 'cancelled', 'paypal', '966581', '2024-12-19');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LDV', '18', 'Mega Members', '2024-02-24', 'paused', 'bank_transfer', '84378', '2024-03-14');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '11', 'Legendary Patron', '2025-03-25', 'cancelled', 'gopay', '47946', '2025-04-16');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '20', 'Supreme Benefactor', '2024-10-06', 'active', 'credit_card', '382145', '2024-11-01');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TTS', '4', 'Platinum', '2023-06-19', 'paused', 'bank_transfer', '835336', '2023-06-29');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '20', 'Master Supporter', '2024-11-30', 'active', 'gopay', '122553', '2024-12-06');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JNL', '17', 'Legendary Patron', '2024-09-13', 'cancelled', 'gopay', '420420', '2024-09-24');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '3', 'Sahabat Berkarya', '2024-06-01', 'cancelled', 'credit_card', '116154', '2024-07-01');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '13', 'Legendary Patron', '2024-12-01', 'cancelled', 'paypal', '47946', '2024-12-05');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '20', 'Supreme Benefactor', '2024-08-10', 'cancelled', 'credit_card', '948138', '2024-08-19');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '5', 'Silver', '2023-12-29', 'cancelled', 'paypal', '528193', '2024-01-22');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '16', 'Supreme Benefactor', '2024-10-25', 'cancelled', 'bank_transfer', '948138', '2024-10-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '1', 'Diamond', '2024-10-09', 'cancelled', 'bank_transfer', '699399', '2024-11-07');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '10', 'Supreme Benefactor', '2024-07-01', 'paused', 'bank_transfer', '948138', '2024-07-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RTM', '1', 'Champion of Creativity', '2024-11-19', 'active', 'credit_card', '325519', '2024-11-29');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TTS', '7', 'Platinum', '2025-04-17', 'active', 'bank_transfer', '835336', '2025-04-28');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TVS', '15', 'Mitra Kreatif', '2025-01-21', 'cancelled', 'credit_card', '143734', '2025-01-28');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JJK', '13', 'Epic Champion', '2024-12-03', 'cancelled', 'paypal', '975586', '2024-12-15');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '9', 'Super Supporter', '2024-01-07', 'active', 'credit_card', '661116', '2024-02-04');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RTM', '20', 'Champion Chums', '2024-07-22', 'active', 'credit_card', '751164', '2024-08-02');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '11', 'Super Subscribers', '2025-03-25', 'cancelled', 'credit_card', '259670', '2025-04-04');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '12', 'Pahlawan Seni', '2024-11-13', 'cancelled', 'credit_card', '17680', '2024-11-14');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('CTD', '24', 'Legendary Loyalists', '2025-05-07', 'paused', 'bank_transfer', '792419', '2025-05-19');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '8', 'Master Supporter', '2024-10-30', 'active', 'bank_transfer', '859943', '2024-11-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LCL', '9', 'Supreme Benefactor', '2023-06-18', 'active', 'paypal', '534216', '2023-07-10');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '15', 'Epic Enthusiasts', '2025-01-21', 'cancelled', 'credit_card', '883405', '2025-01-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '9', 'Sahabat Berkarya', '2024-07-13', 'active', 'paypal', '116154', '2024-07-13');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RBC', '2', 'Fan Garis Keras', '2024-07-26', 'cancelled', 'bank_transfer', '890761', '2024-08-22');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SSS', '22', 'Legendary Patron', '2024-10-01', 'paused', 'paypal', '723874', '2024-10-09');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '25', 'Silver', '2024-09-18', 'paused', 'bank_transfer', '485653', '2024-10-04');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '20', 'Supreme Benefactor', '2024-12-06', 'cancelled', 'paypal', '166900', '2024-12-20');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('WDB', '12', 'Supreme Benefactor', '2024-12-27', 'paused', 'paypal', '948138', '2025-01-08');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('BRS', '16', 'Mega Fanatic', '2024-12-17', 'paused', 'credit_card', '911779', '2025-01-01');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('BRS', '11', 'Supreme Benefactor', '2025-03-25', 'cancelled', 'paypal', '815025', '2025-03-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LCL', '2', 'Supreme Benefactor', '2023-12-05', 'cancelled', 'paypal', '534216', '2023-12-09');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '16', 'Epic Champion', '2024-10-22', 'paused', 'paypal', '262549', '2024-11-04');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JNL', '15', 'Super Supporter', '2025-01-21', 'active', 'credit_card', '282850', '2025-01-30');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RBC', '12', 'Diamond', '2024-11-03', 'active', 'gopay', '994232', '2024-11-20');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LDV', '22', 'Mega Members', '2024-09-03', 'active', 'bank_transfer', '84378', '2024-09-10');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RBC', '19', 'Fan Garis Keras', '2024-03-25', 'cancelled', 'credit_card', '890761', '2024-03-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '7', 'Master Supporter', '2025-04-17', 'active', 'credit_card', '122553', '2025-05-16');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '20', 'Ultimate Superstar', '2024-10-03', 'paused', 'paypal', '746935', '2024-10-10');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '7', 'Pahlawan Seni', '2025-04-17', 'active', 'gopay', '72485', '2025-04-28');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '5', 'Champion Chums', '2024-05-13', 'paused', 'bank_transfer', '694174', '2024-05-17');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('CTD', '3', 'Mega Fanatic', '2024-06-25', 'cancelled', 'bank_transfer', '744922', '2024-07-23');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '22', 'Ultimate', '2024-08-25', 'active', 'bank_transfer', '907941', '2024-08-30');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '17', 'Silver', '2024-12-06', 'cancelled', 'gopay', '541499', '2025-01-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '25', 'Pahlawan Seni', '2024-11-05', 'active', 'gopay', '17680', '2024-11-10');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '8', 'Silver', '2024-11-04', 'paused', 'bank_transfer', '528193', '2024-11-12');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RBC', '5', 'Mega Fanatic', '2024-05-13', 'paused', 'gopay', '194167', '2024-06-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '18', 'Sahabat Berkarya', '2023-07-17', 'cancelled', 'credit_card', '116154', '2023-08-07');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '5', 'Mitra Kreatif', '2024-07-04', 'paused', 'paypal', '316815', '2024-07-28');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('CTD', '23', 'Mega Fanatic', '2023-08-16', 'cancelled', 'bank_transfer', '744922', '2023-08-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '5', 'Mega Fanatic', '2024-07-18', 'active', 'bank_transfer', '519597', '2024-08-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TVS', '10', 'Mitra Kreatif', '2024-11-11', 'cancelled', 'credit_card', '143734', '2024-11-22');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '7', 'Pahlawan Seni', '2025-04-17', 'paused', 'credit_card', '17680', '2025-04-27');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DNS', '9', 'Creative Crew', '2024-12-01', 'active', 'paypal', '318649', '2024-12-01');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TVS', '17', 'Silver', '2024-09-04', 'paused', 'paypal', '231275', '2024-10-02');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SMS', '3', 'Creative Crew', '2024-11-27', 'paused', 'gopay', '172387', '2024-12-16');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '13', 'Mega Fanatic', '2024-07-30', 'active', 'gopay', '519597', '2024-08-17');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '4', 'Mega Fanatic', '2023-09-21', 'cancelled', 'credit_card', '519597', '2023-09-24');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '23', 'Supreme', '2024-09-19', 'paused', 'paypal', '966581', '2024-09-24');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '19', 'Epic Champion', '2024-09-30', 'cancelled', 'paypal', '262549', '2024-10-22');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '2', 'Mitra Kreatif', '2024-02-02', 'cancelled', 'bank_transfer', '316815', '2024-02-27');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JJK', '5', 'Bronze', '2024-03-25', 'cancelled', 'gopay', '692871', '2024-04-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SKP', '20', 'Supreme', '2024-10-13', 'cancelled', 'paypal', '966581', '2024-10-21');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JNL', '8', 'Platinum', '2024-12-25', 'paused', 'bank_transfer', '722994', '2025-01-18');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '7', 'Ultimate', '2025-04-17', 'cancelled', 'credit_card', '907941', '2025-05-05');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SSS', '17', 'Epic Enthusiasts', '2024-11-09', 'cancelled', 'credit_card', '553810', '2024-12-08');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LCL', '8', 'Champion of Creativity', '2024-11-07', 'cancelled', 'gopay', '463940', '2024-11-29');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TXT', '21', 'Supreme Benefactor', '2023-10-07', 'paused', 'gopay', '188501', '2023-11-02');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LDV', '14', 'Mega', '2024-05-13', 'active', 'bank_transfer', '426532', '2024-06-08');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SSS', '8', 'Legendary Patron', '2024-12-24', 'active', 'gopay', '723874', '2025-01-06');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '24', 'Champion Chums', '2025-05-07', 'cancelled', 'gopay', '694174', '2025-05-07');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SSS', '17', 'Champion of Creativity', '2024-10-09', 'active', 'gopay', '650943', '2024-10-16');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '8', 'Master Supporter', '2024-12-01', 'active', 'paypal', '122553', '2024-12-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TTS', '11', 'Platinum', '2025-03-25', 'cancelled', 'paypal', '835336', '2025-04-23');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('AGT', '4', 'Champion Chums', '2023-05-04', 'paused', 'paypal', '212540', '2023-05-25');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '11', 'Silver', '2025-03-25', 'cancelled', 'paypal', '528193', '2025-04-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LDV', '16', 'Mega', '2024-07-15', 'paused', 'gopay', '426532', '2024-08-14');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('SSS', '13', 'Champion of Creativity', '2024-05-10', 'cancelled', 'bank_transfer', '650943', '2024-05-25');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '16', 'Ultimate Superstar', '2024-09-01', 'cancelled', 'paypal', '746935', '2024-09-17');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RTM', '13', 'Ultimate Superstar', '2023-10-27', 'paused', 'paypal', '837890', '2023-11-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '11', 'Master Supporter', '2025-03-25', 'cancelled', 'credit_card', '859943', '2025-04-09');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('LCL', '10', 'Supreme Benefactor', '2024-10-10', 'active', 'gopay', '534216', '2024-10-15');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('RBC', '17', 'Mega Fanatic', '2024-12-11', 'active', 'gopay', '194167', '2024-12-14');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JJK', '9', 'Epic Champion', '2023-02-26', 'cancelled', 'bank_transfer', '975586', '2023-03-24');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ATT', '8', 'Champion Chums', '2024-12-20', 'active', 'credit_card', '694174', '2024-12-28');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JLN', '3', 'Epic Enthusiasts', '2024-12-10', 'active', 'gopay', '883405', '2024-12-31');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '3', 'Creative Crew', '2024-08-30', 'paused', 'gopay', '255157', '2024-09-28');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '18', 'Elite Backer', '2024-11-15', 'cancelled', 'bank_transfer', '249800', '2024-11-26');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '24', 'Supreme Benefactor', '2025-05-07', 'active', 'bank_transfer', '166900', '2025-05-23');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '17', 'Ultimate', '2024-10-13', 'paused', 'credit_card', '907941', '2024-10-23');
+UPDATE Subscribe
+SET tanggal_mulai = STR_TO_DATE(tanggal_mulai, '%Y-%m-%d');
+ALTER TABLE Subscribe
+MODIFY COLUMN tanggal_mulai DATE;
 
+UPDATE Subscribe
+SET tanggal_bayar = STR_TO_DATE(tanggal_bayar, '%Y-%m-%d');
+ALTER TABLE Subscribe
+MODIFY COLUMN tanggal_bayar DATE;
 
 -- BeliMerchandise
 CREATE TABLE BeliMerchandise (

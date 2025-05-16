@@ -1,12 +1,12 @@
 CREATE TABLE Manfaat (
-    id_creator   VARCHAR(4) NOT NULL,
-    nama_tier    VARCHAR(30) NOT NULL,
-    id_konten    VARCHAR(4) NOT NULL,
+    id_creator CHAR(4) NOT NULL,
+    nama_tier VARCHAR(30) NOT NULL,
+    id_konten CHAR(4) NOT NULL,
     PRIMARY KEY (id_creator, nama_tier, id_konten),
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
-    FOREIGN KEY (nama_tier) REFERENCES Tier(nama_tier)
+    FOREIGN KEY (nama_tier) REFERENCES Tier(nama)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (id_konten) REFERENCES Konten(id_konten)
