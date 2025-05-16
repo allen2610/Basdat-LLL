@@ -1,0 +1,167 @@
+CREATE TABLE Manfaat (
+    id_creator   VARCHAR(4),
+    nama_tier    VARCHAR(30),
+    id_konten    VARCHAR(4),
+    PRIMARY KEY (id_creator, nama_tier, id_konten),
+    FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (nama_tier) REFERENCES Tier(nama_tier)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (id_konten) REFERENCES Konten(id_konten)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('AGT', 'Creative Crew', '869');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('AGT', 'Champion Chums', '869');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('AGT', 'Champion Chums', '527');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('AGT', 'Pahlawan Seni', '869');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('AGT', 'Pahlawan Seni', '527');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('AGT', 'Pahlawan Seni', '924');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ATT', 'Legendary Patron', '546');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ATT', 'Mitra Kreatif', '546');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ATT', 'Mitra Kreatif', '997');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ATT', 'Champion Chums', '546');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ATT', 'Champion Chums', '997');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ATT', 'Champion Chums', '552');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('BRS', 'Elite', '588');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('BRS', 'Supreme Benefactor', '588');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('BRS', 'Supreme Benefactor', '948');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('BRS', 'Mega Fanatic', '588');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('BRS', 'Mega Fanatic', '948');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('BRS', 'Mega Fanatic', '791');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('CTD', 'Master Supporter', '391');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('CTD', 'Mega Fanatic', '635');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('CTD', 'Mega Fanatic', '391');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('CTD', 'Legendary Loyalists', '391');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('CTD', 'Legendary Loyalists', '635');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('CTD', 'Legendary Loyalists', '404');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DHM', 'Mega Fanatic', '759');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DHM', 'Diamond', '759');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DHM', 'Diamond', '185');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DHM', 'Creative Crew', '759');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DHM', 'Creative Crew', '185');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DHM', 'Creative Crew', '730');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DNS', 'Creative Crew', '998');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DNS', 'Legendary Patron', '998');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DNS', 'Legendary Patron', '664');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DNS', 'Master Supporter', '998');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DNS', 'Master Supporter', '664');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DNS', 'Master Supporter', '402');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DWP', 'Creative Crew', '107');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DWP', 'Silver', '107');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DWP', 'Silver', '685');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DWP', 'Inovator Hebat', '107');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DWP', 'Inovator Hebat', '685');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('DWP', 'Inovator Hebat', '259');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JJK', 'Bronze', '277');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JJK', 'Super Subscribers', '277');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JJK', 'Super Subscribers', '359');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JJK', 'Epic Champion', '277');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JJK', 'Epic Champion', '359');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JJK', 'Epic Champion', '274');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JLN', 'Silver', '351');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JLN', 'Master Supporter', '351');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JLN', 'Master Supporter', '819');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JLN', 'Epic Enthusiasts', '351');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JLN', 'Epic Enthusiasts', '819');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JLN', 'Epic Enthusiasts', '721');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JNL', 'Super Supporter', '307');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JNL', 'Legendary Patron', '307');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JNL', 'Legendary Patron', '806');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JNL', 'Platinum', '307');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JNL', 'Platinum', '806');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('JNL', 'Platinum', '976');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LCL', 'Champion Chums', '743');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LCL', 'Champion of Creativity', '743');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LCL', 'Champion of Creativity', '662');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LCL', 'Supreme Benefactor', '743');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LCL', 'Supreme Benefactor', '662');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LCL', 'Supreme Benefactor', '540');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LDV', 'Pahlawan Seni', '182');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LDV', 'Mega Members', '182');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LDV', 'Mega Members', '315');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LDV', 'Mega', '182');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LDV', 'Mega', '315');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('LDV', 'Mega', '170');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('MRB', 'Elite Backer', '798');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('MRB', 'Creative Crew', '798');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('MRB', 'Creative Crew', '856');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('MRB', 'Ultimate Superstar', '798');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('MRB', 'Ultimate Superstar', '856');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('MRB', 'Ultimate Superstar', '638');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('PDB', 'Pahlawan Seni', '205');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('PDB', 'Champion of Creativity', '205');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('PDB', 'Champion of Creativity', '677');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('PDB', 'Super Supporter', '205');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('PDB', 'Super Supporter', '677');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('PDB', 'Super Supporter', '594');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Mega Fanatic', '121');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Fan Garis Keras', '121');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Fan Garis Keras', '358');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Diamond', '121');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Diamond', '358');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Diamond', '239');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Diamond', '500');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Diamond', '705');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Diamond', '154');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RBC', 'Diamond', '439');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Champion of Creativity', '816');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Champion of Creativity', '199');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Champion Chums', '816');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Champion Chums', '199');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Champion Chums', '982');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Ultimate Superstar', '816');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Ultimate Superstar', '199');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Ultimate Superstar', '982');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Ultimate Superstar', '465');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('RTM', 'Ultimate Superstar', '944');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SMS', 'Creative Crew', '188');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SMS', 'Super Subscribers', '188');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SMS', 'Super Subscribers', '973');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SMS', 'Supreme Benefactor', '188');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SMS', 'Supreme Benefactor', '973');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SMS', 'Supreme Benefactor', '830');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SMS', 'Supreme Benefactor', '934');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SSS', 'Epic Enthusiasts', '536');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SSS', 'Champion of Creativity', '536');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('SSS', 'Champion of Creativity', '862');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TRL', 'Pahlawan Seni', '694');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TRL', 'Supreme Benefactor', '694');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TRL', 'Supreme Benefactor', '354');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TRL', 'Champion of Creativity', '694');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TRL', 'Champion of Creativity', '354');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TRL', 'Champion of Creativity', '236');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TTS', 'Gold', '360');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TTS', 'Mega Members', '360');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TTS', 'Mega Members', '873');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TTS', 'Platinum', '360');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TTS', 'Platinum', '873');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TTS', 'Platinum', '138');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TVS', 'Mitra Kreatif', '355');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TVS', 'Silver', '355');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TVS', 'Silver', '835');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TVS', 'Master Supporter', '355');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TVS', 'Master Supporter', '835');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TVS', 'Master Supporter', '964');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TXT', 'Supreme Benefactor', '146');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TXT', 'Mega Fanatic', '146');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TXT', 'Mega Fanatic', '106');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TXT', 'Diamond', '146');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TXT', 'Diamond', '106');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('TXT', 'Diamond', '495');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('WDB', 'Supreme Benefactor', '100');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('WDB', 'Supreme Benefactor', '448');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('WDB', 'Supreme Benefactor', '173');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Master Supporter', '482');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Silver', '482');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Silver', '889');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Silver', '787');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Silver', '863');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Ultimate', '482');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Ultimate', '889');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Ultimate', '787');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Ultimate', '863');
+INSERT INTO Creator (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Ultimate', '319');
