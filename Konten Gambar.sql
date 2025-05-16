@@ -1,5 +1,5 @@
-CREATE TABLE tableName (
-    id_konten	INT PRIMARY KEY,
+CREATE TABLE KontenGambar (
+    id_konten	VARCHAR(3) PRIMARY KEY,
     resolusi	INT,
     format	VARCHAR(512),
     FOREIGN KEY (id_konten)

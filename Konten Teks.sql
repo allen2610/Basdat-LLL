@@ -1,5 +1,5 @@
-CREATE TABLE tableName (
-    id_konten	INT PRIMARY KEY,
+CREATE TABLE KontenTeks (
+    id_konten	VARCHAR(3) PRIMARY KEY,
     jumlah_kata	INT,
     format	VARCHAR(512),
     FOREIGN KEY (id_konten)

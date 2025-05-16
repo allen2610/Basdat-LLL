@@ -1,5 +1,5 @@
-CREATE TABLE tableName (
-    id_konten	INT PRIMARY KEY,
+CREATE TABLE Konten (
+    id_konten	VARCHAR(3) PRIMARY KEY,
     judul	VARCHAR(512),
     jenis	VARCHAR(512),
     deskripsi	VARCHAR(512),

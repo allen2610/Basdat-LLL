@@ -1,5 +1,5 @@
-CREATE TABLE tableName (
-    id_order	INT PRIMARY KEY,
+CREATE TABLE OrderSpecialContent (
+    id_order	VARCHAR(3) PRIMARY KEY,
     id_suporter	INT,
     id_creator	VARCHAR(512),
     judul	VARCHAR(512),

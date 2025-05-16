@@ -1,5 +1,5 @@
-CREATE TABLE tableName (
-    id_konten	INT PRIMARY KEY,
+CREATE TABLE KontenAudio (
+    id_konten	VARCHAR(3) PRIMARY KEY,
     durasi	VARCHAR(512),
     kualitas	VARCHAR(512),
     FOREIGN KEY (id_konten)
