@@ -1,6 +1,6 @@
 CREATE TABLE Tier (
-    id_creator	VARCHAR(4) PRIMARY KEY,
-    nama	VARCHAR(30),
+    id_creator	VARCHAR(4) PRIMARY KEY NOT NULL,
+    nama	VARCHAR(30) NOT NULL,
     deskripsi	VARCHAR(512),
     harga	INT,
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)

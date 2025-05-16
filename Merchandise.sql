@@ -1,7 +1,7 @@
 CREATE TABLE Merchandise (
-    id_merchandise	VARCHAR(3) PRIMARY KEY,
-    id_creator	VARCHAR(3),
-    id_konten	VARCHAR(3),
+    id_merchandise	VARCHAR(3) PRIMARY KEY NOT NULL,
+    id_creator	VARCHAR(3) NOT NULL,
+    id_konten	VARCHAR(3) NOT NULL,
     nama	VARCHAR(40),
     harga	INT,
     stok	INT,

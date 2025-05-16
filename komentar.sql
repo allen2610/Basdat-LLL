@@ -1,7 +1,7 @@
 CREATE TABLE Komentar(
-    id_komentar	VARCHAR(5),
-    id_supporter VARCHAR(3),
-    id_konten	VARCHAR(4),
+    id_komentar	VARCHAR(5) NOT NULL,
+    id_supporter VARCHAR(3) NOT NULL,
+    id_konten	VARCHAR(4) NOT NULL,
     isi	VARCHAR(512),
     waktu	DATETIME,
     PRIMARY KEY (id_komentar),

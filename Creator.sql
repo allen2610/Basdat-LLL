@@ -1,5 +1,5 @@
 CREATE TABLE Creator (
-    id_creator	VARCHAR(4) PRIMARY KEY,
+    id_creator	VARCHAR(4) PRIMARY KEY NOT NULL,
     nama	VARCHAR(25),
     email	VARCHAR(30),
     deskripsi	VARCHAR(512),

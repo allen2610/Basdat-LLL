@@ -1,5 +1,5 @@
 CREATE TABLE Konten (
-    id_konten	VARCHAR(3) PRIMARY KEY,
+    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
     judul	VARCHAR(512),
     jenis	VARCHAR(512),
     deskripsi	VARCHAR(512),

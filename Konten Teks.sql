@@ -1,5 +1,5 @@
 CREATE TABLE KontenTeks (
-    id_konten	VARCHAR(3) PRIMARY KEY,
+    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
     jumlah_kata	INT,
     format	VARCHAR(512),
     FOREIGN KEY (id_konten)

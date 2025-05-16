@@ -1,6 +1,6 @@
 CREATE TABLE Membuat (
-    id_creator	VARCHAR(3),
-    id_konten	VARCHAR(3)
+    id_creator	VARCHAR(3) NOT NULL,
+    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
         ON DELETE CASCADE
         ON UPDATE CASCADE,

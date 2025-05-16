@@ -1,5 +1,5 @@
 CREATE TABLE KontenVideo (
-    id_konten	VARCHAR(3) PRIMARY KEY,
+    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
     durasi	VARCHAR(512),
     resolusi	INT,
     FOREIGN KEY (id_konten)

@@ -1,5 +1,5 @@
 CREATE TABLE KontenGambar (
-    id_konten	VARCHAR(3) PRIMARY KEY,
+    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
     resolusi	INT,
     format	VARCHAR(512),
     FOREIGN KEY (id_konten)

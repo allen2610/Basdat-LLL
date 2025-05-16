@@ -1,10 +1,10 @@
 CREATE TABLE BeliMerchandise (
-    id_supporter	VARCHAR(3),
-    id_merchandise	VARCHAR(3),
-    jumlah	INT,
+    id_supporter	VARCHAR(3) NOT NULL,
+    id_merchandise	VARCHAR(3) NOT NULL,
+    jumlah	INT NOT NULL,
     tanggal_beli	VARCHAR(512),
     total_harga	INT,
-    metode_bayar	VARCHAR(20),
+    metode_bayar	VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_supporter, id_merchandise),
     FOREIGN KEY (id_supporter) REFERENCES Supporter(id_supporter)
         ON DELETE CASCADE

@@ -1,5 +1,5 @@
 CREATE TABLE Suporter (
-    id_suporter	VARCHAR(3) PRIMARY KEY,
+    id_suporter	VARCHAR(3) PRIMARY KEY NOT NULL,
     nama	VARCHAR(20),
     email	VARCHAR(35),
     alamat	VARCHAR(35),
