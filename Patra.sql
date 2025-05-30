@@ -2400,3 +2400,44 @@ INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, desk
 ('16', 'Beli_Merchandise', '951', 'Pendukung Trstram membeli merchandise ''Shoelace'' sebanyak 17 unit.', '2024-05-29'),
 ('16', 'Komentar', '118', 'Pendukung Trstram memuji gaya penulisan konten ''Off 323'' yang membuatnya penasaran.', '2025-04-19'),
 ('22', 'Langganan', 'Bronze', 'Pendukung Beau memulai langganan tier ''Bronze'' untuk kreator Jeon Jungkook.', '2024-08-31');
+
+
+CREATE VIEW KreatorPopuler AS
+WITH
+    PendukungAktifPerKreator AS (
+        SELECT
+            s.id_creator,
+            COUNT(DISTINCT s.id_suporter) AS jumlah_pendukung_aktif
+        FROM
+            Subscribe s
+        WHERE
+            s.status = 'Aktif'
+        GROUP BY
+            s.id_creator
+    ),
+    KomentarPerKreator AS (
+        SELECT
+            m.id_creator,
+            COUNT(k.id_komentar) AS jumlah_komentar
+        FROM
+            Membuat m
+            JOIN Konten ko ON m.id_konten = ko.id_konten
+            JOIN Komentar k ON ko.id_konten = k.id_konten
+        GROUP BY
+            m.id_creator
+    )
+SELECT
+    c.nama AS nama_kreator,
+    c.bidang AS bidang_kreasi_kreator,
+    COALESCE(pa.jumlah_pendukung_aktif, 0) AS jumlah_pendukung_aktif,
+    COALESCE(kp.jumlah_komentar, 0) AS jumlah_komentar,
+    (
+        COALESCE(pa.jumlah_pendukung_aktif, 0) * 3 + COALESCE(kp.jumlah_komentar, 0)
+    ) AS skor_popularitas
+FROM
+    Creator c
+    LEFT JOIN PendukungAktifPerKreator pa ON c.id_creator = pa.id_creator
+    LEFT JOIN KomentarPerKreator kp ON c.id_creator = kp.id_creator
+ORDER BY
+    skor_popularitas DESC
+LIMIT 10;
