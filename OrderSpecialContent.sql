@@ -1,7 +1,7 @@
 CREATE TABLE OrderSpecialContent (
-    id_order	INT,
-    id_suporter	INT,
-    id_creator	VARCHAR(512),
+    id_order	INT PRIMARY KEY NOT NULL,
+    id_suporter	INT NOT NULL,
+    id_creator	VARCHAR(512) NOT NULL,
     judul	VARCHAR(512),
     deskripsi	VARCHAR(512),
     harga_dasar	INT,
@@ -10,7 +10,17 @@ CREATE TABLE OrderSpecialContent (
     estimasi_pengerjaan	INT,
     tanggal_penyelesaian	VARCHAR(512),
     id_konten	VARCHAR(512),
-    feedback	VARCHAR(512)
+    feedback	VARCHAR(512),
+    FOREIGN KEY (id_suporter, id_creator)
+        REFERENCES Suporter(id_suporter, id_creator)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (id_order) REFERENCES OrderSpecialContent(id_order)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (id_konten) REFERENCES Konten(id_konten)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
 );
 
 INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('1', '4', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '878012', '2023-04-17', 'dalam_pengerjaan', '8', NULL, NULL, NULL);
