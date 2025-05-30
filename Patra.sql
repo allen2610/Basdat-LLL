@@ -430,7 +430,7 @@ INSERT INTO KontenAudio (id_konten, durasi, kualitas) VALUES ('990', '18:57', 'L
 -- Konten Gambar
 CREATE TABLE KontenGambar (
     id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
-    resolusi	INT,
+    resolusi	INT CHECK (resolusi > 0),
     format	VARCHAR(512),
     FOREIGN KEY (id_konten)
         REFERENCES Konten(id_konten)
@@ -506,7 +506,7 @@ INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('984', '6322', 'J
 -- Konten Teks
 CREATE TABLE KontenTeks (
     id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
-    jumlah_kata	INT,
+    jumlah_kata	INT CHECK (jumlah_kata >= 0),
     format	VARCHAR(512),
     FOREIGN KEY (id_konten)
         REFERENCES Konten(id_konten)
@@ -582,7 +582,7 @@ INSERT INTO KontenTeks (id_konten, jumlah_kata, format) VALUES ('982', '7386', '
 CREATE TABLE KontenVideo (
     id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
     durasi	VARCHAR(512),
-    resolusi	INT,
+    resolusi	INT CHECK (resolusi >= 0),,
     FOREIGN KEY (id_konten)
         REFERENCES Konten(id_konten)
         ON DELETE CASCADE
@@ -1108,7 +1108,7 @@ CREATE TABLE OrderSpecialContent (
     harga_dasar	INT,
     tgl_batas_revisi	VARCHAR(512),
     feedback	VARCHAR(512),
-    estimasi_pengerjaan	INT,
+    estimasi_pengerjaan	INT CHECK (estimasi_pengerjaan > 0),
     FOREIGN KEY (id_suporter)
         REFERENCES Suporter(id_suporter)
         ON DELETE CASCADE
@@ -1767,7 +1767,7 @@ CREATE TABLE Subscribe (
     tanggal_mulai  DATE          NOT NULL,
     status         VARCHAR(15) NOT NULL,
     metode_bayar   VARCHAR(15) NOT NULL,
-    jumlah         INT NOT NULL,
+    jumlah         INT NOT NULL CHECK (jumlah >= 0),
     tanggal_bayar  DATE NOT NULL,
     PRIMARY KEY (id_suporter, id_creator, nama_tier),
     FOREIGN KEY (id_suporter)  REFERENCES Suporter(id_suporter) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1963,7 +1963,7 @@ CREATE TABLE Merchandise (
     id_konten	VARCHAR(3) NOT NULL,
     nama	VARCHAR(40),
     harga	INT CHECK (harga >= 0 AND harga <= 1500000),
-    stok	INT,
+    stok	CHECK (stok >= 0 AND stok <= 500),
     deskripsi	VARCHAR(512),
     FOREIGN KEY (id_creator) REFERENCES Membuat(id_creator)
         ON DELETE CASCADE
@@ -2128,7 +2128,7 @@ INSERT INTO Merchandise (id_merchandise, id_creator, id_konten, nama, harga, sto
 CREATE TABLE BeliMerchandise (
     id_suporter	VARCHAR(3) NOT NULL,
     id_merchandise	VARCHAR(3) NOT NULL,
-    jumlah	INT NOT NULL,
+    jumlah	INT NOT NULL CHECK (jumlah >= 0),
     tanggal_beli	VARCHAR(512),
     total_harga	INT,
     metode_bayar	VARCHAR(20) NOT NULL,
