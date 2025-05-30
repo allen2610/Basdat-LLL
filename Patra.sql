@@ -2480,10 +2480,10 @@ FOR EACH ROW
 BEGIN
     IF NEW.email IS NOT NULL THEN
         IF NOT (
-            (LENGTH(NEW.email) - LENGTH(REPLACE(NEW.email, '@', ''))) = 1 AND -- Tepat satu '@'
-            RIGHT(NEW.email, 4) = '.com' AND                                  -- Berakhir dengan '.com'
-            LOCATE('@', NEW.email) > 1 AND                                    -- Bagian lokal tidak kosong (ada karakter sebelum '@')
-            (LENGTH(NEW.email) - LOCATE('@', NEW.email) - 4) > 0              -- Bagian domain (antara '@' dan '.com') tidak kosong
+            (LENGTH(NEW.email) - LENGTH(REPLACE(NEW.email, '@', ''))) = 1 AND 
+            RIGHT(NEW.email, 4) = '.com' AND                                  
+            LOCATE('@', NEW.email) > 1 AND                                    
+            (LENGTH(NEW.email) - LOCATE('@', NEW.email) - 4) > 0              
         ) THEN
             SIGNAL SQLSTATE '45000'
                 SET MESSAGE_TEXT = 'Format email tidak valid untuk Creator. Harus berbentuk <local_part>@<domain_part>.com, di mana setiap bagian tidak boleh kosong dan tidak mengandung karakter ''@''.';
@@ -2500,10 +2500,10 @@ FOR EACH ROW
 BEGIN
     IF NEW.email IS NOT NULL THEN
         IF NOT (
-            (LENGTH(NEW.email) - LENGTH(REPLACE(NEW.email, '@', ''))) = 1 AND -- Tepat satu '@'
-            RIGHT(NEW.email, 4) = '.com' AND                                  -- Berakhir dengan '.com'
-            LOCATE('@', NEW.email) > 1 AND                                    -- Bagian lokal tidak kosong
-            (LENGTH(NEW.email) - LOCATE('@', NEW.email) - 4) > 0              -- Bagian domain (antara '@' dan '.com') tidak kosong
+            (LENGTH(NEW.email) - LENGTH(REPLACE(NEW.email, '@', ''))) = 1 AND-- Tepat satu '@'
+            RIGHT(NEW.email, 4) = '.com' AND                                  
+            LOCATE('@', NEW.email) > 1 AND                                   
+            (LENGTH(NEW.email) - LOCATE('@', NEW.email) - 4) > 0              
         ) THEN
             SIGNAL SQLSTATE '45000'
                 SET MESSAGE_TEXT = 'Format email tidak valid untuk Suporter. Harus berbentuk <local_part>@<domain_part>.com, di mana setiap bagian tidak boleh kosong dan tidak mengandung karakter ''@''.';
