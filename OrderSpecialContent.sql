@@ -143,3 +143,27 @@ INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskr
 INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('118', '21', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '185022', '2024-01-03', 'disetujui', '14', NULL, NULL, NULL);
 INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('119', '13', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1163483', '2025-02-02', 'menunggu_persetujuan', '16', NULL, NULL, NULL);
 INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('120', '22', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1420395', '2024-01-29', 'disetujui', '23', NULL, NULL, NULL);
+
+
+DELIMITER $$
+
+CREATE TRIGGER check_status_transition
+BEFORE UPDATE ON OrderSpecialContent
+FOR EACH ROW
+BEGIN
+    IF NEW.status_pengerjaan != OLD.status_pengerjaan THEN
+        IF OLD.status_pengerjaan = 'menunggu_persetujuan' AND 
+           (NEW.status_pengerjaan = 'disetujui' OR NEW.status_pengerjaan = 'ditolak') THEN
+            -- valid
+        ELSEIF OLD.status_pengerjaan = 'disetujui' AND NEW.status_pengerjaan = 'dalam_pengerjaan' THEN
+            -- valid
+        ELSEIF OLD.status_pengerjaan = 'dalam_pengerjaan' AND NEW.status_pengerjaan = 'selesai' THEN
+            -- valid
+        ELSE
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = CONCAT('Transisi status tidak valid dari ', OLD.status_pengerjaan, ' ke ', NEW.status_pengerjaan);
+        END IF;
+    END IF;
+END$$
+
+DELIMITER ;
