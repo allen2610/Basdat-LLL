@@ -2310,7 +2310,6 @@ CREATE TABLE AktivitasPendukung (
         ON UPDATE CASCADE
 );
 
--- Mengubah delimiter untuk pembuatan trigger
 DELIMITER //
 -- Trigger yang akan mencatat aktivitas saat pendukung berlangganan tier
 CREATE TRIGGER trigger_catat_langganan
@@ -2342,8 +2341,11 @@ BEGIN
 
     INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas)
     VALUES (NEW.id_suporter, 'Langganan', NEW.nama_tier, deskripsi_final, NEW.tanggal_mulai);
-END//
+END;
+//
+DELIMITER ;
 
+DELIMITER //
 -- Trigger yang akan mencatat aktivitas saat pendukung memberikan komentar pada konten
 CREATE TRIGGER trigger_catat_komentar
 AFTER INSERT ON Komentar
@@ -2374,8 +2376,11 @@ BEGIN
     SET deskripsi_final = CONCAT('Pendukung ', ref_nama_suporter, ' memberikan komentar pada konten ''', ref_judul_konten, '''. Isi: ', isi_komentar_singkat);
     INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas)
     VALUES (NEW.id_suporter, 'Komentar', NEW.id_komentar, deskripsi_final, DATE(NEW.waktu)); -- Mengambil hanya bagian tanggal dari DATETIME
-END//
+END;
+//
+DELIMITER ;
 
+DELIMITER //
 -- Trigger yang akan mencatat aktivitas saat pendukung membeli merchandise
 CREATE TRIGGER trigger_catat_beli_merchandise
 AFTER INSERT ON BeliMerchandise
@@ -2401,7 +2406,8 @@ BEGIN
     SET deskripsi_final = CONCAT('Pendukung ', ref_nama_suporter, ' membeli merchandise ''', ref_nama_merch, ''' sebanyak ', NEW.jumlah, ' unit.');
     INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas)
     VALUES (NEW.id_suporter, 'Beli_Merchandise', NEW.id_merchandise, deskripsi_final, NEW.tanggal_beli);
-END//
+END;
+//
 DELIMITER ;
 
 INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas) VALUES
