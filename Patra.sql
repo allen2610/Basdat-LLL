@@ -1505,7 +1505,7 @@ MODIFY COLUMN tanggal_penyelesaian DATE;
 -- Tier
 CREATE TABLE Tier (
     id_creator	VARCHAR(4) NOT NULL,
-    nama	VARCHAR(30) NOT NULL,
+    nama_tier	VARCHAR(30) NOT NULL,
     deskripsi	VARCHAR(512),
     harga	INT CHECK (harga >= 0 AND harga <= 1000000),
     PRIMARY KEY (id_creator, nama),
