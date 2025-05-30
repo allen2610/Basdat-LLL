@@ -92,7 +92,7 @@ MODIFY COLUMN tanggal_gabung DATE;
 CREATE TABLE Konten (
     id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
     judul	VARCHAR(512),
-    jenis	VARCHAR(512),
+    jenis	VARCHAR(512) CHECK (jenis IN ('Teks', 'Gambar', 'Audio', 'Video')),
     deskripsi	VARCHAR(512),
     tanggal_publikasi	VARCHAR(512)
 );
@@ -1507,7 +1507,7 @@ CREATE TABLE Tier (
     id_creator	VARCHAR(4) NOT NULL,
     nama	VARCHAR(30) NOT NULL,
     deskripsi	VARCHAR(512),
-    harga	INT,
+    harga	INT CHECK (harga >= 0 AND harga <= 1000000),
     PRIMARY KEY (id_creator, nama),
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
 );
@@ -1963,7 +1963,7 @@ CREATE TABLE Merchandise (
     id_creator	VARCHAR(3) NOT NULL,
     id_konten	VARCHAR(3) NOT NULL,
     nama	VARCHAR(40),
-    harga	INT,
+    harga	INT CHECK (harga >= 0 AND harga <= 1500000),
     stok	INT,
     deskripsi	VARCHAR(512),
     FOREIGN KEY (id_creator) REFERENCES Membuat(id_creator)
