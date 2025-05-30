@@ -9,31 +9,32 @@ CREATE TABLE Creator (
     email	VARCHAR(100),
     deskripsi	VARCHAR(512),
     bidang	VARCHAR(15),
-    tanggal_gabung	VARCHAR(15)
+    tanggal_gabung	VARCHAR(15),
+    CHECK (bidang IN('Seni visual', 'Penulisan', 'Game', 'Video', 'Podcast', 'Musik'))
 );
 
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('AGT', 'Agatha Christie', 'poirot@addtoany.com', 'Menulis cerita pendek, artikel, dan opini dengan gaya bahasa yang tajam dan personal.', 'Penulisan', '11/27/2021');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('ATT', 'Atta Gledek', 'ziggizagga@geocities.com', 'Mengemas cerita bermakna menjadi tayangan visual yang memikat dan penuh emosi.', 'Video', '5/4/2022');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('BRS', 'Bob Ross', 'happyaccident@independent.com', 'Berkreasi dalam bentuk poster, fan art, hingga visual storytelling interaktif.', 'Seni visual', '9/2/2022');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('BRS', 'Bob Ross', 'happyaccident@independent.co.uk', 'Berkreasi dalam bentuk poster, fan art, hingga visual storytelling interaktif.', 'Seni visual', '9/2/2022');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('CTD', 'Close Jedor', 'deddymagic@diigo.com', 'Membahas topik seputar kehidupan, kreativitas, dan isu sosial dengan sudut pandang segar.', 'Podcast', '6/17/2020');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('DHM', 'Dhar Mann', 'yousee@rambler.com', 'Spesialis dalam editing cinematic, transisi halus, dan narasi visual yang kuat.', 'Video', '4/19/2020');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('DHM', 'Dhar Mann', 'yousee@rambler.ru', 'Spesialis dalam editing cinematic, transisi halus, dan narasi visual yang kuat.', 'Video', '4/19/2020');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('DNS', 'Denny Sumargo', 'curhatbang@engadget.com', 'Mengembangkan komunitas pendengar aktif melalui dialog yang relevan dan jujur.', 'Podcast', '11/11/2022');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('DWP', 'Dewi Persik', 'adanonaambon@desdev.com', 'Menghadirkan musik sebagai media terapi, hiburan, dan ekspresi personal.', 'Musik', '4/10/2020');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('DWP', 'Dewi Persik', 'adanonaambon@desdev.cn', 'Menghadirkan musik sebagai media terapi, hiburan, dan ekspresi personal.', 'Musik', '4/10/2020');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('JJK', 'Jeon Jungkook', 'bities@vistaprint.com', 'Mengaransemen dan menciptakan musik yang mencerminkan emosi dan suasana hati.', 'Musik', '1/5/2020');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('JLN', 'John Lennon', 'debeatles@github.com', 'Membuat cover, remix, dan original track dengan gaya khas dan unik.', 'Musik', '10/19/2022');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('JNL', 'Jess No Limit', 'neversurrender@noaa.com', 'Fokus pada game indie, AAA, dan konten comkatif seputar industri game.', 'Game', '10/16/2022');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('LCL', 'Lancelot', 'bladeoofroses@vimeo.com', 'Membuat konten gaming secom, review jujur, dan gameplay penuh strategi.', 'Game', '6/16/2021');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('JLN', 'John Lennon', 'debeatles@github.io', 'Membuat cover, remix, dan original track dengan gaya khas dan unik.', 'Musik', '10/19/2022');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('JNL', 'Jess No Limit', 'neversurrender@noaa.gov', 'Fokus pada game indie, AAA, dan konten edukatif seputar industri game.', 'Game', '10/16/2022');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('LCL', 'Lancelot', 'bladeoofroses@vimeo.com', 'Membuat konten gaming seru, review jujur, dan gameplay penuh strategi.', 'Game', '6/16/2021');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('LDV', 'Leonardo Da Vinci', 'monalisa@artisteer.com', 'Menyajikan ilustrasi, desain grafis, dan digital art yang unik dan penuh karakter.', 'Seni visual', '7/22/2020');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('MRB', 'Mr Beast', 'feastables@berkeley.com', 'Membuat konten video pendek dan panjang yang relevan dengan tren dan berdaya tarik tinggi.', 'Video', '7/7/2020');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('PDB', 'Pidi Baiq', 'kamumilea@epa.com', 'Menciptakan naskah kreatif untuk konten digital, iklan, dan kampanye sosial.', 'Penulisan', '6/25/2022');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('RBC', 'comby Chan', 'nanigasuki@google.com', 'Membangun narasi dan karakter dalam dunia virtual dengan pendekatan storytelling.', 'Game', '10/22/2022');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('RTM', 'Rotten Manggo', 'stephsoo@odnoklassniki.com', 'Menghadirkan narasumber inspiratif dan diskusi yang membuka perspektif bacom.', 'Podcast', '12/18/2021');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('MRB', 'Mr Beast', 'feastables@berkeley.edu', 'Membuat konten video pendek dan panjang yang relevan dengan tren dan berdaya tarik tinggi.', 'Video', '7/7/2020');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('PDB', 'Pidi Baiq', 'kamumilea@epa.gov', 'Menciptakan naskah kreatif untuk konten digital, iklan, dan kampanye sosial.', 'Penulisan', '6/25/2022');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('RBC', 'Ruby Chan', 'nanigasuki@google.ca', 'Membangun narasi dan karakter dalam dunia virtual dengan pendekatan storytelling.', 'Game', '10/22/2022');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('RTM', 'Rotten Manggo', 'stephsoo@odnoklassniki.ru', 'Menghadirkan narasumber inspiratif dan diskusi yang membuka perspektif baru.', 'Podcast', '12/18/2021');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('SKP', 'Shakespear', 'tobeornottobe@quantcast.com', 'Memadukan riset dan imajinasi dalam setiap karya tulis yang inspiratif.', 'Penulisan', '1/6/2021');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('SMS', 'Smosh', 'smoshmouth@instagram.com', 'Fokus pada produksi audio berkualitas tinggi dan storytelling yang engaging.', 'Podcast', '6/17/2022');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('SSS', 'SSSniperwolf', 'contentthief@apache.com', 'Mengembangkan konsep video mulai dari script hingga post-produksi dengan gaya khas.', 'Video', '8/15/2022');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('SSS', 'SSSniperwolf', 'contentthief@apache.org', 'Mengembangkan konsep video mulai dari script hingga post-produksi dengan gaya khas.', 'Video', '8/15/2022');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('TRL', 'Tere Liye', 'cerosbartozar@ehow.com', 'Mengolah kata menjadi narasi yang menyentuh dan menggugah pembaca.', 'Penulisan', '9/10/2022');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('TTS', 'Tung Tung Sahur', 'anomali@symantec.com', 'Mengekspresikan ide dan emosi melalui perpaduan warna, bentuk, dan detail artistik.', 'Seni visual', '5/6/2021');
-INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('TVS', 'Taylor Swift', 'reputationtv@google.com', 'Menyampaikan pesan dan cerita melalui lirik yang kuat dan melodi yang catchy.', 'Musik', '2/7/2022');
+INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('TVS', 'Taylor Swift', 'reputationtv@google.com.br', 'Menyampaikan pesan dan cerita melalui lirik yang kuat dan melodi yang catchy.', 'Musik', '2/7/2022');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('TXT', 'Tomorrow X Together', 'tubatu@cnn.com', 'Kolaborasi dengan musisi lain dalam proyek lintas genre dan budaya.', 'Musik', '4/27/2021');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('WDB', 'Windah Basudara', 'siapayangcitacita@tripod.com', 'Menyajikan insight dunia game dari sudut pandang kreator dan pemain aktif.', 'Game', '3/7/2020');
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('ZHC', 'Zach Hsieh', 'customiphone@histats.com', 'Fokus pada estetika visual yang kuat untuk branding personal dan kolaborasi klien.', 'Seni visual', '12/11/2021');
@@ -54,28 +55,28 @@ CREATE TABLE Suporter (
     tanggal_gabung	VARCHAR(15)
 );
 
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('1', 'Augusto', 'agrimster0@ucsd.com', '8 Cherokee Street', '29-09-2024');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('2', 'Rebeca', 'rverny1@cargocollective.com', '5 comskin Lane', '12-08-2023');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('1', 'Augusto', 'agrimster0@ucsd.edu', '8 Cherokee Street', '29-09-2024');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('2', 'Rebeca', 'rverny1@cargocollective.com', '5 Ruskin Lane', '12-08-2023');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('3', 'Vittoria', 'vemmet2@linkedin.com', '33233 Artisan Way', '04-01-2024');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('4', 'Darleen', 'dmonketon3@engadget.com', '34 Mesta Hill', '03-04-2023');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('5', 'Christoffer', 'channaford4@house.com', '682 Starling Drive', '05-12-2023');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('5', 'Christoffer', 'channaford4@house.gov', '682 Starling Drive', '05-12-2023');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('6', 'Erma', 'eedgworth5@reuters.com', '943 Elka Way', '01-05-2024');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('7', 'Stacee', 'slubman6@sphinn.com', '49 Dovetail Terrace', '17-04-2025');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('8', 'Nowell', 'nstreeting7@google.com', '7 Stephen Terrace', '21-10-2024');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('9', 'Salomi', 'sgodbert8@msu.com', '52 Hooker Avenue', '08-12-2022');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('10', 'Tcomdi', 'tboarleyson9@bigcartel.com', '53 Nancy Trail', '06-02-2023');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('8', 'Nowell', 'nstreeting7@google.ca', '7 Stephen Terrace', '21-10-2024');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('9', 'Salomi', 'sgodbert8@msu.edu', '52 Hooker Avenue', '08-12-2022');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('10', 'Trudi', 'tboarleyson9@bigcartel.com', '53 Nancy Trail', '06-02-2023');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('11', 'Peder', 'pskirlinga@usnews.com', '772 Sugar Park', '25-03-2025');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('12', 'Francisco', 'farlettb@slate.com', '36046 Pond Road', '31-10-2024');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('13', 'Ferris', 'fizkovicic@phpbb.com', '1926 Boyd Junction', '22-09-2023');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('14', 'Stormi', 'shaldenbyd@ehow.com', '34 Forest comn Center', '02-06-2023');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('14', 'Stormi', 'shaldenbyd@ehow.com', '34 Forest Run Center', '02-06-2023');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('15', 'Alexa', 'astreate@eepurl.com', '88 Messerschmidt Plaza', '21-01-2025');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('16', 'Trstram', 'twellf@tumblr.com', '53 Darwin Center', '05-05-2024');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('17', 'Meaghan', 'mthextong@blogspot.com', '2941 Utah Trail', '20-08-2024');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('18', 'Lacy', 'lpoytherash@xinhuanet.com', '4 Crescent Oaks Pass', '27-05-2023');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('19', 'Araldo', 'amcconnultyi@dmoz.com', '3508 Veith Alley', '03-12-2023');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('20', 'Harlene', 'hgerokj@hud.com', '20 Jackson Crossing', '30-05-2024');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('19', 'Araldo', 'amcconnultyi@dmoz.org', '3508 Veith Alley', '03-12-2023');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('20', 'Harlene', 'hgerokj@hud.gov', '20 Jackson Crossing', '30-05-2024');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('21', 'Crichton', 'cbagnalk@netscape.com', '5149 Sunnyside Terrace', '02-08-2023');
-INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('22', 'Beau', 'bplampeynl@goo.com', '593 Burning Wood Place', '29-07-2024');
+INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('22', 'Beau', 'bplampeynl@goo.gl', '593 Burning Wood Place', '29-07-2024');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('23', 'Korie', 'kestickm@statcounter.com', '3386 Arizona Street', '16-05-2023');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('24', 'Boy', 'bbonassn@slate.com', '362 Spohn Drive', '07-05-2025');
 INSERT INTO Suporter (id_suporter, nama, email, alamat, tanggal_gabung) VALUES ('25', 'Nerti', 'nroscriggo@fastcompany.com', '5480 Bluestem Center', '21-07-2024');
@@ -87,278 +88,287 @@ ALTER TABLE Suporter
 MODIFY COLUMN tanggal_gabung DATE;
 
 
-
 -- Konten
 CREATE TABLE Konten (
     id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
-    judul	VARCHAR(512),
+    judul	VARCHAR(512) UNIQUE,
     jenis	VARCHAR(512) CHECK (jenis IN ('Teks', 'Gambar', 'Audio', 'Video')),
     deskripsi	VARCHAR(512),
     tanggal_publikasi	VARCHAR(512)
 );
 
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('217', 'Bohemian Rhapsody', 'Audio', 'Audio berjudul \'Bohemian Rhapsody\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('826', 'Inception', 'Teks', 'Teks berjudul \'Inception\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-03-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('436', 'Shape of You', 'Gambar', 'Gambar berjudul \'Shape of You\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('391', 'Titanic', 'Video', 'Video berjudul \'Titanic\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-17');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('736', 'Let It Be', 'Audio', 'Audio berjudul \'Let It Be\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('725', 'Parasite', 'Teks', 'Teks berjudul \'Parasite\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-02');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('685', 'Blinding Lights', 'Gambar', 'Gambar berjudul \'Blinding Lights\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('956', 'The Matrix', 'Video', 'Video berjudul \'The Matrix\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('911', 'Rolling in the Deep', 'Audio', 'Audio berjudul \'Rolling in the Deep\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('262', 'Avatar', 'Teks', 'Teks berjudul \'Avatar\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-09');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('928', 'Bad Guy', 'Gambar', 'Gambar berjudul \'Bad Guy\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('103', 'Coco', 'Video', 'Video berjudul \'Coco\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('377', 'Yesterday', 'Audio', 'Audio berjudul \'Yesterday\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('205', 'Frozen', 'Teks', 'Teks berjudul \'Frozen\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-04');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('439', 'Believer', 'Gambar', 'Gambar berjudul \'Believer\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-14');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('816', 'Interstellar', 'Video', 'Video berjudul \'Interstellar\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-02');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('746', 'La La Land', 'Audio', 'Audio berjudul \'La La Land\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-25');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('188', 'The Lion King', 'Teks', 'Teks berjudul \'The Lion King\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-13');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('536', 'Shallow', 'Gambar', 'Gambar berjudul \'Shallow\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('694', 'Joker', 'Video', 'Video berjudul \'Joker\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-23');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('360', 'All of Me', 'Audio', 'Audio berjudul \'All of Me\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('355', 'Soul', 'Teks', 'Teks berjudul \'Soul\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-19');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('876', 'Dune', 'Gambar', 'Gambar berjudul \'Dune\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-06-19');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('100', 'Senorita', 'Video', 'Video berjudul \'Senorita\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-01-21');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('482', 'Gravity', 'Audio', 'Audio berjudul \'Gravity\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('724', 'Skyfall', 'Teks', 'Teks berjudul \'Skyfall\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('683', 'Moana', 'Gambar', 'Gambar berjudul \'Moana\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-07');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('588', 'Perfect', 'Video', 'Video berjudul \'Perfect\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('619', 'Tenet', 'Audio', 'Audio berjudul \'Tenet\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('759', 'Wonder', 'Teks', 'Teks berjudul \'Wonder\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('831', 'Savage Love', 'Gambar', 'Gambar berjudul \'Savage Love\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('107', 'Encanto', 'Video', 'Video berjudul \'Encanto\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-11-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('277', 'Uptown Funk', 'Audio', 'Audio berjudul \'Uptown Funk\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('680', 'The Batman', 'Teks', 'Teks berjudul \'The Batman\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('339', 'Photograph', 'Gambar', 'Gambar berjudul \'Photograph\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-27');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('743', 'Arrival', 'Video', 'Video berjudul \'Arrival\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('182', 'Hello', 'Audio', 'Audio berjudul \'Hello\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-08-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('113', 'Black Panther', 'Teks', 'Teks berjudul \'Black Panther\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-31');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('926', 'Thunder', 'Gambar', 'Gambar berjudul \'Thunder\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('895', '1917', 'Video', 'Video berjudul \'1917\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-13');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('199', 'Lose Yourself', 'Audio', 'Audio berjudul \'Lose Yourself\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-04');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('388', 'The Greatest Showman', 'Teks', 'Teks berjudul \'The Greatest Showman\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-02-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('973', 'Drivers License', 'Gambar', 'Gambar berjudul \'Drivers License\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-11-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('165', 'No Time To Die', 'Video', 'Video berjudul \'No Time To Die\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-12');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('354', 'Mad Max: Fury Road', 'Audio', 'Audio berjudul \'Mad Max: Fury Road\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('873', 'On My Way', 'Teks', 'Teks berjudul \'On My Way\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-07');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('396', 'Whiplash', 'Gambar', 'Gambar berjudul \'Whiplash\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-02-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('623', 'Happier', 'Video', 'Video berjudul \'Happier\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-27');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('173', 'The Irishman', 'Audio', 'Audio berjudul \'The Irishman\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('889', 'Counting Stars', 'Teks', 'Teks berjudul \'Counting Stars\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-31');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('527', 'Her', 'Gambar', 'Gambar berjudul \'Her\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('546', 'Either 767', 'Video', 'Video berjudul \'Either 767\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('343', 'Beautiful 746', 'Audio', 'Audio berjudul \'Beautiful 746\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('523', 'Write 378', 'Teks', 'Teks berjudul \'Write 378\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('563', 'Spend 478', 'Gambar', 'Gambar berjudul \'Spend 478\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('998', 'Less 672', 'Video', 'Video berjudul \'Less 672\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('159', 'Paper 745', 'Audio', 'Audio berjudul \'Paper 745\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('962', 'Radio 301', 'Teks', 'Teks berjudul \'Radio 301\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('274', 'Indicate 507', 'Gambar', 'Gambar berjudul \'Indicate 507\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-06-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('398', 'Game 97', 'Video', 'Video berjudul \'Game 97\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('211', 'Region 183', 'Audio', 'Audio berjudul \'Region 183\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('555', 'Institution 65', 'Teks', 'Teks berjudul \'Institution 65\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('638', 'Subject 906', 'Gambar', 'Gambar berjudul \'Subject 906\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('515', 'Mean 596', 'Video', 'Video berjudul \'Mean 596\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-13');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('227', 'Style 401', 'Audio', 'Audio berjudul \'Style 401\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('982', 'Science 217', 'Teks', 'Teks berjudul \'Science 217\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('401', 'Rich 660', 'Gambar', 'Gambar berjudul \'Rich 660\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-01');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('830', 'Total 97', 'Video', 'Video berjudul \'Total 97\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-14');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('862', 'Thank 39', 'Audio', 'Audio berjudul \'Thank 39\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-08-09');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('236', 'Pattern 511', 'Teks', 'Teks berjudul \'Pattern 511\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-25');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('138', 'Goal 488', 'Gambar', 'Gambar berjudul \'Goal 488\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-11-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('835', 'Mention 726', 'Video', 'Video berjudul \'Mention 726\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-02-14');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('146', 'Thank 556', 'Audio', 'Audio berjudul \'Thank 556\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('448', 'They 696', 'Teks', 'Teks berjudul \'They 696\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('787', 'Husband 194', 'Gambar', 'Gambar berjudul \'Husband 194\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('869', 'Loss 553', 'Video', 'Video berjudul \'Loss 553\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-08-02');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('953', 'Practice 391', 'Audio', 'Audio berjudul \'Practice 391\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('612', 'Term 978', 'Teks', 'Teks berjudul \'Term 978\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('424', 'Room 128', 'Gambar', 'Gambar berjudul \'Room 128\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-27');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('185', 'Study 341', 'Video', 'Video berjudul \'Study 341\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('659', 'Responsibility 448', 'Audio', 'Audio berjudul \'Responsibility 448\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('166', 'Could 534', 'Teks', 'Teks berjudul \'Could 534\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('737', 'Author 395', 'Gambar', 'Gambar berjudul \'Author 395\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-11-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('566', 'Audience 433', 'Video', 'Video berjudul \'Audience 433\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('101', 'Ability 287', 'Audio', 'Audio berjudul \'Ability 287\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-08-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('662', 'Simple 565', 'Teks', 'Teks berjudul \'Simple 565\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-03-13');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('315', 'Main 8', 'Gambar', 'Gambar berjudul \'Main 8\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-14');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('805', 'Over 758', 'Video', 'Video berjudul \'Over 758\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-17');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('594', 'Generation 742', 'Audio', 'Audio berjudul \'Generation 742\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-22');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('406', 'Scene 35', 'Teks', 'Teks berjudul \'Scene 35\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-01');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('465', 'Ask 625', 'Gambar', 'Gambar berjudul \'Ask 625\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('120', 'Environmental 929', 'Video', 'Video berjudul \'Environmental 929\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-14');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('934', 'Their 742', 'Audio', 'Audio berjudul \'Their 742\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('745', 'Exactly 631', 'Teks', 'Teks berjudul \'Exactly 631\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-27');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('234', 'Account 988', 'Gambar', 'Gambar berjudul \'Account 988\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-12');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('556', 'Attorney 252', 'Video', 'Video berjudul \'Attorney 252\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('964', 'Television 234', 'Audio', 'Audio berjudul \'Television 234\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-12');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('106', 'Wall 564', 'Teks', 'Teks berjudul \'Wall 564\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-01-17');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('342', 'Consumer 196', 'Gambar', 'Gambar berjudul \'Consumer 196\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-23');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('512', 'Left 539', 'Video', 'Video berjudul \'Left 539\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-11-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('706', 'Body 285', 'Audio', 'Audio berjudul \'Body 285\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-01');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('395', 'National 922', 'Teks', 'Teks berjudul \'National 922\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('791', 'Else 204', 'Gambar', 'Gambar berjudul \'Else 204\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('635', 'Never 308', 'Video', 'Video berjudul \'Never 308\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('730', 'Today 463', 'Audio', 'Audio berjudul \'Today 463\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('402', 'Area 493', 'Teks', 'Teks berjudul \'Area 493\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-23');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('834', 'Site 821', 'Gambar', 'Gambar berjudul \'Site 821\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-23');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('381', 'Contain 337', 'Video', 'Video berjudul \'Contain 337\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-06-01');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('351', 'Order 643', 'Audio', 'Audio berjudul \'Order 643\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-01-07');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('307', 'Man 52', 'Teks', 'Teks berjudul \'Man 52\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('603', 'Church 280', 'Gambar', 'Gambar berjudul \'Church 280\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-13');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('438', 'Four 23', 'Video', 'Video berjudul \'Four 23\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('206', 'Risk 766', 'Audio', 'Audio berjudul \'Risk 766\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-22');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('283', 'Live 464', 'Teks', 'Teks berjudul \'Live 464\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('121', 'Degree 5', 'Gambar', 'Gambar berjudul \'Degree 5\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-03-07');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('944', 'Poor 657', 'Video', 'Video berjudul \'Poor 657\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-17');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('666', 'Rock 724', 'Audio', 'Audio berjudul \'Rock 724\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('418', 'Director 136', 'Teks', 'Teks berjudul \'Director 136\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('916', 'Nor 915', 'Gambar', 'Gambar berjudul \'Nor 915\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('999', 'South 922', 'Video', 'Video berjudul \'South 922\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-11-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('524', 'Store 512', 'Audio', 'Audio berjudul \'Store 512\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-21');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('521', 'Know 26', 'Teks', 'Teks berjudul \'Know 26\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('286', 'Usually 188', 'Gambar', 'Gambar berjudul \'Usually 188\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-09');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('306', 'Right 422', 'Video', 'Video berjudul \'Right 422\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('863', 'Game 973', 'Audio', 'Audio berjudul \'Game 973\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-21');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('714', 'Car 321', 'Teks', 'Teks berjudul \'Car 321\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-25');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('502', 'Require 1', 'Gambar', 'Gambar berjudul \'Require 1\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('948', 'Cause 225', 'Video', 'Video berjudul \'Cause 225\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-07');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('337', 'Way 930', 'Audio', 'Audio berjudul \'Way 930\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-10');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('366', 'Second 352', 'Teks', 'Teks berjudul \'Second 352\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('663', 'Decide 642', 'Gambar', 'Gambar berjudul \'Decide 642\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('773', 'Force 808', 'Video', 'Video berjudul \'Force 808\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('102', 'Several 377', 'Audio', 'Audio berjudul \'Several 377\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-06-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('819', 'Professional 655', 'Teks', 'Teks berjudul \'Professional 655\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('479', 'Wall 163', 'Gambar', 'Gambar berjudul \'Wall 163\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-21');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('540', 'Yeah 207', 'Video', 'Video berjudul \'Yeah 207\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-09');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('170', 'A 765', 'Audio', 'Audio berjudul \'A 765\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('613', 'Maintain 76', 'Teks', 'Teks berjudul \'Maintain 76\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('742', 'Memory 569', 'Gambar', 'Gambar berjudul \'Memory 569\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-21');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('358', 'Population 109', 'Video', 'Video berjudul \'Population 109\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('196', 'Both 925', 'Audio', 'Audio berjudul \'Both 925\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-02-13');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('872', 'Air 948', 'Teks', 'Teks berjudul \'Air 948\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('486', 'Government 469', 'Gambar', 'Gambar berjudul \'Government 469\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-25');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('162', 'Cold 932', 'Video', 'Video berjudul \'Cold 932\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-08-21');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('420', 'Law 517', 'Audio', 'Audio berjudul \'Law 517\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('716', 'Or 5', 'Teks', 'Teks berjudul \'Or 5\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-01-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('327', 'Cut 604', 'Gambar', 'Gambar berjudul \'Cut 604\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('495', 'Feeling 142', 'Video', 'Video berjudul \'Feeling 142\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-04');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('957', 'Kind 790', 'Audio', 'Audio berjudul \'Kind 790\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-01');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('871', 'Will 169', 'Teks', 'Teks berjudul \'Will 169\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-06-07');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('542', 'Team 358', 'Gambar', 'Gambar berjudul \'Team 358\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('997', 'Reason 865', 'Video', 'Video berjudul \'Reason 865\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('990', 'Weight 505', 'Audio', 'Audio berjudul \'Weight 505\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-03-17');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('592', 'Audience 331', 'Teks', 'Teks berjudul \'Audience 331\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('832', 'And 906', 'Gambar', 'Gambar berjudul \'And 906\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('664', 'Entire 458', 'Video', 'Video berjudul \'Entire 458\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-22');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('259', 'Theory 487', 'Audio', 'Audio berjudul \'Theory 487\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('472', 'Newspaper 960', 'Teks', 'Teks berjudul \'Newspaper 960\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-12');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('628', 'Research 873', 'Gambar', 'Gambar berjudul \'Research 873\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-02-19');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('800', 'Paper 97', 'Video', 'Video berjudul \'Paper 97\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-22');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('784', 'Different 58', 'Audio', 'Audio berjudul \'Different 58\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-13');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('547', 'Recently 27', 'Teks', 'Teks berjudul \'Recently 27\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('798', 'Benefit 854', 'Gambar', 'Gambar berjudul \'Benefit 854\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-08-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('677', 'System 245', 'Video', 'Video berjudul \'System 245\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-31');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('239', 'Policy 11', 'Audio', 'Audio berjudul \'Policy 11\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-03-10');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('921', 'Human 21', 'Teks', 'Teks berjudul \'Human 21\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('291', 'Meet 59', 'Gambar', 'Gambar berjudul \'Meet 59\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('903', 'Drop 607', 'Video', 'Video berjudul \'Drop 607\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('891', 'Address 522', 'Audio', 'Audio berjudul \'Address 522\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-31');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('715', 'Pull 66', 'Teks', 'Teks berjudul \'Pull 66\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('771', 'Stop 611', 'Gambar', 'Gambar berjudul \'Stop 611\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-17');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('483', 'Ready 456', 'Video', 'Video berjudul \'Ready 456\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('579', 'Huge 814', 'Audio', 'Audio berjudul \'Huge 814\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('178', 'Against 912', 'Teks', 'Teks berjudul \'Against 912\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-10');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('517', 'Space 373', 'Gambar', 'Gambar berjudul \'Space 373\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('469', 'Why 762', 'Video', 'Video berjudul \'Why 762\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('341', 'List 485', 'Audio', 'Audio berjudul \'List 485\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('218', 'Town 632', 'Teks', 'Teks berjudul \'Town 632\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-10');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('793', 'Bad 848', 'Gambar', 'Gambar berjudul \'Bad 848\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('807', 'Include 279', 'Video', 'Video berjudul \'Include 279\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-10');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('708', 'Board 685', 'Audio', 'Audio berjudul \'Board 685\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-06-17');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('897', 'Reflect 588', 'Teks', 'Teks berjudul \'Reflect 588\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('359', 'Event 324', 'Gambar', 'Gambar berjudul \'Event 324\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('281', 'Player 907', 'Video', 'Video berjudul \'Player 907\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-24');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('778', 'Determine 422', 'Audio', 'Audio berjudul \'Determine 422\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-09');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('630', 'Professor 188', 'Teks', 'Teks berjudul \'Professor 188\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-25');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('432', 'Suddenly 553', 'Gambar', 'Gambar berjudul \'Suddenly 553\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-04');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('856', 'Pick 37', 'Video', 'Video berjudul \'Pick 37\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-06-12');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('110', 'Attack 222', 'Audio', 'Audio berjudul \'Attack 222\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-25');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('500', 'Floor 141', 'Teks', 'Teks berjudul \'Floor 141\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-01-04');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('858', 'Require 946', 'Gambar', 'Gambar berjudul \'Require 946\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-05-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('790', 'Likely 980', 'Video', 'Video berjudul \'Likely 980\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('109', 'Within 446', 'Audio', 'Audio berjudul \'Within 446\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('548', 'Recent 840', 'Teks', 'Teks berjudul \'Recent 840\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('104', 'Certainly 46', 'Gambar', 'Gambar berjudul \'Certainly 46\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('894', 'Number 352', 'Video', 'Video berjudul \'Number 352\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-18');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('229', 'Easy 845', 'Audio', 'Audio berjudul \'Easy 845\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('430', 'Reality 446', 'Teks', 'Teks berjudul \'Reality 446\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-10');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('590', 'Between 567', 'Gambar', 'Gambar berjudul \'Between 567\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-02');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('246', 'Pressure 588', 'Video', 'Video berjudul \'Pressure 588\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('924', 'Art 422', 'Audio', 'Audio berjudul \'Art 422\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-21');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('552', 'Before 209', 'Teks', 'Teks berjudul \'Before 209\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('898', 'Despite 956', 'Gambar', 'Gambar berjudul \'Despite 956\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-23');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('875', 'Movement 453', 'Video', 'Video berjudul \'Movement 453\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('147', 'Involve 139', 'Audio', 'Audio berjudul \'Involve 139\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-14');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('352', 'Account 152', 'Teks', 'Teks berjudul \'Account 152\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-01-29');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('481', 'Whatever 659', 'Gambar', 'Gambar berjudul \'Whatever 659\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('625', 'Challenge 41', 'Video', 'Video berjudul \'Challenge 41\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-07-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('849', 'Human 192', 'Audio', 'Audio berjudul \'Human 192\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('806', 'Interesting 393', 'Teks', 'Teks berjudul \'Interesting 393\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('344', 'Will 484', 'Gambar', 'Gambar berjudul \'Will 484\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('905', 'Carry 104', 'Video', 'Video berjudul \'Carry 104\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-06-07');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('896', 'Energy 237', 'Audio', 'Audio berjudul \'Energy 237\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('689', 'Hope 949', 'Teks', 'Teks berjudul \'Hope 949\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('705', 'After 820', 'Gambar', 'Gambar berjudul \'After 820\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-08-02');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('979', 'High 851', 'Video', 'Video berjudul \'High 851\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('696', 'Policy 426', 'Audio', 'Audio berjudul \'Policy 426\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-01-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('733', 'Natural 433', 'Teks', 'Teks berjudul \'Natural 433\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('139', 'Senior 875', 'Gambar', 'Gambar berjudul \'Senior 875\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('525', 'comle 236', 'Video', 'Video berjudul \'comle 236\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-31');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('902', 'Back 342', 'Audio', 'Audio berjudul \'Back 342\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-19');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('833', 'Ten 984', 'Teks', 'Teks berjudul \'Ten 984\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-03');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('550', 'Per 35', 'Gambar', 'Gambar berjudul \'Per 35\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('855', 'Worry 335', 'Video', 'Video berjudul \'Worry 335\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-11-27');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('319', 'Probably 600', 'Audio', 'Audio berjudul \'Probably 600\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-03-30');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('719', 'Respond 633', 'Teks', 'Teks berjudul \'Respond 633\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('620', 'While 177', 'Gambar', 'Gambar berjudul \'While 177\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('866', 'Example 268', 'Video', 'Video berjudul \'Example 268\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-15');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('404', 'Show 138', 'Audio', 'Audio berjudul \'Show 138\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-20');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('827', 'Off 323', 'Teks', 'Teks berjudul \'Off 323\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-11-01');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('516', 'Your 499', 'Gambar', 'Gambar berjudul \'Your 499\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-02-01');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('661', 'Provide 348', 'Video', 'Video berjudul \'Provide 348\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-04-27');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('766', 'Much 760', 'Audio', 'Audio berjudul \'Much 760\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-03-19');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('721', 'Computer 882', 'Teks', 'Teks berjudul \'Computer 882\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-10-09');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('976', 'Person 823', 'Gambar', 'Gambar berjudul \'Person 823\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-26');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('254', 'Treatment 324', 'Video', 'Video berjudul \'Treatment 324\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-02-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('842', 'Fly 494', 'Audio', 'Audio berjudul \'Fly 494\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-04-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('644', 'Early 158', 'Teks', 'Teks berjudul \'Early 158\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-08');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('984', 'Play 93', 'Gambar', 'Gambar berjudul \'Play 93\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-05-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('154', 'Front 232', 'Video', 'Video berjudul \'Front 232\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-01-23');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('256', 'Protect 816', 'Audio', 'Audio berjudul \'Protect 816\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-06');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('172', 'Machine 174', 'Teks', 'Teks berjudul \'Machine 174\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-09-05');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('312', 'Word 460', 'Gambar', 'Gambar berjudul \'Word 460\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-16');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('300', 'Somebody 198', 'Video', 'Video berjudul \'Somebody 198\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-12-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('616', 'Fact 436', 'Audio', 'Audio berjudul \'Fact 436\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-27');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('462', 'Order 512', 'Teks', 'Teks berjudul \'Order 512\' yang dipublikasikan untuk hiburan atau comkasi.', '2025-07-19');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('649', 'Gun 856', 'Gambar', 'Gambar berjudul \'Gun 856\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-09-12');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('593', 'Bit 353', 'Video', 'Video berjudul \'Bit 353\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-10-11');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('544', 'Focus 223', 'Audio', 'Audio berjudul \'Focus 223\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-08-28');
-INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('631', 'Nature 404', 'Teks', 'Teks berjudul \'Nature 404\' yang dipublikasikan untuk hiburan atau comkasi.', '2024-12-22');
-
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('100', 'Senorita', 'Video', 'Video berjudul \'Senorita\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-01-21');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('101', 'Ability 287', 'Audio', 'Audio berjudul \'Ability 287\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-08-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('102', 'Several 377', 'Audio', 'Audio berjudul \'Several 377\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-06-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('103', 'Coco', 'Video', 'Video berjudul \'Coco\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('104', 'Certainly 46', 'Gambar', 'Gambar berjudul \'Certainly 46\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('106', 'Wall 564', 'Teks', 'Teks berjudul \'Wall 564\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-01-17');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('107', 'Encanto', 'Video', 'Video berjudul \'Encanto\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-11-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('108', 'Konser Musik', 'Gambar', 'Ilustrasi karakter dengan suasana konser atau musik yang dipublikasikan untuk hiburan', '2025-10-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('109', 'Within 446', 'Audio', 'Audio berjudul \'Within 446\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('110', 'Attack 222', 'Audio', 'Audio berjudul \'Attack 222\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-25');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('111', 'Poster Event Seru BGT', 'Gambar', 'Gambar berisi poster untuk promosi acara fiktif dengan elemen visual yang kuat banget', '2025-03-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('113', 'Black Panther', 'Teks', 'Teks berjudul \'Black Panther\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-31');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('120', 'Environmental 929', 'Video', 'Video berjudul \'Environmental 929\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('121', 'Degree 5', 'Gambar', 'Gambar berjudul \'Degree 5\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-03-07');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('138', 'Goal 488', 'Gambar', 'Gambar berjudul \'Goal 488\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-11-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('139', 'Senior 875', 'Gambar', 'Gambar berjudul \'Senior 875\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('146', 'Thank 556', 'Audio', 'Audio berjudul \'Thank 556\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('147', 'Involve 139', 'Audio', 'Audio berjudul \'Involve 139\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('154', 'Front 232', 'Video', 'Video berjudul \'Front 232\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-23');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('159', 'Paper 745', 'Audio', 'Audio berjudul \'Paper 745\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('162', 'Cold 932', 'Video', 'Video berjudul \'Cold 932\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-08-21');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('165', 'No Time To Die', 'Video', 'Video berjudul \'No Time To Die\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-12');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('166', 'Could 534', 'Teks', 'Teks berjudul \'Could 534\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('170', 'A 765', 'Audio', 'Audio berjudul \'A 765\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('172', 'Machine 174', 'Teks', 'Teks berjudul \'Machine 174\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('173', 'The Irishman', 'Audio', 'Audio berjudul \'The Irishman\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('178', 'Against 912', 'Teks', 'Teks berjudul \'Against 912\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('182', 'Hello', 'Audio', 'Audio berjudul \'Hello\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-08-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('185', 'Study 341', 'Video', 'Video berjudul \'Study 341\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('188', 'The Lion King', 'Teks', 'Teks berjudul \'The Lion King\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-13');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('196', 'Both 925', 'Audio', 'Audio berjudul \'Both 925\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-02-13');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('199', 'Lose Yourself', 'Audio', 'Audio berjudul \'Lose Yourself\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-04');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('205', 'Frozen', 'Teks', 'Teks berjudul \'Frozen\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-04');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('206', 'Risk 766', 'Audio', 'Audio berjudul \'Risk 766\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-22');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('211', 'Region 183', 'Audio', 'Audio berjudul \'Region 183\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('217', 'Bohemian Rhapsody', 'Audio', 'Audio berjudul \'Bohemian Rhapsody\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('218', 'Town 632', 'Teks', 'Teks berjudul \'Town 632\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('227', 'Style 401', 'Audio', 'Audio berjudul \'Style 401\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('229', 'Easy 845', 'Audio', 'Audio berjudul \'Easy 845\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('234', 'Account 988', 'Gambar', 'Gambar berjudul \'Account 988\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-12');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('236', 'Pattern 511', 'Teks', 'Teks berjudul \'Pattern 511\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-25');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('239', 'Policy 11', 'Audio', 'Audio berjudul \'Policy 11\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-03-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('241', 'Panel Cerita Visual', 'Gambar', 'Latar belakang untuk digunakan dalam panel cerita visual.', '2025-03-02');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('246', 'Pressure 588', 'Video', 'Video berjudul \'Pressure 588\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('254', 'Treatment 324', 'Video', 'Video berjudul \'Treatment 324\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('256', 'Protect 816', 'Audio', 'Audio berjudul \'Protect 816\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('259', 'Theory 487', 'Audio', 'Audio berjudul \'Theory 487\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('262', 'Avatar', 'Teks', 'Teks berjudul \'Avatar\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-09');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('274', 'Indicate 507', 'Gambar', 'Gambar berjudul \'Indicate 507\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-06-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('277', 'Uptown Funk', 'Audio', 'Audio berjudul \'Uptown Funk\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('281', 'Player 907', 'Video', 'Video berjudul \'Player 907\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('283', 'Live 464', 'Teks', 'Teks berjudul \'Live 464\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('286', 'Usually 188', 'Gambar', 'Gambar berjudul \'Usually 188\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-09');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('291', 'Meet 59', 'Gambar', 'Gambar berjudul \'Meet 59\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('299', 'Blekping Chibi', 'Gambar', 'Versi chibi lucu dari empat anggota band virtual.', '2025-04-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('300', 'Somebody 198', 'Video', 'Video berjudul \'Somebody 198\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('301', 'Cimol Bojot', 'Gambar', 'Desain karakter cimol bojot untuk proyek game role-playing.', '2025-07-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('306', 'Right 422', 'Video', 'Video berjudul \'Right 422\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('307', 'Man 52', 'Teks', 'Teks berjudul \'Man 52\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('312', 'Word 460', 'Gambar', 'Gambar berjudul \'Word 460\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('315', 'Main 8', 'Gambar', 'Gambar berjudul \'Main 8\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('319', 'Probably 600', 'Audio', 'Audio berjudul \'Probably 600\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('327', 'Cut 604', 'Gambar', 'Gambar berjudul \'Cut 604\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('337', 'Way 930', 'Audio', 'Audio berjudul \'Way 930\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('339', 'Photograph', 'Gambar', 'Gambar berjudul \'Photograph\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-27');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('341', 'List 485', 'Audio', 'Audio berjudul \'List 485\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('342', 'Consumer 196', 'Gambar', 'Gambar berjudul \'Consumer 196\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-23');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('343', 'Beautiful 746', 'Audio', 'Audio berjudul \'Beautiful 746\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('344', 'Will 484', 'Gambar', 'Gambar berjudul \'Will 484\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('351', 'Order 643', 'Audio', 'Audio berjudul \'Order 643\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-01-07');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('352', 'Account 152', 'Teks', 'Teks berjudul \'Account 152\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-01-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('354', 'Mad Max: Fury Road', 'Audio', 'Audio berjudul \'Mad Max: Fury Road\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('355', 'Soul', 'Teks', 'Teks berjudul \'Soul\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-19');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('358', 'Population 109', 'Video', 'Video berjudul \'Population 109\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('359', 'Event 324', 'Gambar', 'Gambar berjudul \'Event 324\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('360', 'All of Me', 'Audio', 'Audio berjudul \'All of Me\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('366', 'Second 352', 'Teks', 'Teks berjudul \'Second 352\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('377', 'Yesterday', 'Audio', 'Audio berjudul \'Yesterday\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('381', 'Contain 337', 'Video', 'Video berjudul \'Contain 337\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-06-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('388', 'The Greatest Showman', 'Teks', 'Teks berjudul \'The Greatest Showman\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-02-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('391', 'Titanic', 'Video', 'Video berjudul \'Titanic\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-17');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('395', 'National 922', 'Teks', 'Teks berjudul \'National 922\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('396', 'Whiplash', 'Gambar', 'Gambar berjudul \'Whiplash\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-02-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('398', 'Game 97', 'Video', 'Video berjudul \'Game 97\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('401', 'Rich 660', 'Gambar', 'Gambar berjudul \'Rich 660\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('402', 'Area 493', 'Teks', 'Teks berjudul \'Area 493\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-23');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('404', 'Show 138', 'Audio', 'Audio berjudul \'Show 138\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('406', 'Scene 35', 'Teks', 'Teks berjudul \'Scene 35\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('418', 'Director 136', 'Teks', 'Teks berjudul \'Director 136\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('420', 'Law 517', 'Audio', 'Audio berjudul \'Law 517\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('424', 'Room 128', 'Gambar', 'Gambar berjudul \'Room 128\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-27');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('430', 'Reality 446', 'Teks', 'Teks berjudul \'Reality 446\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('432', 'Suddenly 553', 'Gambar', 'Gambar berjudul \'Suddenly 553\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-04');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('436', 'Shape of You', 'Gambar', 'Gambar berjudul \'Shape of You\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('438', 'Four 23', 'Video', 'Video berjudul \'Four 23\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('439', 'Believer', 'Gambar', 'Gambar berjudul \'Believer\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('448', 'They 696', 'Teks', 'Teks berjudul \'They 696\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('462', 'Order 512', 'Teks', 'Teks berjudul \'Order 512\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-19');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('465', 'Ask 625', 'Gambar', 'Gambar berjudul \'Ask 625\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('469', 'Why 762', 'Video', 'Video berjudul \'Why 762\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('472', 'Newspaper 960', 'Teks', 'Teks berjudul \'Newspaper 960\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-12');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('479', 'Wall 163', 'Gambar', 'Gambar berjudul \'Wall 163\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-21');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('481', 'Whatever 659', 'Gambar', 'Gambar berjudul \'Whatever 659\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('482', 'Gravity', 'Audio', 'Audio berjudul \'Gravity\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('483', 'Ready 456', 'Video', 'Video berjudul \'Ready 456\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('486', 'Government 469', 'Gambar', 'Gambar berjudul \'Government 469\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-25');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('495', 'Feeling 142', 'Video', 'Video berjudul \'Feeling 142\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-04');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('500', 'Floor 141', 'Teks', 'Teks berjudul \'Floor 141\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-01-04');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('502', 'Require 1', 'Gambar', 'Gambar berjudul \'Require 1\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('512', 'Left 539', 'Video', 'Video berjudul \'Left 539\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-11-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('515', 'Mean 596', 'Video', 'Video berjudul \'Mean 596\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-13');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('516', 'Your 499', 'Gambar', 'Gambar berjudul \'Your 499\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-02-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('517', 'Space 373', 'Gambar', 'Gambar berjudul \'Space 373\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('521', 'Know 26', 'Teks', 'Teks berjudul \'Know 26\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('523', 'Write 378', 'Teks', 'Teks berjudul \'Write 378\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('524', 'Store 512', 'Audio', 'Audio berjudul \'Store 512\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-21');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('525', 'Rule 236', 'Video', 'Video berjudul \'Rule 236\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-31');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('527', 'Her', 'Gambar', 'Gambar berjudul \'Her\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('530', 'Marvel Dupe', 'Gambar', 'Latar belakang untuk digunakan dalam panel cerita visual.', '2025-09-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('536', 'Shallow', 'Gambar', 'Gambar berjudul \'Shallow\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('540', 'Yeah 207', 'Video', 'Video berjudul \'Yeah 207\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-09');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('542', 'Team 358', 'Gambar', 'Gambar berjudul \'Team 358\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('544', 'Focus 223', 'Audio', 'Audio berjudul \'Focus 223\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('546', 'Either 767', 'Video', 'Video berjudul \'Either 767\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('547', 'Recently 27', 'Teks', 'Teks berjudul \'Recently 27\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('548', 'Recent 840', 'Teks', 'Teks berjudul \'Recent 840\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('550', 'Per 35', 'Gambar', 'Gambar berjudul \'Per 35\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('552', 'Before 209', 'Teks', 'Teks berjudul \'Before 209\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('555', 'Institution 65', 'Teks', 'Teks berjudul \'Institution 65\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('556', 'Attorney 252', 'Video', 'Video berjudul \'Attorney 252\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('560', 'Pokemon', 'Gambar', 'Latar belakang buat komik pokemon', '2024-11-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('563', 'Spend 478', 'Gambar', 'Gambar berjudul \'Spend 478\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('566', 'Audience 433', 'Video', 'Video berjudul \'Audience 433\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('571', 'Hatsune Miku', 'Gambar', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '2025-10-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('579', 'Huge 814', 'Audio', 'Audio berjudul \'Huge 814\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('588', 'Perfect', 'Video', 'Video berjudul \'Perfect\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('590', 'Between 567', 'Gambar', 'Gambar berjudul \'Between 567\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-02');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('592', 'Audience 331', 'Teks', 'Teks berjudul \'Audience 331\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('593', 'Bit 353', 'Video', 'Video berjudul \'Bit 353\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('594', 'Generation 742', 'Audio', 'Audio berjudul \'Generation 742\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-22');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('603', 'Church 280', 'Gambar', 'Gambar berjudul \'Church 280\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-13');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('609', 'Nona Ambon', 'Gambar', 'Background buat cerita stecu stecu', '2024-05-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('610', 'Babi', 'Gambar', 'Desain karakter babi untuk proyek game role-playing.', '2025-08-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('612', 'Term 978', 'Teks', 'Teks berjudul \'Term 978\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('613', 'Maintain 76', 'Teks', 'Teks berjudul \'Maintain 76\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('616', 'Fact 436', 'Audio', 'Audio berjudul \'Fact 436\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-27');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('619', 'Tenet', 'Audio', 'Audio berjudul \'Tenet\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('620', 'While 177', 'Gambar', 'Gambar berjudul \'While 177\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('623', 'Happier', 'Video', 'Video berjudul \'Happier\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-27');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('625', 'Challenge 41', 'Video', 'Video berjudul \'Challenge 41\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('628', 'Research 873', 'Gambar', 'Gambar berjudul \'Research 873\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-02-19');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('630', 'Professor 188', 'Teks', 'Teks berjudul \'Professor 188\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-25');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('631', 'Nature 404', 'Teks', 'Teks berjudul \'Nature 404\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-22');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('635', 'Never 308', 'Video', 'Video berjudul \'Never 308\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('638', 'Subject 906', 'Gambar', 'Gambar berjudul \'Subject 906\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('644', 'Early 158', 'Teks', 'Teks berjudul \'Early 158\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('649', 'Gun 856', 'Gambar', 'Gambar berjudul \'Gun 856\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-12');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('659', 'Responsibility 448', 'Audio', 'Audio berjudul \'Responsibility 448\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('661', 'Provide 348', 'Video', 'Video berjudul \'Provide 348\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-27');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('662', 'Simple 565', 'Teks', 'Teks berjudul \'Simple 565\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-03-13');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('663', 'Decide 642', 'Gambar', 'Gambar berjudul \'Decide 642\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('664', 'Entire 458', 'Video', 'Video berjudul \'Entire 458\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-22');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('666', 'Rock 724', 'Audio', 'Audio berjudul \'Rock 724\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('677', 'System 245', 'Video', 'Video berjudul \'System 245\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-31');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('680', 'The Batman', 'Teks', 'Teks berjudul \'The Batman\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('683', 'Moana', 'Gambar', 'Gambar berjudul \'Moana\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-07');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('685', 'Blinding Lights', 'Gambar', 'Gambar berjudul \'Blinding Lights\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('689', 'Hope 949', 'Teks', 'Teks berjudul \'Hope 949\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('694', 'Joker', 'Video', 'Video berjudul \'Joker\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-23');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('696', 'Policy 426', 'Audio', 'Audio berjudul \'Policy 426\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-01-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('705', 'After 820', 'Gambar', 'Gambar berjudul \'After 820\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-08-02');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('706', 'Body 285', 'Audio', 'Audio berjudul \'Body 285\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('708', 'Board 685', 'Audio', 'Audio berjudul \'Board 685\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-06-17');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('714', 'Car 321', 'Teks', 'Teks berjudul \'Car 321\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-25');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('715', 'Pull 66', 'Teks', 'Teks berjudul \'Pull 66\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('716', 'Or 5', 'Teks', 'Teks berjudul \'Or 5\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-01-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('719', 'Respond 633', 'Teks', 'Teks berjudul \'Respond 633\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('721', 'Computer 882', 'Teks', 'Teks berjudul \'Computer 882\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-09');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('724', 'Skyfall', 'Teks', 'Teks berjudul \'Skyfall\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('725', 'Parasite', 'Teks', 'Teks berjudul \'Parasite\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-02');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('730', 'Today 463', 'Audio', 'Audio berjudul \'Today 463\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('733', 'Natural 433', 'Teks', 'Teks berjudul \'Natural 433\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('736', 'Let It Be', 'Audio', 'Audio berjudul \'Let It Be\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('737', 'Author 395', 'Gambar', 'Gambar berjudul \'Author 395\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-11-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('742', 'Memory 569', 'Gambar', 'Gambar berjudul \'Memory 569\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-09-21');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('743', 'Arrival', 'Video', 'Video berjudul \'Arrival\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('744', 'Akhir Zaman', 'Gambar', 'Background surga dan neraka', '2025-10-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('745', 'Exactly 631', 'Teks', 'Teks berjudul \'Exactly 631\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-27');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('746', 'La La Land', 'Audio', 'Audio berjudul \'La La Land\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-25');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('759', 'Wonder', 'Teks', 'Teks berjudul \'Wonder\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('763', 'Medusa', 'Gambar', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '2024-11-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('766', 'Much 760', 'Audio', 'Audio berjudul \'Much 760\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-03-19');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('771', 'Stop 611', 'Gambar', 'Gambar berjudul \'Stop 611\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-17');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('773', 'Force 808', 'Video', 'Video berjudul \'Force 808\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('778', 'Determine 422', 'Audio', 'Audio berjudul \'Determine 422\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-04-09');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('784', 'Different 58', 'Audio', 'Audio berjudul \'Different 58\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-13');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('787', 'Husband 194', 'Gambar', 'Gambar berjudul \'Husband 194\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('790', 'Likely 980', 'Video', 'Video berjudul \'Likely 980\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('791', 'Else 204', 'Gambar', 'Gambar berjudul \'Else 204\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-24');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('793', 'Bad 848', 'Gambar', 'Gambar berjudul \'Bad 848\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('798', 'Benefit 854', 'Gambar', 'Gambar berjudul \'Benefit 854\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-08-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('800', 'Paper 97', 'Video', 'Video berjudul \'Paper 97\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-22');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('805', 'Over 758', 'Video', 'Video berjudul \'Over 758\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-17');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('806', 'Interesting 393', 'Teks', 'Teks berjudul \'Interesting 393\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-11');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('807', 'Include 279', 'Video', 'Video berjudul \'Include 279\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('808', '2NE1', 'Gambar', 'Versi chibi lucu dari empat anggota band virtual.', '2025-07-04');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('811', 'Anya Anya', 'Gambar', 'Gambar ulang karakter anime favorit (Anya) dalam gaya Anda.', '2025-05-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('816', 'Interstellar', 'Video', 'Video berjudul \'Interstellar\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-02');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('819', 'Professional 655', 'Teks', 'Teks berjudul \'Professional 655\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('826', 'Inception', 'Teks', 'Teks berjudul \'Inception\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-03-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('827', 'Off 323', 'Teks', 'Teks berjudul \'Off 323\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-11-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('830', 'Total 97', 'Video', 'Video berjudul \'Total 97\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('831', 'Savage Love', 'Gambar', 'Gambar berjudul \'Savage Love\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('832', 'And 906', 'Gambar', 'Gambar berjudul \'And 906\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('833', 'Ten 984', 'Teks', 'Teks berjudul \'Ten 984\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-07-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('834', 'Site 821', 'Gambar', 'Gambar berjudul \'Site 821\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-23');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('835', 'Mention 726', 'Video', 'Video berjudul \'Mention 726\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-02-14');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('842', 'Fly 494', 'Audio', 'Audio berjudul \'Fly 494\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-28');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('849', 'Human 192', 'Audio', 'Audio berjudul \'Human 192\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('855', 'Worry 335', 'Video', 'Video berjudul \'Worry 335\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-27');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('856', 'Pick 37', 'Video', 'Video berjudul \'Pick 37\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-06-12');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('858', 'Require 946', 'Gambar', 'Gambar berjudul \'Require 946\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('862', 'Thank 39', 'Audio', 'Audio berjudul \'Thank 39\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-08-09');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('863', 'Game 973', 'Audio', 'Audio berjudul \'Game 973\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-03-21');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('866', 'Example 268', 'Video', 'Video berjudul \'Example 268\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('869', 'Loss 553', 'Video', 'Video berjudul \'Loss 553\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-08-02');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('871', 'Will 169', 'Teks', 'Teks berjudul \'Will 169\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-06-07');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('872', 'Air 948', 'Teks', 'Teks berjudul \'Air 948\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-05');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('873', 'On My Way', 'Teks', 'Teks berjudul \'On My Way\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-07');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('875', 'Movement 453', 'Video', 'Video berjudul \'Movement 453\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('876', 'Dune', 'Gambar', 'Gambar berjudul \'Dune\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-06-19');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('889', 'Counting Stars', 'Teks', 'Teks berjudul \'Counting Stars\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-05-31');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('891', 'Address 522', 'Audio', 'Audio berjudul \'Address 522\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-31');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('894', 'Number 352', 'Video', 'Video berjudul \'Number 352\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('895', '1917', 'Video', 'Video berjudul \'1917\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-13');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('896', 'Energy 237', 'Audio', 'Audio berjudul \'Energy 237\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('897', 'Reflect 588', 'Teks', 'Teks berjudul \'Reflect 588\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('898', 'Despite 956', 'Gambar', 'Gambar berjudul \'Despite 956\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-23');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('902', 'Back 342', 'Audio', 'Audio berjudul \'Back 342\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-12-19');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('903', 'Drop 607', 'Video', 'Video berjudul \'Drop 607\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('905', 'Carry 104', 'Video', 'Video berjudul \'Carry 104\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-07');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('911', 'Rolling in the Deep', 'Audio', 'Audio berjudul \'Rolling in the Deep\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-07-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('916', 'Nor 915', 'Gambar', 'Gambar berjudul \'Nor 915\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('921', 'Human 21', 'Teks', 'Teks berjudul \'Human 21\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-16');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('924', 'Art 422', 'Audio', 'Audio berjudul \'Art 422\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-21');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('926', 'Thunder', 'Gambar', 'Gambar berjudul \'Thunder\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-11-29');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('928', 'Bad Guy', 'Gambar', 'Gambar berjudul \'Bad Guy\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('934', 'Their 742', 'Audio', 'Audio berjudul \'Their 742\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-08-20');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('944', 'Poor 657', 'Video', 'Video berjudul \'Poor 657\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-12-17');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('948', 'Cause 225', 'Video', 'Video berjudul \'Cause 225\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-01-07');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('953', 'Practice 391', 'Audio', 'Audio berjudul \'Practice 391\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-10-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('956', 'The Matrix', 'Video', 'Video berjudul \'The Matrix\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-15');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('957', 'Kind 790', 'Audio', 'Audio berjudul \'Kind 790\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-01');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('962', 'Radio 301', 'Teks', 'Teks berjudul \'Radio 301\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-08');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('964', 'Television 234', 'Audio', 'Audio berjudul \'Television 234\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-09-12');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('973', 'Drivers License', 'Gambar', 'Gambar berjudul \'Drivers License\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-11-30');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('976', 'Person 823', 'Gambar', 'Gambar berjudul \'Person 823\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-04-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('979', 'High 851', 'Video', 'Video berjudul \'High 851\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-02-26');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('982', 'Science 217', 'Teks', 'Teks berjudul \'Science 217\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-10-18');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('984', 'Play 93', 'Gambar', 'Gambar berjudul \'Play 93\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-06');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('988', 'Little Mix Chibi', 'Gambar', 'Versi chibi lucu dari empat anggota band llittle mix', '2024-03-10');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('990', 'Weight 505', 'Audio', 'Audio berjudul \'Weight 505\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-03-17');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('997', 'Reason 865', 'Video', 'Video berjudul \'Reason 865\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-06-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('998', 'Less 672', 'Video', 'Video berjudul \'Less 672\' yang dipublikasikan untuk hiburan atau edukasi.', '2025-05-03');
+INSERT INTO Konten (id_konten, judul, jenis, deskripsi, tanggal_publikasi) VALUES ('999', 'South 922', 'Video', 'Video berjudul \'South 922\' yang dipublikasikan untuk hiburan atau edukasi.', '2024-11-03');
 
 
 -- Konten Audio
 CREATE TABLE KontenAudio (
-    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
+    id_konten	INT PRIMARY KEY NOT NULL,
     durasi	VARCHAR(512),
-    kualitas	VARCHAR(512),
-    FOREIGN KEY (id_konten)
-        REFERENCES Konten(id_konten)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
+    kualitas	VARCHAR(512)
 );
 
 INSERT INTO KontenAudio (id_konten, durasi, kualitas) VALUES ('101', '4:43', '320 kbps');
@@ -426,16 +436,11 @@ INSERT INTO KontenAudio (id_konten, durasi, kualitas) VALUES ('964', '8:32', '12
 INSERT INTO KontenAudio (id_konten, durasi, kualitas) VALUES ('990', '18:57', 'Lossless');
 
 
-
 -- Konten Gambar
 CREATE TABLE KontenGambar (
-    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
-    resolusi	INT CHECK (resolusi > 0),
-    format	VARCHAR(512),
-    FOREIGN KEY (id_konten)
-        REFERENCES Konten(id_konten)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
+    id_konten	INT PRIMARY KEY NOT NULL,
+    resolusi	INT,
+    format	VARCHAR(512)
 );
 
 INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('104', '5192', 'JPG');
@@ -500,18 +505,28 @@ INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('928', '7488', 'J
 INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('973', '3083', 'JPG');
 INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('976', '3115', 'SVG');
 INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('984', '6322', 'JPG');
-
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('811', '1574', 'JPEG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('808', '7963', 'JPG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('610', '6148', 'SVG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('530', '844', 'SVG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('744', '4576', 'PNG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('571', '551', 'JPG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('988', '5534', 'PNG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('763', '510', 'JPEG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('299', '1266', 'PNG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('301', '7273', 'JPG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('609', '5725', 'JPG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('560', '2375', 'JPEG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('241', '1828', 'JPG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('111', '913', 'SVG');
+INSERT INTO KontenGambar (id_konten, resolusi, format) VALUES ('108', '688', 'JPEG');
 
 
 -- Konten Teks
 CREATE TABLE KontenTeks (
-    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
-    jumlah_kata	INT CHECK (jumlah_kata >= 0),
-    format	VARCHAR(512),
-    FOREIGN KEY (id_konten)
-        REFERENCES Konten(id_konten)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
+    id_konten	INT PRIMARY KEY NOT NULL,
+    jumlah_kata	INT,
+    format	VARCHAR(512)
 );
 
 INSERT INTO KontenTeks (id_konten, jumlah_kata, format) VALUES ('106', '8671', 'html');
@@ -578,15 +593,12 @@ INSERT INTO KontenTeks (id_konten, jumlah_kata, format) VALUES ('921', '8901', '
 INSERT INTO KontenTeks (id_konten, jumlah_kata, format) VALUES ('962', '289', 'pdf');
 INSERT INTO KontenTeks (id_konten, jumlah_kata, format) VALUES ('982', '7386', 'html');
 
+
 -- Konten Video
 CREATE TABLE KontenVideo (
-    id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
+    id_konten	INT PRIMARY KEY NOT NULL,
     durasi	VARCHAR(512),
-    resolusi	INT CHECK (resolusi >= 0),
-    FOREIGN KEY (id_konten)
-        REFERENCES Konten(id_konten)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
+    resolusi	INT
 );
 
 INSERT INTO KontenVideo (id_konten, durasi, resolusi) VALUES ('100', '11:11', '2040');
@@ -651,6 +663,7 @@ INSERT INTO KontenVideo (id_konten, durasi, resolusi) VALUES ('979', '6:31', '20
 INSERT INTO KontenVideo (id_konten, durasi, resolusi) VALUES ('997', '3:51', '860');
 INSERT INTO KontenVideo (id_konten, durasi, resolusi) VALUES ('998', '1:09', '860');
 INSERT INTO KontenVideo (id_konten, durasi, resolusi) VALUES ('999', '21:16', '720');
+
 
 -- Membuat
 CREATE TABLE Membuat (
@@ -914,6 +927,21 @@ INSERT INTO Membuat (id_creator, id_konten) VALUES ('TVS', '649');
 INSERT INTO Membuat (id_creator, id_konten) VALUES ('TXT', '593');
 INSERT INTO Membuat (id_creator, id_konten) VALUES ('WDB', '544');
 INSERT INTO Membuat (id_creator, id_konten) VALUES ('ZHC', '631');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('ZHC', '108');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('ZHC', '111');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('ZHC', '241');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('ZHC', '560');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('ZHC', '609');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('LDV', '301');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('LDV', '299');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('LDV', '763');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('LDV', '988');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('BRS', '571');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('BRS', '744');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('BRS', '530');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('BRS', '610');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('BRS', '808');
+INSERT INTO Membuat (id_creator, id_konten) VALUES ('BRS', '811');
 
 -- Komentar
 CREATE TABLE Komentar(
@@ -927,188 +955,192 @@ CREATE TABLE Komentar(
     FOREIGN KEY (id_konten)    REFERENCES Konten(id_konten) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('1', '17', '196', 'Saya sangat menikmati \'Both 925\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-03-14 17:38:28');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('2', '21', '188', 'Saya sangat menikmati \'The Lion King\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-02-05 07:11:57');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('3', '4', '352', 'Saya sangat menikmati \'Account 152\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-05-14 11:08:00');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('4', '25', '483', 'Saya sangat menikmati \'Ready 456\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-30 21:17:44');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('5', '4', '649', 'Saya sangat menikmati \'Gun 856\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2025-02-15 15:34:10');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('6', '24', '121', 'Saya sangat menikmati \'Degree 5\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-05-14 06:40:58');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('7', '7', '736', 'Saya sangat menikmati \'Let It Be\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi narasi host yang disajikan dengan baik.', '2025-04-21 06:48:43');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('8', '7', '448', 'Saya sangat menikmati \'They 696\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-05-14 12:26:42');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('9', '5', '525', 'Saya sangat menikmati \'comle 236\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-01-08 23:14:53');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('10', '25', '791', 'Saya sangat menikmati \'Else 204\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-05-14 00:25:24');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('11', '2', '516', 'Saya sangat menikmati \'Your 499\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-02-27 10:38:24');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('12', '12', '418', 'Saya sangat menikmati \'Director 136\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2024-12-28 08:14:34');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('13', '17', '469', 'Saya sangat menikmati \'Why 762\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-04-19 14:25:55');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('14', '2', '592', 'Saya sangat menikmati \'Audience 331\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-05-10 10:49:41');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('15', '8', '766', 'Saya sangat menikmati \'Much 760\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2024-11-08 01:32:41');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('16', '15', '469', 'Saya sangat menikmati \'Why 762\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-04-30 11:24:26');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('17', '16', '849', 'Saya sangat menikmati \'Human 192\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi narasi host yang disajikan dengan baik.', '2025-05-10 07:16:09');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('18', '4', '239', 'Saya sangat menikmati \'Policy 11\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-09 23:10:03');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('19', '24', '218', 'Saya sangat menikmati \'Town 632\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-05-10 06:24:15');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('20', '6', '402', 'Saya sangat menikmati \'Area 493\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2024-09-01 12:11:22');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('21', '8', '542', 'Saya sangat menikmati \'Team 358\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2024-10-29 11:01:39');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('22', '23', '469', 'Saya sangat menikmati \'Why 762\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-20 10:00:58');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('23', '11', '903', 'Saya sangat menikmati \'Drop 607\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-04-21 09:04:05');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('24', '4', '902', 'Saya sangat menikmati \'Back 342\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-04-25 04:35:54');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('25', '1', '556', 'Saya sangat menikmati \'Attorney 252\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-12 17:33:13');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('26', '3', '866', 'Saya sangat menikmati \'Example 268\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-05-15 00:01:00');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('27', '22', '110', 'Saya sangat menikmati \'Attack 222\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2024-09-05 20:41:51');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('28', '12', '120', 'Saya sangat menikmati \'Environmental 929\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-05-10 19:49:56');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('29', '1', '790', 'Saya sangat menikmati \'Likely 980\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-25 11:51:03');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('30', '19', '896', 'Saya sangat menikmati \'Energy 237\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2025-05-12 14:13:49');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('31', '13', '199', 'Saya sangat menikmati \'Lose Yourself\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2024-09-01 19:36:38');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('32', '19', '344', 'Saya sangat menikmati \'Will 484\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-02-08 09:53:43');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('33', '15', '778', 'Saya sangat menikmati \'Determine 422\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2025-04-25 09:37:21');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('34', '4', '525', 'Saya sangat menikmati \'comle 236\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2024-10-27 18:46:24');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('35', '20', '778', 'Saya sangat menikmati \'Determine 422\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-02-09 10:14:49');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('36', '2', '873', 'Saya sangat menikmati \'On My Way\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-10-07 01:52:41');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('37', '17', '239', 'Saya sangat menikmati \'Policy 11\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi narasi host yang disajikan dengan baik.', '2025-03-08 09:34:21');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('38', '20', '849', 'Saya sangat menikmati \'Human 192\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-05-05 09:02:56');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('39', '7', '205', 'Saya sangat menikmati \'Frozen\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-05-01 10:01:13');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('40', '15', '858', 'Saya sangat menikmati \'Require 946\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-02-20 09:05:22');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('41', '11', '934', 'Saya sangat menikmati \'Their 742\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2025-05-10 18:46:36');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('42', '22', '612', 'Saya sangat menikmati \'Term 978\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-03-05 21:40:11');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('43', '7', '677', 'Saya sangat menikmati \'System 245\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-12 16:52:31');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('44', '24', '976', 'Saya sangat menikmati \'Person 823\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-14 20:47:29');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('45', '23', '120', 'Saya sangat menikmati \'Environmental 929\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-12 04:57:38');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('46', '5', '512', 'Saya sangat menikmati \'Left 539\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-04-12 15:29:36');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('47', '6', '469', 'Saya sangat menikmati \'Why 762\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-04-14 12:33:45');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('48', '25', '540', 'Saya sangat menikmati \'Yeah 207\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-01-16 10:21:23');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('49', '2', '666', 'Saya sangat menikmati \'Rock 724\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-04-06 16:21:43');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('50', '15', '778', 'Saya sangat menikmati \'Determine 422\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-02-26 12:05:13');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('51', '22', '689', 'Saya sangat menikmati \'Hope 949\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-02-24 02:07:15');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('52', '7', '352', 'Saya sangat menikmati \'Account 152\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-05-01 06:49:44');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('53', '4', '898', 'Saya sangat menikmati \'Despite 956\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2024-09-10 12:30:08');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('54', '14', '277', 'Saya sangat menikmati \'Uptown Funk\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2024-06-30 03:22:41');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('55', '11', '806', 'Saya sangat menikmati \'Interesting 393\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-04-22 19:25:09');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('56', '7', '555', 'Saya sangat menikmati \'Institution 65\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-04-29 13:40:12');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('57', '9', '714', 'Saya sangat menikmati \'Car 321\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-04-16 06:38:57');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('58', '13', '312', 'Saya sangat menikmati \'Word 460\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2024-12-16 08:07:32');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('59', '17', '891', 'Saya sangat menikmati \'Address 522\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2025-04-23 23:52:51');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('60', '2', '286', 'Saya sangat menikmati \'Usually 188\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-02 22:16:24');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('61', '14', '742', 'Saya sangat menikmati \'Memory 569\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2024-12-30 00:39:24');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('62', '3', '283', 'Saya sangat menikmati \'Live 464\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-12-03 07:35:13');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('63', '4', '725', 'Saya sangat menikmati \'Parasite\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-01-22 20:05:10');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('64', '6', '659', 'Saya sangat menikmati \'Responsibility 448\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-12 14:38:00');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('65', '2', '677', 'Saya sangat menikmati \'System 245\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2024-06-15 05:01:19');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('66', '1', '631', 'Saya sangat menikmati \'Nature 404\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-04-25 17:29:18');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('67', '16', '746', 'Saya sangat menikmati \'La La Land\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi narasi host yang disajikan dengan baik.', '2025-04-28 12:22:29');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('68', '13', '351', 'Saya sangat menikmati \'Order 643\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-05-11 13:13:57');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('69', '6', '246', 'Saya sangat menikmati \'Pressure 588\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-03-21 07:46:39');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('70', '25', '566', 'Saya sangat menikmati \'Audience 433\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-04-10 01:42:44');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('71', '23', '486', 'Saya sangat menikmati \'Government 469\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-01-22 09:37:14');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('72', '18', '592', 'Saya sangat menikmati \'Audience 331\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-13 05:37:45');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('73', '3', '628', 'Saya sangat menikmati \'Research 873\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2025-05-07 08:37:30');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('74', '16', '262', 'Saya sangat menikmati \'Avatar\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-11 03:08:41');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('75', '7', '924', 'Saya sangat menikmati \'Art 422\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-05-14 23:29:26');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('76', '1', '341', 'Saya sangat menikmati \'List 485\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-04-21 05:26:13');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('77', '3', '465', 'Saya sangat menikmati \'Ask 625\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2024-11-11 03:31:15');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('78', '23', '315', 'Saya sangat menikmati \'Main 8\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2025-03-17 10:14:57');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('79', '13', '544', 'Saya sangat menikmati \'Focus 223\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-04-21 21:46:43');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('80', '6', '999', 'Saya sangat menikmati \'South 922\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2024-11-11 17:31:34');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('81', '7', '873', 'Saya sangat menikmati \'On My Way\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-04-18 08:46:44');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('82', '17', '234', 'Saya sangat menikmati \'Account 988\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-01-25 19:15:33');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('83', '8', '623', 'Saya sangat menikmati \'Happier\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-10 02:47:50');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('84', '20', '623', 'Saya sangat menikmati \'Happier\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-03-28 02:32:29');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('85', '4', '957', 'Saya sangat menikmati \'Kind 790\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-01-30 06:14:26');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('86', '17', '352', 'Saya sangat menikmati \'Account 152\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-02-23 03:58:29');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('87', '2', '402', 'Saya sangat menikmati \'Area 493\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2024-11-06 21:41:16');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('88', '17', '218', 'Saya sangat menikmati \'Town 632\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2024-09-28 18:18:58');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('89', '17', '934', 'Saya sangat menikmati \'Their 742\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-08 07:14:27');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('90', '1', '858', 'Saya sangat menikmati \'Require 946\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2025-02-15 02:48:57');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('91', '18', '835', 'Saya sangat menikmati \'Mention 726\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-04-14 08:40:32');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('92', '12', '737', 'Saya sangat menikmati \'Author 395\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2025-01-06 16:58:36');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('93', '25', '638', 'Saya sangat menikmati \'Subject 906\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2024-10-16 21:31:06');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('94', '25', '196', 'Saya sangat menikmati \'Both 925\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-14 17:45:41');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('95', '12', '830', 'Saya sangat menikmati \'Total 97\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-01-19 23:37:05');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('96', '5', '106', 'Saya sangat menikmati \'Wall 564\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-11 05:25:28');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('97', '13', '366', 'Saya sangat menikmati \'Second 352\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-01-10 07:55:54');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('98', '4', '592', 'Saya sangat menikmati \'Audience 331\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-05 11:48:21');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('99', '3', '525', 'Saya sangat menikmati \'comle 236\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2024-11-27 10:34:13');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('100', '22', '547', 'Saya sangat menikmati \'Recently 27\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-04-25 13:08:21');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('101', '18', '402', 'Saya sangat menikmati \'Area 493\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-01-29 16:52:10');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('102', '17', '997', 'Saya sangat menikmati \'Reason 865\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-03-03 19:52:54');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('103', '5', '638', 'Saya sangat menikmati \'Subject 906\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2024-05-24 08:02:38');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('104', '20', '677', 'Saya sangat menikmati \'System 245\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-03-29 07:27:27');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('105', '11', '402', 'Saya sangat menikmati \'Area 493\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-05-10 05:18:40');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('106', '4', '351', 'Saya sangat menikmati \'Order 643\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-04-21 15:28:56');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('107', '5', '218', 'Saya sangat menikmati \'Town 632\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-07-10 18:06:28');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('108', '2', '547', 'Saya sangat menikmati \'Recently 27\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-04-06 15:13:45');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('109', '16', '863', 'Saya sangat menikmati \'Game 973\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-03-26 08:17:30');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('110', '18', '351', 'Saya sangat menikmati \'Order 643\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi stcomktur pembahasan yang disajikan dengan baik.', '2025-04-05 20:51:33');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('111', '6', '406', 'Saya sangat menikmati \'Scene 35\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-05-06 20:49:50');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('112', '19', '512', 'Saya sangat menikmati \'Left 539\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2024-12-21 06:01:57');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('113', '13', '439', 'Saya sangat menikmati \'Believer\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-07 20:42:55');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('114', '24', '146', 'Saya sangat menikmati \'Thank 556\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-05-14 17:24:51');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('115', '1', '205', 'Saya sangat menikmati \'Frozen\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-03-07 22:42:43');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('116', '20', '875', 'Saya sangat menikmati \'Movement 453\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-24 01:40:22');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('117', '24', '229', 'Saya sangat menikmati \'Easy 845\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-05-14 21:11:27');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('118', '16', '827', 'Saya sangat menikmati \'Off 323\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2025-04-19 21:35:11');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('119', '8', '872', 'Saya sangat menikmati \'Air 948\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-03-26 03:13:09');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('120', '6', '694', 'Saya sangat menikmati \'Joker\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-02-13 23:12:00');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('121', '5', '166', 'Saya sangat menikmati \'Could 534\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2024-09-21 11:20:20');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('122', '6', '590', 'Saya sangat menikmati \'Between 567\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2025-02-15 09:35:19');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('123', '7', '540', 'Saya sangat menikmati \'Yeah 207\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-05-02 07:20:17');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('124', '9', '659', 'Saya sangat menikmati \'Responsibility 448\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-04-02 07:34:26');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('125', '7', '630', 'Saya sangat menikmati \'Professor 188\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-05-14 22:49:26');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('126', '10', '593', 'Saya sangat menikmati \'Bit 353\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-04-17 23:18:21');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('127', '8', '896', 'Saya sangat menikmati \'Energy 237\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-03-30 23:56:16');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('128', '25', '121', 'Saya sangat menikmati \'Degree 5\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2024-12-19 06:46:56');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('129', '4', '185', 'Saya sangat menikmati \'Study 341\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2024-05-15 17:12:16');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('130', '11', '984', 'Saya sangat menikmati \'Play 93\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-13 11:44:09');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('131', '6', '106', 'Saya sangat menikmati \'Wall 564\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-04-13 17:36:16');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('132', '22', '185', 'Saya sangat menikmati \'Study 341\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2024-08-29 17:14:46');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('133', '7', '351', 'Saya sangat menikmati \'Order 643\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-05-11 12:59:35');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('134', '16', '638', 'Saya sangat menikmati \'Subject 906\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2024-11-08 23:32:38');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('135', '9', '683', 'Saya sangat menikmati \'Moana\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2024-09-06 19:42:49');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('136', '4', '546', 'Saya sangat menikmati \'Either 767\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-05-13 18:24:22');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('137', '12', '352', 'Saya sangat menikmati \'Account 152\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-04-24 11:58:49');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('138', '24', '418', 'Saya sangat menikmati \'Director 136\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-05-07 23:22:14');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('139', '22', '544', 'Saya sangat menikmati \'Focus 223\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2024-09-27 13:57:08');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('140', '23', '239', 'Saya sangat menikmati \'Policy 11\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2024-12-02 15:18:11');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('141', '19', '661', 'Saya sangat menikmati \'Provide 348\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2024-06-08 18:16:58');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('142', '20', '550', 'Saya sangat menikmati \'Per 35\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2025-05-13 19:45:26');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('143', '20', '418', 'Saya sangat menikmati \'Director 136\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-02-24 06:33:20');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('144', '2', '104', 'Saya sangat menikmati \'Certainly 46\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-04-25 03:20:02');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('145', '19', '355', 'Saya sangat menikmati \'Soul\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2024-03-29 05:51:50');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('146', '1', '746', 'Saya sangat menikmati \'La La Land\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-05-08 20:57:22');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('147', '9', '766', 'Saya sangat menikmati \'Much 760\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-04-09 20:17:25');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('148', '19', '406', 'Saya sangat menikmati \'Scene 35\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2024-11-23 23:33:05');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('149', '8', '911', 'Saya sangat menikmati \'Rolling in the Deep\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-02-24 16:34:09');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('150', '6', '525', 'Saya sangat menikmati \'comle 236\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2024-11-06 00:06:21');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('151', '3', '438', 'Saya sangat menikmati \'Four 23\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-02-28 00:01:38');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('152', '17', '737', 'Saya sangat menikmati \'Author 395\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2025-03-12 09:35:30');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('153', '22', '448', 'Saya sangat menikmati \'They 696\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-09-18 20:44:15');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('154', '7', '566', 'Saya sangat menikmati \'Audience 433\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi visual efek yang disajikan dengan baik.', '2025-04-26 09:44:41');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('155', '22', '793', 'Saya sangat menikmati \'Bad 848\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2025-04-12 10:48:46');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('156', '16', '905', 'Saya sangat menikmati \'Carry 104\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-04-29 00:42:07');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('157', '25', '342', 'Saya sangat menikmati \'Consumer 196\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi komposisi warna yang disajikan dengan baik.', '2024-11-08 22:25:06');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('158', '1', '402', 'Saya sangat menikmati \'Area 493\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi stcomktur paragraf yang disajikan dengan baik.', '2024-10-16 17:16:12');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('159', '10', '827', 'Saya sangat menikmati \'Off 323\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-02-26 02:56:09');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('160', '20', '401', 'Saya sangat menikmati \'Rich 660\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2024-12-27 03:15:35');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('161', '19', '483', 'Saya sangat menikmati \'Ready 456\'. Memberi perspektif yang berbeda. Saya tecomtama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-05-07 06:51:07');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('162', '15', '548', 'Saya sangat menikmati \'Recent 840\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-01-21 17:49:24');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('163', '5', '402', 'Saya sangat menikmati \'Area 493\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-01-25 00:15:27');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('164', '13', '625', 'Saya sangat menikmati \'Challenge 41\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2024-12-15 18:19:56');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('165', '18', '327', 'Saya sangat menikmati \'Cut 604\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2024-11-22 15:16:38');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('166', '8', '827', 'Saya sangat menikmati \'Off 323\'. Membuat saya penasaran untuk menggali lebih jauh. Saya tecomtama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-04-19 03:43:04');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('167', '10', '766', 'Saya sangat menikmati \'Much 760\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi narasi host yang disajikan dengan baik.', '2024-09-18 13:40:21');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('168', '10', '742', 'Saya sangat menikmati \'Memory 569\'. Sangat informatif dan engaging. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2025-03-04 19:30:20');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('169', '3', '234', 'Saya sangat menikmati \'Account 988\'. Memberi wawasan bacom bagi saya. Saya tecomtama mengapresiasi detail visual yang disajikan dengan baik.', '2024-12-07 22:26:04');
-INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('170', '2', '875', 'Saya sangat menikmati \'Movement 453\'. Sangat membantu memahami topik ini. Saya tecomtama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-05-06 01:04:09');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('1', '17', '196', 'Saya sangat menikmati \'Both 925\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-03-14 17:38:28');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('2', '21', '188', 'Saya sangat menikmati \'The Lion King\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-02-05 07:11:57');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('3', '4', '352', 'Saya sangat menikmati \'Account 152\'. Sangat informatif dan engaging. Saya terutama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-05-14 11:08:00');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('4', '25', '483', 'Saya sangat menikmati \'Ready 456\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-30 21:17:44');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('5', '4', '649', 'Saya sangat menikmati \'Gun 856\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2025-02-15 15:34:10');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('6', '24', '121', 'Saya sangat menikmati \'Degree 5\'. Sangat informatif dan engaging. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-05-14 06:40:58');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('7', '7', '736', 'Saya sangat menikmati \'Let It Be\'. Sangat informatif dan engaging. Saya terutama mengapresiasi narasi host yang disajikan dengan baik.', '2025-04-21 06:48:43');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('8', '7', '448', 'Saya sangat menikmati \'They 696\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-05-14 12:26:42');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('9', '5', '525', 'Saya sangat menikmati \'Rule 236\'. Sangat informatif dan engaging. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-01-08 23:14:53');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('10', '25', '791', 'Saya sangat menikmati \'Else 204\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-05-14 00:25:24');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('11', '2', '516', 'Saya sangat menikmati \'Your 499\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-02-27 10:38:24');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('12', '12', '418', 'Saya sangat menikmati \'Director 136\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2024-12-28 08:14:34');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('13', '17', '469', 'Saya sangat menikmati \'Why 762\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-04-19 14:25:55');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('14', '2', '592', 'Saya sangat menikmati \'Audience 331\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-05-10 10:49:41');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('15', '8', '766', 'Saya sangat menikmati \'Much 760\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2024-11-08 01:32:41');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('16', '15', '469', 'Saya sangat menikmati \'Why 762\'. Sangat informatif dan engaging. Saya terutama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-04-30 11:24:26');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('17', '16', '849', 'Saya sangat menikmati \'Human 192\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi narasi host yang disajikan dengan baik.', '2025-05-10 07:16:09');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('18', '4', '239', 'Saya sangat menikmati \'Policy 11\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-09 23:10:03');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('19', '24', '218', 'Saya sangat menikmati \'Town 632\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-05-10 06:24:15');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('20', '6', '402', 'Saya sangat menikmati \'Area 493\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2024-09-01 12:11:22');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('21', '8', '542', 'Saya sangat menikmati \'Team 358\'. Sangat informatif dan engaging. Saya terutama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2024-10-29 11:01:39');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('22', '23', '469', 'Saya sangat menikmati \'Why 762\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-20 10:00:58');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('23', '11', '903', 'Saya sangat menikmati \'Drop 607\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-04-21 09:04:05');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('24', '4', '902', 'Saya sangat menikmati \'Back 342\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-04-25 04:35:54');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('25', '1', '556', 'Saya sangat menikmati \'Attorney 252\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-12 17:33:13');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('26', '3', '866', 'Saya sangat menikmati \'Example 268\'. Sangat informatif dan engaging. Saya terutama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-05-15 00:01:00');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('27', '22', '110', 'Saya sangat menikmati \'Attack 222\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2024-09-05 20:41:51');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('28', '12', '120', 'Saya sangat menikmati \'Environmental 929\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-05-10 19:49:56');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('29', '1', '790', 'Saya sangat menikmati \'Likely 980\'. Sangat informatif dan engaging. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-25 11:51:03');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('30', '19', '896', 'Saya sangat menikmati \'Energy 237\'. Sangat informatif dan engaging. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2025-05-12 14:13:49');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('31', '13', '199', 'Saya sangat menikmati \'Lose Yourself\'. Sangat informatif dan engaging. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2024-09-01 19:36:38');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('32', '19', '344', 'Saya sangat menikmati \'Will 484\'. Sangat informatif dan engaging. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-02-08 09:53:43');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('33', '15', '778', 'Saya sangat menikmati \'Determine 422\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2025-04-25 09:37:21');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('34', '4', '525', 'Saya sangat menikmati \'Rule 236\'. Sangat informatif dan engaging. Saya terutama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2024-10-27 18:46:24');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('35', '20', '778', 'Saya sangat menikmati \'Determine 422\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-02-09 10:14:49');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('36', '2', '873', 'Saya sangat menikmati \'On My Way\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-10-07 01:52:41');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('37', '17', '239', 'Saya sangat menikmati \'Policy 11\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi narasi host yang disajikan dengan baik.', '2025-03-08 09:34:21');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('38', '20', '849', 'Saya sangat menikmati \'Human 192\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-05-05 09:02:56');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('39', '7', '205', 'Saya sangat menikmati \'Frozen\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-05-01 10:01:13');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('40', '15', '858', 'Saya sangat menikmati \'Require 946\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-02-20 09:05:22');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('41', '11', '934', 'Saya sangat menikmati \'Their 742\'. Sangat informatif dan engaging. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2025-05-10 18:46:36');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('42', '22', '612', 'Saya sangat menikmati \'Term 978\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-03-05 21:40:11');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('43', '7', '677', 'Saya sangat menikmati \'System 245\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-12 16:52:31');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('44', '24', '976', 'Saya sangat menikmati \'Person 823\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-14 20:47:29');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('45', '23', '120', 'Saya sangat menikmati \'Environmental 929\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-12 04:57:38');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('46', '5', '512', 'Saya sangat menikmati \'Left 539\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-04-12 15:29:36');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('47', '6', '469', 'Saya sangat menikmati \'Why 762\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-04-14 12:33:45');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('48', '25', '540', 'Saya sangat menikmati \'Yeah 207\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-01-16 10:21:23');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('49', '2', '666', 'Saya sangat menikmati \'Rock 724\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-04-06 16:21:43');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('50', '15', '778', 'Saya sangat menikmati \'Determine 422\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-02-26 12:05:13');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('51', '22', '689', 'Saya sangat menikmati \'Hope 949\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-02-24 02:07:15');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('52', '7', '352', 'Saya sangat menikmati \'Account 152\'. Sangat informatif dan engaging. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-05-01 06:49:44');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('53', '4', '898', 'Saya sangat menikmati \'Despite 956\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2024-09-10 12:30:08');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('54', '14', '277', 'Saya sangat menikmati \'Uptown Funk\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2024-06-30 03:22:41');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('55', '11', '806', 'Saya sangat menikmati \'Interesting 393\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-04-22 19:25:09');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('56', '7', '555', 'Saya sangat menikmati \'Institution 65\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-04-29 13:40:12');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('57', '9', '714', 'Saya sangat menikmati \'Car 321\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-04-16 06:38:57');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('58', '13', '312', 'Saya sangat menikmati \'Word 460\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2024-12-16 08:07:32');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('59', '17', '891', 'Saya sangat menikmati \'Address 522\'. Sangat informatif dan engaging. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2025-04-23 23:52:51');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('60', '2', '286', 'Saya sangat menikmati \'Usually 188\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-02 22:16:24');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('61', '14', '742', 'Saya sangat menikmati \'Memory 569\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2024-12-30 00:39:24');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('62', '3', '283', 'Saya sangat menikmati \'Live 464\'. Sangat informatif dan engaging. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-12-03 07:35:13');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('63', '4', '725', 'Saya sangat menikmati \'Parasite\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-01-22 20:05:10');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('64', '6', '659', 'Saya sangat menikmati \'Responsibility 448\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-12 14:38:00');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('65', '2', '677', 'Saya sangat menikmati \'System 245\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2024-06-15 05:01:19');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('66', '1', '631', 'Saya sangat menikmati \'Nature 404\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-04-25 17:29:18');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('67', '16', '746', 'Saya sangat menikmati \'La La Land\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi narasi host yang disajikan dengan baik.', '2025-04-28 12:22:29');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('68', '13', '351', 'Saya sangat menikmati \'Order 643\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-05-11 13:13:57');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('69', '6', '246', 'Saya sangat menikmati \'Pressure 588\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-03-21 07:46:39');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('70', '25', '566', 'Saya sangat menikmati \'Audience 433\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-04-10 01:42:44');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('71', '23', '486', 'Saya sangat menikmati \'Government 469\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-01-22 09:37:14');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('72', '18', '592', 'Saya sangat menikmati \'Audience 331\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-13 05:37:45');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('73', '3', '628', 'Saya sangat menikmati \'Research 873\'. Sangat informatif dan engaging. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2025-05-07 08:37:30');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('74', '16', '262', 'Saya sangat menikmati \'Avatar\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-11 03:08:41');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('75', '7', '924', 'Saya sangat menikmati \'Art 422\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-05-14 23:29:26');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('76', '1', '341', 'Saya sangat menikmati \'List 485\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-04-21 05:26:13');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('77', '3', '465', 'Saya sangat menikmati \'Ask 625\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2024-11-11 03:31:15');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('78', '23', '315', 'Saya sangat menikmati \'Main 8\'. Sangat informatif dan engaging. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2025-03-17 10:14:57');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('79', '13', '544', 'Saya sangat menikmati \'Focus 223\'. Sangat informatif dan engaging. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-04-21 21:46:43');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('80', '6', '999', 'Saya sangat menikmati \'South 922\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2024-11-11 17:31:34');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('81', '7', '873', 'Saya sangat menikmati \'On My Way\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-04-18 08:46:44');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('82', '17', '234', 'Saya sangat menikmati \'Account 988\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-01-25 19:15:33');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('83', '8', '623', 'Saya sangat menikmati \'Happier\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-05-10 02:47:50');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('84', '20', '623', 'Saya sangat menikmati \'Happier\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-03-28 02:32:29');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('85', '4', '957', 'Saya sangat menikmati \'Kind 790\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-01-30 06:14:26');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('86', '17', '352', 'Saya sangat menikmati \'Account 152\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-02-23 03:58:29');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('87', '2', '402', 'Saya sangat menikmati \'Area 493\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2024-11-06 21:41:16');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('88', '17', '218', 'Saya sangat menikmati \'Town 632\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2024-09-28 18:18:58');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('89', '17', '934', 'Saya sangat menikmati \'Their 742\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-08 07:14:27');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('90', '1', '858', 'Saya sangat menikmati \'Require 946\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2025-02-15 02:48:57');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('91', '18', '835', 'Saya sangat menikmati \'Mention 726\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-04-14 08:40:32');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('92', '12', '737', 'Saya sangat menikmati \'Author 395\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2025-01-06 16:58:36');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('93', '25', '638', 'Saya sangat menikmati \'Subject 906\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2024-10-16 21:31:06');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('94', '25', '196', 'Saya sangat menikmati \'Both 925\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-03-14 17:45:41');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('95', '12', '830', 'Saya sangat menikmati \'Total 97\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-01-19 23:37:05');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('96', '5', '106', 'Saya sangat menikmati \'Wall 564\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-11 05:25:28');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('97', '13', '366', 'Saya sangat menikmati \'Second 352\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-01-10 07:55:54');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('98', '4', '592', 'Saya sangat menikmati \'Audience 331\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-05-05 11:48:21');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('99', '3', '525', 'Saya sangat menikmati \'Rule 236\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2024-11-27 10:34:13');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('100', '22', '547', 'Saya sangat menikmati \'Recently 27\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-04-25 13:08:21');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('101', '18', '402', 'Saya sangat menikmati \'Area 493\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-01-29 16:52:10');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('102', '17', '997', 'Saya sangat menikmati \'Reason 865\'. Sangat informatif dan engaging. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-03-03 19:52:54');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('103', '5', '638', 'Saya sangat menikmati \'Subject 906\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2024-05-24 08:02:38');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('104', '20', '677', 'Saya sangat menikmati \'System 245\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-03-29 07:27:27');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('105', '11', '402', 'Saya sangat menikmati \'Area 493\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-05-10 05:18:40');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('106', '4', '351', 'Saya sangat menikmati \'Order 643\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-04-21 15:28:56');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('107', '5', '218', 'Saya sangat menikmati \'Town 632\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-07-10 18:06:28');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('108', '2', '547', 'Saya sangat menikmati \'Recently 27\'. Sangat informatif dan engaging. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2025-04-06 15:13:45');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('109', '16', '863', 'Saya sangat menikmati \'Game 973\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-03-26 08:17:30');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('110', '18', '351', 'Saya sangat menikmati \'Order 643\'. Sangat informatif dan engaging. Saya terutama mengapresiasi struktur pembahasan yang disajikan dengan baik.', '2025-04-05 20:51:33');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('111', '6', '406', 'Saya sangat menikmati \'Scene 35\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-05-06 20:49:50');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('112', '19', '512', 'Saya sangat menikmati \'Left 539\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2024-12-21 06:01:57');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('113', '13', '439', 'Saya sangat menikmati \'Believer\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-07 20:42:55');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('114', '24', '146', 'Saya sangat menikmati \'Thank 556\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-05-14 17:24:51');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('115', '1', '205', 'Saya sangat menikmati \'Frozen\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-03-07 22:42:43');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('116', '20', '875', 'Saya sangat menikmati \'Movement 453\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-04-24 01:40:22');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('117', '24', '229', 'Saya sangat menikmati \'Easy 845\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-05-14 21:11:27');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('118', '16', '827', 'Saya sangat menikmati \'Off 323\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2025-04-19 21:35:11');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('119', '8', '872', 'Saya sangat menikmati \'Air 948\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-03-26 03:13:09');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('120', '6', '694', 'Saya sangat menikmati \'Joker\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-02-13 23:12:00');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('121', '5', '166', 'Saya sangat menikmati \'Could 534\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2024-09-21 11:20:20');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('122', '6', '590', 'Saya sangat menikmati \'Between 567\'. Sangat informatif dan engaging. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2025-02-15 09:35:19');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('123', '7', '540', 'Saya sangat menikmati \'Yeah 207\'. Sangat informatif dan engaging. Saya terutama mengapresiasi durasi yang pas yang disajikan dengan baik.', '2025-05-02 07:20:17');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('124', '9', '659', 'Saya sangat menikmati \'Responsibility 448\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-04-02 07:34:26');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('125', '7', '630', 'Saya sangat menikmati \'Professor 188\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-05-14 22:49:26');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('126', '10', '593', 'Saya sangat menikmati \'Bit 353\'. Sangat informatif dan engaging. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-04-17 23:18:21');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('127', '8', '896', 'Saya sangat menikmati \'Energy 237\'. Sangat informatif dan engaging. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-03-30 23:56:16');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('128', '25', '121', 'Saya sangat menikmati \'Degree 5\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2024-12-19 06:46:56');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('129', '4', '185', 'Saya sangat menikmati \'Study 341\'. Sangat informatif dan engaging. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2024-05-15 17:12:16');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('130', '11', '984', 'Saya sangat menikmati \'Play 93\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kreativitas desain yang disajikan dengan baik.', '2025-05-13 11:44:09');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('131', '6', '106', 'Saya sangat menikmati \'Wall 564\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-04-13 17:36:16');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('132', '22', '185', 'Saya sangat menikmati \'Study 341\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2024-08-29 17:14:46');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('133', '7', '351', 'Saya sangat menikmati \'Order 643\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2025-05-11 12:59:35');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('134', '16', '638', 'Saya sangat menikmati \'Subject 906\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2024-11-08 23:32:38');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('135', '9', '683', 'Saya sangat menikmati \'Moana\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2024-09-06 19:42:49');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('136', '4', '546', 'Saya sangat menikmati \'Either 767\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-05-13 18:24:22');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('137', '12', '352', 'Saya sangat menikmati \'Account 152\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-04-24 11:58:49');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('138', '24', '418', 'Saya sangat menikmati \'Director 136\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-05-07 23:22:14');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('139', '22', '544', 'Saya sangat menikmati \'Focus 223\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kejelasan audio yang disajikan dengan baik.', '2024-09-27 13:57:08');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('140', '23', '239', 'Saya sangat menikmati \'Policy 11\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2024-12-02 15:18:11');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('141', '19', '661', 'Saya sangat menikmati \'Provide 348\'. Sangat informatif dan engaging. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2024-06-08 18:16:58');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('142', '20', '550', 'Saya sangat menikmati \'Per 35\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2025-05-13 19:45:26');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('143', '20', '418', 'Saya sangat menikmati \'Director 136\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-02-24 06:33:20');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('144', '2', '104', 'Saya sangat menikmati \'Certainly 46\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2025-04-25 03:20:02');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('145', '19', '355', 'Saya sangat menikmati \'Soul\'. Sangat informatif dan engaging. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2024-03-29 05:51:50');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('146', '1', '746', 'Saya sangat menikmati \'La La Land\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-05-08 20:57:22');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('147', '9', '766', 'Saya sangat menikmati \'Much 760\'. Sangat informatif dan engaging. Saya terutama mengapresiasi pemilihan topik yang disajikan dengan baik.', '2025-04-09 20:17:25');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('148', '19', '406', 'Saya sangat menikmati \'Scene 35\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2024-11-23 23:33:05');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('149', '8', '911', 'Saya sangat menikmati \'Rolling in the Deep\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kualitas suara yang disajikan dengan baik.', '2025-02-24 16:34:09');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('150', '6', '525', 'Saya sangat menikmati \'Rule 236\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2024-11-06 00:06:21');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('151', '3', '438', 'Saya sangat menikmati \'Four 23\'. Sangat informatif dan engaging. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-02-28 00:01:38');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('152', '17', '737', 'Saya sangat menikmati \'Author 395\'. Sangat informatif dan engaging. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2025-03-12 09:35:30');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('153', '22', '448', 'Saya sangat menikmati \'They 696\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi contoh kasus yang disajikan dengan baik.', '2024-09-18 20:44:15');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('154', '7', '566', 'Saya sangat menikmati \'Audience 433\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi visual efek yang disajikan dengan baik.', '2025-04-26 09:44:41');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('155', '22', '793', 'Saya sangat menikmati \'Bad 848\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2025-04-12 10:48:46');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('156', '16', '905', 'Saya sangat menikmati \'Carry 104\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi kualitas editing yang disajikan dengan baik.', '2025-04-29 00:42:07');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('157', '25', '342', 'Saya sangat menikmati \'Consumer 196\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi komposisi warna yang disajikan dengan baik.', '2024-11-08 22:25:06');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('158', '1', '402', 'Saya sangat menikmati \'Area 493\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi struktur paragraf yang disajikan dengan baik.', '2024-10-16 17:16:12');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('159', '10', '827', 'Saya sangat menikmati \'Off 323\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi kedalaman riset yang disajikan dengan baik.', '2025-02-26 02:56:09');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('160', '20', '401', 'Saya sangat menikmati \'Rich 660\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi Konsep artistik yang disajikan dengan baik.', '2024-12-27 03:15:35');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('161', '19', '483', 'Saya sangat menikmati \'Ready 456\'. Memberi perspektif yang berbeda. Saya terutama mengapresiasi grafis pendukung yang disajikan dengan baik.', '2025-05-07 06:51:07');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('162', '15', '548', 'Saya sangat menikmati \'Recent 840\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-01-21 17:49:24');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('163', '5', '402', 'Saya sangat menikmati \'Area 493\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi gaya penulisan yang disajikan dengan baik.', '2025-01-25 00:15:27');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('164', '13', '625', 'Saya sangat menikmati \'Challenge 41\'. Sangat informatif dan engaging. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2024-12-15 18:19:56');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('165', '18', '327', 'Saya sangat menikmati \'Cut 604\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi kejernihan ilustrasi yang disajikan dengan baik.', '2024-11-22 15:16:38');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('166', '8', '827', 'Saya sangat menikmati \'Off 323\'. Membuat saya penasaran untuk menggali lebih jauh. Saya terutama mengapresiasi bahasa yang digunakan yang disajikan dengan baik.', '2025-04-19 03:43:04');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('167', '10', '766', 'Saya sangat menikmati \'Much 760\'. Sangat informatif dan engaging. Saya terutama mengapresiasi narasi host yang disajikan dengan baik.', '2024-09-18 13:40:21');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('168', '10', '742', 'Saya sangat menikmati \'Memory 569\'. Sangat informatif dan engaging. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2025-03-04 19:30:20');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('169', '3', '234', 'Saya sangat menikmati \'Account 988\'. Memberi wawasan baru bagi saya. Saya terutama mengapresiasi detail visual yang disajikan dengan baik.', '2024-12-07 22:26:04');
+INSERT INTO Komentar (id_komentar, id_suporter, id_konten, isi, waktu) VALUES ('170', '2', '875', 'Saya sangat menikmati \'Movement 453\'. Sangat membantu memahami topik ini. Saya terutama mengapresiasi alur cerita yang disajikan dengan baik.', '2025-05-06 01:04:09');
+
 
 -- OrderSpecialContent
 CREATE TABLE OrderSpecialContent (
-    id_order	VARCHAR(3) PRIMARY KEY NOT NULL,
+    id_order	INT PRIMARY KEY NOT NULL,
     id_suporter	VARCHAR(3) NOT NULL,
-    id_creator	VARCHAR(3) NOT NULL,
-    judul	VARCHAR(512) NOT NULL,
+    id_creator VARCHAR(4) NOT NULL,
+    judul	VARCHAR(512),
     deskripsi	VARCHAR(512),
     harga_dasar	INT,
     tgl_batas_revisi	VARCHAR(512),
+    status_pengerjaan	VARCHAR(512),
+    estimasi_pengerjaan	INT,
+    tanggal_penyelesaian	VARCHAR(512),
+    id_konten	VARCHAR(512),
     feedback	VARCHAR(512),
-    estimasi_pengerjaan	INT CHECK (estimasi_pengerjaan > 0),
     FOREIGN KEY (id_suporter)
         REFERENCES Suporter(id_suporter)
         ON DELETE CASCADE
@@ -1116,391 +1148,160 @@ CREATE TABLE OrderSpecialContent (
     FOREIGN KEY (id_creator)
         REFERENCES Creator(id_creator)
         ON DELETE CASCADE
-        ON UPDATE CASCADE
-);
-
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('1', '4', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '878012', '2023-04-17', 'Hasil sangat memuaskan dan profesional!', '8');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('2', '17', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '289584', '2025-04-17', '', '7');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('3', '3', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1355541', '2025-05-26', 'Revisi langsung dikerjakan, mantap.', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('4', '7', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1486971', '2025-03-26', 'Ilustrasinya keren, sesuai request!', '23');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('5', '19', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '997771', '2024-09-24', '', '21');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('6', '17', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '275121', '2023-09-26', 'Ilustrasinya keren, sesuai request!', '29');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('7', '20', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1487298', '2023-05-21', 'Proses cepat dan komunikatif.', '14');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('8', '8', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1234294', '2024-10-15', '', '7');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('9', '15', 'ZHC', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '1181819', '2024-02-27', '', '4');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('10', '23', 'ZHC', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '611138', '2025-08-07', '', '6');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('11', '12', 'LDV', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '614183', '2023-04-30', '', '21');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('12', '14', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1022057', '2025-01-10', 'Ilustrasinya keren, sesuai request!', '17');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('13', '22', 'LDV', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '228360', '2025-05-10', '', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('14', '11', 'LDV', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '666489', '2025-02-07', '', '22');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('15', '24', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1135374', '2024-10-21', '', '6');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('16', '24', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '596525', '2023-11-06', '', '14');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('17', '5', 'LDV', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '714606', '2024-09-12', '', '14');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('18', '21', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '564657', '2023-06-28', '', '19');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('19', '11', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '648669', '2025-10-13', 'Proses cepat dan komunikatif.', '10');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('20', '10', 'LDV', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1332549', '2023-12-14', '', '7');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('21', '23', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1209226', '2023-10-05', 'Revisi langsung dikerjakan, mantap.', '26');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('22', '23', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '982213', '2023-08-31', 'Gaya visualnya unik dan berkarakter.', '5');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('23', '5', 'LDV', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1230465', '2025-06-01', 'Proses cepat dan komunikatif.', '5');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('24', '19', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '174822', '2025-07-25', '', '8');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('25', '4', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '241859', '2023-11-05', 'Proses cepat dan komunikatif.', '10');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('26', '3', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '919312', '2023-02-22', 'Ilustrasinya keren, sesuai request!', '29');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('27', '23', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '690787', '2025-08-16', 'Hasil sangat memuaskan dan profesional!', '22');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('28', '5', 'ZHC', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1089442', '2025-06-06', 'Gaya visualnya unik dan berkarakter.', '24');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('29', '25', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '892615', '2023-09-19', '', '22');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('30', '17', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '287385', '2024-10-02', '', '24');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('31', '4', 'LDV', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1474260', '2023-09-21', '', '7');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('32', '1', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '473017', '2025-03-21', 'Gaya visualnya unik dan berkarakter.', '18');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('33', '12', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '494766', '2024-11-22', '', '5');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('34', '18', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '949715', '2023-01-27', '', '18');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('35', '12', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '837374', '2024-10-21', 'Gaya visualnya unik dan berkarakter.', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('36', '14', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1095375', '2025-08-16', 'Gaya visualnya unik dan berkarakter.', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('37', '22', 'ZHC', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '443824', '2025-10-30', '', '8');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('38', '11', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '505734', '2024-12-22', 'Proses cepat dan komunikatif.', '30');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('39', '2', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1363818', '2024-09-03', '', '17');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('40', '7', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '745541', '2025-09-04', 'Ilustrasinya keren, sesuai request!', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('41', '5', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '865627', '2023-06-29', 'Ilustrasinya keren, sesuai request!', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('42', '16', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1217320', '2024-02-17', '', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('43', '18', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '13283', '2025-03-07', '', '29');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('44', '7', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1041798', '2024-02-12', 'Proses cepat dan komunikatif.', '9');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('45', '4', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1155845', '2023-01-31', 'Hasil sangat memuaskan dan profesional!', '27');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('46', '21', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1122794', '2025-06-11', 'Gaya visualnya unik dan berkarakter.', '30');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('47', '19', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '772218', '2024-03-08', 'Ilustrasinya keren, sesuai request!', '8');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('48', '5', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1401994', '2025-04-30', 'Ilustrasinya keren, sesuai request!', '19');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('49', '22', 'BRS', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '893936', '2023-12-23', '', '25');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('50', '1', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '402486', '2024-08-13', '', '30');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('51', '22', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '571075', '2024-07-21', 'Gaya visualnya unik dan berkarakter.', '16');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('52', '24', 'LDV', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1125520', '2025-09-25', '', '13');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('53', '23', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '159586', '2023-08-06', '', '19');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('54', '6', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '258769', '2024-02-18', 'Revisi langsung dikerjakan, mantap.', '19');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('55', '10', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '772654', '2023-03-17', 'Hasil sangat memuaskan dan profesional!', '14');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('56', '12', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '778316', '2025-01-24', 'Ilustrasinya keren, sesuai request!', '19');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('57', '4', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '116867', '2023-07-15', 'Revisi langsung dikerjakan, mantap.', '27');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('58', '12', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1383619', '2023-12-16', 'Hasil sangat memuaskan dan profesional!', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('59', '17', 'ZHC', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '316579', '2024-12-14', 'Proses cepat dan komunikatif.', '29');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('60', '25', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '865961', '2023-04-16', '', '14');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('61', '1', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1167665', '2024-01-07', 'Proses cepat dan komunikatif.', '22');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('62', '21', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1230777', '2024-12-31', '', '7');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('63', '22', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1476443', '2024-09-15', 'Proses cepat dan komunikatif.', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('64', '20', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '811482', '2024-11-11', '', '27');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('65', '23', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '996691', '2024-04-30', 'Hasil sangat memuaskan dan profesional!', '9');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('66', '22', 'LDV', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '351089', '2023-11-27', 'Revisi langsung dikerjakan, mantap.', '6');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('67', '19', 'LDV', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '750859', '2025-03-08', 'Gaya visualnya unik dan berkarakter.', '17');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('68', '16', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1394207', '2023-09-20', '', '4');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('69', '11', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '215483', '2025-07-05', 'Ilustrasinya keren, sesuai request!', '23');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('70', '12', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '601839', '2025-07-12', 'Ilustrasinya keren, sesuai request!', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('71', '2', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '865230', '2023-01-16', 'Hasil sangat memuaskan dan profesional!', '23');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('72', '5', 'LDV', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1227092', '2024-03-25', 'Revisi langsung dikerjakan, mantap.', '12');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('73', '14', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '11725', '2023-02-02', '', '24');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('74', '20', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '51454', '2025-03-29', 'Revisi langsung dikerjakan, mantap.', '13');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('75', '3', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '569695', '2024-06-21', '', '5');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('76', '6', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1379683', '2023-10-04', '', '24');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('77', '23', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1478590', '2023-10-25', 'Proses cepat dan komunikatif.', '22');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('78', '21', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1314545', '2023-08-13', 'Revisi langsung dikerjakan, mantap.', '4');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('79', '24', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1175534', '2024-03-07', 'Revisi langsung dikerjakan, mantap.', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('80', '24', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1271286', '2024-09-23', '', '8');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('81', '22', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '697740', '2023-10-29', 'Gaya visualnya unik dan berkarakter.', '10');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('82', '8', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1133499', '2025-06-23', '', '16');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('83', '10', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '238686', '2025-04-30', 'Hasil sangat memuaskan dan profesional!', '4');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('84', '4', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '511135', '2023-12-11', '', '18');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('85', '22', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '657577', '2023-01-31', 'Revisi langsung dikerjakan, mantap.', '22');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('86', '20', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '50856', '2025-05-18', 'Hasil sangat memuaskan dan profesional!', '25');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('87', '12', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '525609', '2025-04-06', 'Proses cepat dan komunikatif.', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('88', '11', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '696314', '2025-01-17', 'Hasil sangat memuaskan dan profesional!', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('89', '4', 'LDV', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '532642', '2025-07-06', '', '18');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('90', '14', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '131312', '2025-07-28', '', '10');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('91', '21', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '469993', '2024-10-02', 'Ilustrasinya keren, sesuai request!', '25');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('92', '1', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '738324', '2025-01-05', 'Hasil sangat memuaskan dan profesional!', '24');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('93', '17', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1158153', '2025-07-28', 'Ilustrasinya keren, sesuai request!', '18');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('94', '21', 'LDV', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1123310', '2023-01-16', 'Hasil sangat memuaskan dan profesional!', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('95', '18', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '696527', '2025-07-18', '', '25');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('96', '25', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '82871', '2025-07-06', 'Hasil sangat memuaskan dan profesional!', '23');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('97', '11', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1345601', '2023-11-20', '', '30');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('98', '11', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '387752', '2023-07-23', '', '30');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('99', '15', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1091402', '2024-03-01', 'Proses cepat dan komunikatif.', '6');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('100', '20', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '910674', '2023-06-03', '', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('101', '3', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1197874', '2025-02-06', '', '20');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('102', '22', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '909828', '2024-06-09', 'Hasil sangat memuaskan dan profesional!', '3');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('103', '25', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1448471', '2025-07-21', 'Gaya visualnya unik dan berkarakter.', '26');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('104', '15', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '380372', '2024-08-29', 'Proses cepat dan komunikatif.', '28');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('105', '18', 'BRS', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1386626', '2023-10-28', '', '25');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('106', '3', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '564940', '2024-11-07', '', '18');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('107', '22', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1187115', '2024-05-21', 'Hasil sangat memuaskan dan profesional!', '27');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('108', '9', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '622535', '2025-10-08', 'Revisi langsung dikerjakan, mantap.', '19');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('109', '6', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '833921', '2024-03-13', 'Gaya visualnya unik dan berkarakter.', '11');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('110', '19', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '880539', '2025-04-15', '', '17');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('111', '2', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '243115', '2025-01-18', '', '6');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('112', '9', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1074505', '2025-02-24', 'Revisi langsung dikerjakan, mantap.', '15');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('113', '12', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '890422', '2023-05-01', 'Proses cepat dan komunikatif.', '5');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('114', '19', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1325402', '2023-09-23', '', '24');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('115', '10', 'BRS', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '1157543', '2025-07-23', '', '27');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('116', '9', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '447210', '2024-08-30', 'Ilustrasinya keren, sesuai request!', '24');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('117', '23', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1075315', '2023-03-13', 'Ilustrasinya keren, sesuai request!', '30');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('118', '21', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '185022', '2024-01-03', '', '14');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('119', '13', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1163483', '2025-02-02', 'Revisi langsung dikerjakan, mantap.', '16');
-INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, feedback, estimasi_pengerjaan) VALUES ('120', '22', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1420395', '2024-01-29', 'Ilustrasinya keren, sesuai request!', '23');
-
--- Hasil Order
-CREATE TABLE HasilOrder (
-    id_order	VARCHAR(3) NOT NULL,
-    id_konten	VARCHAR(3) NOT NULL,
-    status_pengerjaan	VARCHAR(10),
-    tanggal_penyelesaian	VARCHAR(512),
-    PRIMARY KEY (id_order, id_konten),
-    FOREIGN KEY (id_order) REFERENCES OrderSpecialContent(id_order)
-        ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (id_konten) REFERENCES Konten(id_konten)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
 
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('1', '898', 'selesai', '8/9/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('2', '948', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('2', '436', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('3', '482', 'selesai', '9/22/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('4', '863', 'selesai', '5/1/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('5', '787', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('5', '482', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('5', '871', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('6', '863', 'selesai', '12/9/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('7', '990', 'selesai', '6/10/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('8', '889', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('8', '787', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('9', '631', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('10', '631', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('11', '315', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('11', '547', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('12', '791', 'selesai', '8/17/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('12', '990', 'selesai', '11/7/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('13', '182', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('13', '842', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('13', '547', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('14', '438', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('14', '315', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('14', '103', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('15', '871', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('15', '319', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('15', '512', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('16', '791', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('16', '218', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('17', '438', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('17', '315', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('17', '842', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('18', '889', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('18', '517', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('19', '866', 'selesai', '11/11/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('20', '905', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('20', '315', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('20', '182', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('21', '517', 'selesai', '10/22/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('21', '512', 'selesai', '4/27/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('22', '170', 'selesai', '1/29/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('22', '555', 'selesai', '8/15/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('23', '103', 'selesai', '7/8/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('24', '588', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('24', '791', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('25', '612', 'selesai', '6/12/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('26', '791', 'selesai', '5/24/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('27', '791', 'selesai', '8/10/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('27', '436', 'selesai', '7/6/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('27', '866', 'selesai', '8/8/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('28', '871', 'selesai', '8/12/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('29', '612', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('29', '588', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('30', '555', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('30', '432', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('30', '315', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('31', '182', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('31', '432', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('32', '871', 'selesai', '2/4/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('33', '863', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('34', '871', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('34', '246', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('34', '863', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('35', '436', 'selesai', '10/18/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('35', '791', 'selesai', '4/26/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('35', '218', 'selesai', '12/16/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('36', '246', 'selesai', '6/23/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('36', '871', 'selesai', '1/7/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('37', '787', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('37', '512', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('37', '319', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('38', '791', 'selesai', '8/25/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('38', '898', 'selesai', '6/25/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('38', '218', 'selesai', '2/11/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('39', '898', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('39', '218', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('40', '218', 'selesai', '9/28/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('40', '343', 'selesai', '9/23/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('41', '871', 'selesai', '2/25/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('41', '512', 'selesai', '10/26/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('42', '182', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('43', '436', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('43', '218', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('43', '612', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('44', '871', 'selesai', '11/7/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('44', '512', 'selesai', '8/25/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('44', '246', 'selesai', '3/14/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('45', '438', 'selesai', '6/21/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('45', '103', 'selesai', '2/25/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('46', '612', 'selesai', '4/26/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('47', '482', 'selesai', '10/10/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('47', '871', 'selesai', '9/19/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('48', '898', 'selesai', '2/1/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('48', '990', 'selesai', '6/4/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('49', '612', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('49', '343', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('49', '948', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('50', '990', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('50', '218', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('50', '866', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('51', '948', 'selesai', '2/15/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('51', '436', 'selesai', '1/22/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('52', '547', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('53', '343', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('54', '555', 'selesai', '7/9/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('54', '842', 'selesai', '2/19/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('55', '866', 'selesai', '3/10/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('55', '948', 'selesai', '4/28/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('56', '482', 'selesai', '12/26/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('57', '990', 'selesai', '8/2/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('57', '791', 'selesai', '1/18/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('57', '218', 'selesai', '8/20/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('58', '517', 'selesai', '5/16/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('59', '631', 'selesai', '9/25/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('59', '889', 'selesai', '6/28/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('59', '871', 'selesai', '4/25/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('60', '871', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('60', '787', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('60', '517', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('61', '319', 'selesai', '7/30/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('61', '863', 'selesai', '9/27/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('62', '863', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('62', '889', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('62', '482', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('63', '866', 'selesai', '4/25/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('63', '990', 'selesai', '6/13/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('64', '898', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('64', '791', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('64', '866', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('65', '343', 'selesai', '7/20/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('66', '170', 'selesai', '7/16/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('66', '842', 'selesai', '3/7/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('66', '432', 'selesai', '3/15/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('67', '547', 'selesai', '2/2/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('68', '438', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('68', '547', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('69', '436', 'selesai', '11/7/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('70', '787', 'selesai', '9/3/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('70', '512', 'selesai', '7/17/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('70', '246', 'selesai', '10/7/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('71', '791', 'selesai', '12/29/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('72', '905', 'selesai', '2/27/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('72', '170', 'selesai', '12/25/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('72', '432', 'selesai', '9/23/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('73', '482', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('74', '863', 'selesai', '2/2/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('74', '787', 'selesai', '11/25/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('74', '871', 'selesai', '9/21/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('75', '547', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('76', '438', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('76', '103', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('76', '315', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('77', '791', 'selesai', '2/18/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('77', '588', 'selesai', '9/21/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('78', '863', 'selesai', '10/17/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('78', '889', 'selesai', '11/19/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('78', '319', 'selesai', '1/19/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('79', '482', 'selesai', '2/2/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('80', '905', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('80', '432', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('81', '588', 'selesai', '8/6/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('81', '436', 'selesai', '11/29/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('81', '791', 'selesai', '1/4/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('82', '871', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('82', '787', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('82', '512', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('83', '612', 'selesai', '3/3/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('83', '588', 'selesai', '6/18/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('83', '866', 'selesai', '7/17/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('84', '787', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('84', '482', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('85', '990', 'selesai', '11/2/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('85', '866', 'selesai', '11/23/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('85', '612', 'selesai', '3/26/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('86', '436', 'selesai', '11/10/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('86', '948', 'selesai', '3/16/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('87', '631', 'selesai', '9/12/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('87', '482', 'selesai', '5/22/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('87', '787', 'selesai', '1/21/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('88', '547', 'selesai', '5/28/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('88', '103', 'selesai', '12/9/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('88', '182', 'selesai', '8/28/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('89', '547', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('90', '889', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('90', '517', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('91', '182', 'selesai', '8/24/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('91', '438', 'selesai', '11/9/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('92', '871', 'selesai', '11/24/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('92', '863', 'selesai', '8/13/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('93', '103', 'selesai', '10/30/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('93', '432', 'selesai', '4/9/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('94', '170', 'selesai', '3/16/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('94', '547', 'selesai', '11/24/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('95', '842', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('96', '315', 'selesai', '1/20/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('96', '103', 'selesai', '1/16/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('97', '898', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('98', '866', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('99', '898', 'selesai', '2/27/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('100', '866', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('100', '343', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('100', '588', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('101', '170', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('101', '315', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('102', '103', 'selesai', '1/15/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('103', '246', 'selesai', '9/15/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('103', '863', 'selesai', '9/23/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('103', '517', 'selesai', '10/16/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('104', '315', 'selesai', '12/3/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('104', '438', 'selesai', '12/16/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('105', '218', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('106', '343', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('106', '990', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('107', '863', 'selesai', '4/20/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('108', '791', 'selesai', '3/15/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('109', '990', 'selesai', '11/5/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('109', '588', 'selesai', '6/6/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('110', '866', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('111', '182', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('111', '315', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('112', '842', 'selesai', '5/4/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('112', '438', 'selesai', '9/20/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('112', '182', 'selesai', '3/3/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('113', '889', 'selesai', '2/8/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('113', '512', 'selesai', '1/28/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('114', '588', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('114', '898', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('114', '948', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('115', '588', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('115', '343', 'Draft', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('116', '898', 'selesai', '8/6/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('116', '791', 'selesai', '8/17/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('117', '842', 'selesai', '1/31/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('117', '547', 'selesai', '12/3/2024');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('117', '170', 'selesai', '5/11/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('118', '787', 'Revisi', '');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('119', '436', 'selesai', '8/24/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('120', '517', 'selesai', '2/11/2023');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('120', '889', 'selesai', '9/11/2025');
-INSERT INTO HasilOrder (id_order, id_konten, status_pengerjaan, tanggal_penyelesaian) VALUES ('120', '871', 'selesai', '3/18/2023');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('1', '4', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '878012', '2023-04-17', 'dalam_pengerjaan', '8', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('2', '17', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '289584', '2025-04-17', 'menunggu_persetujuan', '7', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('3', '3', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1355541', '2025-05-26', 'menunggu_persetujuan', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('4', '7', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1486971', '2025-03-26', 'menunggu_persetujuan', '23', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('5', '19', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '997771', '2024-09-24', 'dalam_pengerjaan', '21', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('6', '17', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '275121', '2023-09-26', 'ditolak', '29', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('7', '20', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1487298', '2023-05-21', 'disetujui', '14', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('8', '8', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1234294', '2024-10-15', 'dalam_pengerjaan', '7', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('9', '15', 'ZHC', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '1181819', '2024-02-27', 'dalam_pengerjaan', '4', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('10', '23', 'ZHC', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '611138', '2025-08-07', 'menunggu_persetujuan', '6', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('11', '12', 'LDV', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '614183', '2023-04-30', 'ditolak', '21', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('12', '14', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1022057', '2025-01-10', 'menunggu_persetujuan', '17', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('13', '22', 'LDV', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '228360', '2025-05-10', 'menunggu_persetujuan', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('14', '11', 'LDV', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '666489', '2025-02-07', 'menunggu_persetujuan', '22', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('15', '24', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1135374', '2024-10-21', 'disetujui', '6', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('16', '24', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '596525', '2023-11-06', 'ditolak', '14', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('17', '5', 'LDV', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '714606', '2024-09-12', 'dalam_pengerjaan', '14', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('18', '21', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '564657', '2023-06-28', 'ditolak', '19', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('19', '11', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '648669', '2025-10-13', 'selesai', '10', '2025-10-10', '571', 'Proses cepat dan komunikatif.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('20', '10', 'LDV', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1332549', '2023-12-14', 'disetujui', '7', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('21', '23', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1209226', '2023-10-05', 'ditolak', '26', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('22', '23', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '982213', '2023-08-31', 'ditolak', '5', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('23', '5', 'LDV', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1230465', '2025-06-01', 'menunggu_persetujuan', '5', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('24', '19', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '174822', '2025-07-25', 'menunggu_persetujuan', '8', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('25', '4', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '241859', '2023-11-05', 'ditolak', '10', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('26', '3', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '919312', '2023-02-22', 'dalam_pengerjaan', '29', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('27', '23', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '690787', '2025-08-16', 'selesai', '22', '2025-08-01', '610', 'Hasil sangat memuaskan dan profesional!');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('28', '5', 'ZHC', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1089442', '2025-06-06', 'menunggu_persetujuan', '24', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('29', '25', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '892615', '2023-09-19', 'disetujui', '22', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('30', '17', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '287385', '2024-10-02', 'dalam_pengerjaan', '24', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('31', '4', 'LDV', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1474260', '2023-09-21', 'ditolak', '7', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('32', '1', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '473017', '2025-03-08', 'selesai', '18', '2025-03-02', '241', 'Proses cepat dan komunikatif.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('33', '12', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '494766', '2024-11-22', 'selesai', '5', '2024-11-20', '560', 'Revisi langsung dikerjakan, mantap.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('34', '18', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '949715', '2023-01-27', 'ditolak', '18', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('35', '12', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '837374', '2024-10-21', 'dalam_pengerjaan', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('36', '14', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1095375', '2025-08-16', 'menunggu_persetujuan', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('37', '22', 'ZHC', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '443824', '2025-10-30', 'selesai', '18', '2025-10-28', '108', NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('38', '11', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '505734', '2024-12-22', 'menunggu_persetujuan', '30', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('39', '2', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1363818', '2024-09-03', 'dalam_pengerjaan', '17', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('40', '7', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '745541', '2025-09-04', 'selesai', '15', '2025-09-01', '530', 'Ilustrasinya keren, sesuai request!');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('41', '5', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '865627', '2023-06-29', 'ditolak', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('42', '16', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1217320', '2024-02-17', 'disetujui', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('43', '18', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '13283', '2025-03-07', 'menunggu_persetujuan', '29', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('44', '7', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1041798', '2024-02-12', 'dalam_pengerjaan', '9', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('45', '4', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1155845', '2023-01-31', 'ditolak', '27', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('46', '21', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1122794', '2025-06-11', 'menunggu_persetujuan', '30', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('47', '19', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '772218', '2024-03-08', 'dalam_pengerjaan', '8', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('48', '5', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1401994', '2025-04-30', 'menunggu_persetujuan', '19', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('49', '22', 'BRS', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '893936', '2023-12-23', 'dalam_pengerjaan', '25', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('50', '1', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '402486', '2024-08-13', 'disetujui', '30', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('51', '22', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '571075', '2024-07-21', 'disetujui', '16', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('52', '24', 'LDV', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1125520', '2025-09-25', 'dalam_pengerjaan', '13', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('53', '23', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '159586', '2023-08-06', 'disetujui', '19', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('54', '6', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '258769', '2024-02-18', 'disetujui', '19', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('55', '10', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '772654', '2023-03-17', 'dalam_pengerjaan', '14', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('56', '12', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '778316', '2025-01-24', 'menunggu_persetujuan', '19', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('57', '4', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '116867', '2023-07-15', 'ditolak', '27', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('58', '12', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1383619', '2023-12-16', 'disetujui', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('59', '17', 'ZHC', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '316579', '2024-12-14', 'disetujui', '29', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('60', '25', 'ZHC', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '865961', '2023-04-16', 'ditolak', '14', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('61', '1', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1167665', '2024-01-07', 'disetujui', '22', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('62', '21', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1230777', '2024-12-31', 'disetujui', '7', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('63', '22', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1476443', '2024-09-15', 'dalam_pengerjaan', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('64', '20', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '811482', '2024-11-11', 'menunggu_persetujuan', '27', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('65', '23', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '996691', '2024-04-30', 'ditolak', '9', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('66', '22', 'LDV', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '351089', '2023-11-27', 'disetujui', '6', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('67', '19', 'LDV', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '750859', '2025-04-13', 'selesai', '17', '2025-04-10', '299', 'Hasil sangat memuaskan dan profesional!');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('68', '16', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1394207', '2023-09-20', 'ditolak', '4', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('69', '11', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '215483', '2025-07-05', 'selesai', '13', '2025-07-04', '808', NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('70', '12', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '601839', '2025-07-12', 'menunggu_persetujuan', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('71', '2', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '865230', '2023-01-16', 'ditolak', '23', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('72', '5', 'LDV', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1227092', '2024-03-25', 'selesai', '22', '2024-03-20', '988', 'Proses cepat dan komunikatif.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('73', '14', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '11725', '2023-02-02', 'ditolak', '24', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('74', '20', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '51454', '2025-03-15', 'selesai', '13', '2025-03-14', '111', 'Gaya visualnya unik dan berkarakter.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('75', '3', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '569695', '2024-06-21', 'disetujui', '5', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('76', '6', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1379683', '2023-10-04', 'ditolak', '24', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('77', '23', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1478590', '2023-10-25', 'disetujui', '22', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('78', '21', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '1314545', '2023-08-13', 'ditolak', '4', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('79', '24', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1175534', '2024-03-07', 'dalam_pengerjaan', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('80', '24', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1271286', '2024-09-23', 'dalam_pengerjaan', '8', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('81', '22', 'BRS', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '697740', '2023-10-29', 'ditolak', '10', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('82', '8', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1133499', '2025-06-23', 'menunggu_persetujuan', '16', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('83', '10', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '238686', '2025-04-30', 'menunggu_persetujuan', '4', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('84', '4', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '511135', '2023-12-11', 'disetujui', '18', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('85', '22', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '657577', '2023-01-31', 'ditolak', '22', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('86', '20', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '50856', '2025-05-08', 'selesai', '25', '2025-05-06', '811', 'Gaya visualnya unik dan berkarakter.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('87', '12', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '525609', '2025-04-06', 'menunggu_persetujuan', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('88', '11', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '696314', '2025-01-17', 'dalam_pengerjaan', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('89', '4', 'LDV', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '532642', '2025-07-06', 'menunggu_persetujuan', '18', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('90', '14', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '131312', '2025-07-28', 'disetujui', '10', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('91', '21', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '469993', '2024-12-02', 'selesai', '25', '2024-11-29', '763', NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('92', '1', 'ZHC', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '738324', '2025-01-05', 'disetujui', '24', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('93', '17', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1158153', '2025-07-28', 'selesai', '18', '2025-07-14', '301', 'Ilustrasinya keren, sesuai request!');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('94', '21', 'LDV', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1123310', '2023-01-16', 'ditolak', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('95', '18', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '696527', '2025-07-18', 'disetujui', '25', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('96', '25', 'LDV', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '82871', '2025-07-06', 'menunggu_persetujuan', '23', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('97', '11', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1345601', '2023-11-20', 'dalam_pengerjaan', '30', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('98', '11', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '387752', '2023-07-23', 'ditolak', '30', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('99', '15', 'BRS', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1091402', '2024-03-01', 'dalam_pengerjaan', '6', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('100', '20', 'BRS', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '910674', '2023-06-03', 'disetujui', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('101', '3', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1197874', '2025-02-06', 'menunggu_persetujuan', '20', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('102', '22', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '909828', '2024-06-09', 'disetujui', '3', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('103', '25', 'ZHC', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1448471', '2025-07-21', 'dalam_pengerjaan', '26', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('104', '15', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '380372', '2024-08-29', 'disetujui', '28', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('105', '18', 'BRS', 'Ilustrasi Karakter Fantasi', 'Gambarkan karakter orisinal dengan tema dunia fantasi.', '1386626', '2023-10-28', 'ditolak', '25', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('106', '3', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '564940', '2024-11-07', 'dalam_pengerjaan', '18', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('107', '22', 'ZHC', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '1187115', '2024-05-21', 'selesai', '27', '2024-05-11', '609', 'Gaya visualnya unik dan berkarakter.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('108', '9', 'BRS', 'Desain Background Cerita', 'Latar belakang untuk digunakan dalam panel cerita visual.', '622535', '2025-10-08', 'selesai', '19', '2025-10-08', '744', 'Revisi langsung dikerjakan, mantap.');
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('109', '6', 'BRS', 'Lukisan Digital Pemandangan', 'Lukisan pemandangan alam dengan gaya semi-realistis.', '833921', '2024-03-13', 'ditolak', '11', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('110', '19', 'BRS', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '880539', '2025-04-15', 'menunggu_persetujuan', '17', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('111', '2', 'LDV', 'Konsep Art Makhluk Fantasi', 'Makhluk mitologi atau imajinatif dalam bentuk digital.', '243115', '2025-01-18', 'dalam_pengerjaan', '6', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('112', '9', 'LDV', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1074505', '2025-02-24', 'menunggu_persetujuan', '15', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('113', '12', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '890422', '2023-05-01', 'ditolak', '5', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('114', '19', 'BRS', 'Visualisasi Karakter RPG', 'Desain karakter untuk proyek game role-playing.', '1325402', '2023-09-23', 'disetujui', '24', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('115', '10', 'BRS', 'Ilustrasi Tema Musik', 'Ilustrasi karakter dengan suasana konser atau musik.', '1157543', '2025-07-23', 'menunggu_persetujuan', '27', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('116', '9', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '447210', '2024-08-30', 'disetujui', '24', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('117', '23', 'LDV', 'Fanart Karakter Anime', 'Gambar ulang karakter anime favorit dalam gaya Anda.', '1075315', '2023-03-13', 'ditolak', '30', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('118', '21', 'ZHC', 'Desain Poster Event', 'Poster untuk promosi acara fiksi dengan elemen visual kuat.', '185022', '2024-01-03', 'disetujui', '14', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('119', '13', 'BRS', 'Chibi Karakter Band', 'Versi chibi lucu dari empat anggota band virtual.', '1163483', '2025-02-02', 'menunggu_persetujuan', '16', NULL, NULL, NULL);
+INSERT INTO OrderSpecialContent (id_order, id_suporter, id_creator, judul, deskripsi, harga_dasar, tgl_batas_revisi, status_pengerjaan, estimasi_pengerjaan, tanggal_penyelesaian, id_konten, feedback) VALUES ('120', '22', 'ZHC', 'Sampul Komik Digital', 'Desain sampul untuk komik digital bertema petualangan.', '1420395', '2024-01-29', 'disetujui', '23', NULL, NULL, NULL);
 
-UPDATE HasilOrder
-SET tanggal_penyelesaian = STR_TO_DATE(tanggal_penyelesaian, '%m/%d/%Y');
+DELIMITER //
 
-ALTER TABLE HasilOrder
-MODIFY COLUMN tanggal_penyelesaian DATE;
+CREATE TRIGGER check_status_transition
+BEFORE UPDATE ON OrderSpecialContent
+FOR EACH ROW
+check_status_transition: BEGIN
+    IF NEW.status_pengerjaan = OLD.status_pengerjaan THEN
+        LEAVE check_status_transition;
+    END IF;
+
+    IF NOT (
+           (OLD.status_pengerjaan = 'menunggu_persetujuan'
+            AND NEW.status_pengerjaan IN ('disetujui','ditolak'))
+        OR (OLD.status_pengerjaan = 'disetujui'
+            AND NEW.status_pengerjaan = 'dalam_pengerjaan')
+        OR (OLD.status_pengerjaan = 'dalam_pengerjaan'
+            AND NEW.status_pengerjaan = 'selesai')
+       ) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Transisi status tidak valid.';
+    END IF;
+END;
+
+//
+
+DELIMITER ;
+
+
 
 -- Tier
 CREATE TABLE Tier (
@@ -1511,6 +1312,42 @@ CREATE TABLE Tier (
     PRIMARY KEY (id_creator, nama_tier),
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
 );
+
+DELIMITER //
+
+CREATE TRIGGER max_tier
+BEFORE INSERT ON Tier
+FOR EACH ROW
+BEGIN
+    DECLARE tier_count INT;
+
+    SELECT COUNT(*) INTO tier_count
+    FROM Tier
+    WHERE id_creator = NEW.id_creator;
+
+    IF tier_count >= 5 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Constraint dilanggar: Satu kreator hanya boleh memiliki maksimal 5 tier.';
+    END IF;
+END;
+//
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE TRIGGER TC1
+BEFORE UPDATE ON Tier
+FOR EACH ROW
+BEGIN
+    IF NEW.harga < OLD.harga THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Harga tidak boleh turun.';
+    END IF;
+END;
+//
+
+DELIMITER ;
 
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Pahlawan Seni', 'Untuk pecinta penulisan, \'Pahlawan Seni\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '787448');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Champion Chums', 'Untuk pecinta penulisan, \'Champion Chums\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '212540');
@@ -1557,7 +1394,7 @@ INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('PDB', 'Super
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RBC', 'Diamond', 'Dapatkan akses premium ke konten eksklusif seputar game bersama \'Diamond\', dirancang untuk para pendukung sejati.', '994232');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RBC', 'Mega Fanatic', 'Tingkat \'Mega Fanatic\' memberikan Anda pengalaman mendalam dalam dunia game, bersama sang kreator hebat.', '194167');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RBC', 'Fan Garis Keras', '\'Fan Garis Keras\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Membangun narasi dan karakter dalam dunia virtual dengan pendekatan storytelling.', '890761');
-INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RTM', 'Ultimate Superstar', '\'Ultimate Superstar\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menghadirkan narasumber inspiratif dan diskusi yang membuka perspektif bacom.', '837890');
+INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RTM', 'Ultimate Superstar', '\'Ultimate Superstar\' adalah bentuk penghargaan tertinggi bagi Anda yang menghargai karya Menghadirkan narasumber inspiratif dan diskusi yang membuka perspektif baru.', '837890');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RTM', 'Champion of Creativity', '\'Champion of Creativity\' adalah pilihan tepat bagi yang ingin mendalami podcast dan menghargai karya kreator ini.', '325519');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('RTM', 'Champion Chums', 'Dengan tier \'Champion Chums\', Anda mendukung kreator yang menginspirasi lewat podcast.', '751164');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('SKP', 'Sahabat Berkarya', 'Tingkat \'Sahabat Berkarya\' memberikan Anda pengalaman mendalam dalam dunia penulisan, bersama sang kreator hebat.', '116154');
@@ -1588,15 +1425,13 @@ INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ZHC', 'Maste
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ZHC', 'Silver', 'Dapatkan akses premium ke konten eksklusif seputar seni visual bersama \'Silver\', dirancang untuk para pendukung sejati.', '541499');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('ZHC', 'Ultimate', 'Untuk pecinta seni visual, \'Ultimate\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '907941');
 
+
 -- Manfaat
 CREATE TABLE Manfaat (
-    id_creator CHAR(4) NOT NULL,
+    id_creator VARCHAR(4) NOT NULL,
     nama_tier VARCHAR(30) NOT NULL,
-    id_konten CHAR(4) NOT NULL,
+    id_konten VARCHAR(4) NOT NULL,
     PRIMARY KEY (id_creator, nama_tier, id_konten),
-    FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
     FOREIGN KEY (id_creator, nama_tier) REFERENCES Tier(id_creator, nama_tier)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
@@ -1759,6 +1594,7 @@ INSERT INTO Manfaat (id_creator, nama_tier, id_konten) VALUES ('ZHC', 'Ultimate'
 
 
 
+
 -- Subscribe
 CREATE TABLE Subscribe (
     id_creator     VARCHAR(4)    NOT NULL,
@@ -1767,16 +1603,16 @@ CREATE TABLE Subscribe (
     tanggal_mulai  DATE          NOT NULL,
     status         VARCHAR(15) NOT NULL,
     metode_bayar   VARCHAR(15) NOT NULL,
-    jumlah         INT NOT NULL CHECK (jumlah >= 0),
+    jumlah         INT NOT NULL,
     tanggal_bayar  DATE NOT NULL,
     PRIMARY KEY (id_suporter, id_creator, nama_tier),
     FOREIGN KEY (id_suporter)  REFERENCES Suporter(id_suporter) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (id_creator, nama_tier)    REFERENCES Tier(id_creator, nama_tier) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_creator, nama_tier)     REFERENCES Tier(id_creator, nama_tier) ON DELETE CASCADE ON UPDATE CASCADE,
     CHECK (tanggal_bayar >= tanggal_mulai)
 );
 
 
-INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DWP', '9', 'Silver', '2024-09-26', 'paused', 'bank_transfer', '701563', '2024-10-03');
+INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DWP', '19', 'Silver', '2024-09-26', 'paused', 'bank_transfer', '701563', '2024-10-03');
 INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('PDB', '25', 'Champion of Creativity', '2024-09-26', 'cancelled', 'paypal', '620066', '2024-10-06');
 INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('JJK', '8', 'Super Subscribers', '2024-11-12', 'active', 'credit_card', '817924', '2024-12-02');
 INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('DNS', '17', 'Creative Crew', '2024-09-28', 'active', 'gopay', '318649', '2024-10-15');
@@ -1946,15 +1782,7 @@ INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status
 INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('MRB', '18', 'Elite Backer', '2024-11-15', 'cancelled', 'bank_transfer', '249800', '2024-11-26');
 INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('TRL', '24', 'Supreme Benefactor', '2025-05-07', 'active', 'bank_transfer', '166900', '2025-05-23');
 INSERT INTO Subscribe (id_creator, id_suporter, nama_tier, tanggal_mulai, status, metode_bayar, jumlah, tanggal_bayar) VALUES ('ZHC', '17', 'Ultimate', '2024-10-13', 'paused', 'credit_card', '907941', '2024-10-23');
-UPDATE Subscribe
-SET tanggal_mulai = STR_TO_DATE(tanggal_mulai, '%Y-%m-%d');
-ALTER TABLE Subscribe
-MODIFY COLUMN tanggal_mulai DATE;
 
-UPDATE Subscribe
-SET tanggal_bayar = STR_TO_DATE(tanggal_bayar, '%Y-%m-%d');
-ALTER TABLE Subscribe
-MODIFY COLUMN tanggal_bayar DATE;
 
 -- Merchandise
 CREATE TABLE Merchandise (
@@ -2124,11 +1952,12 @@ INSERT INTO Merchandise (id_merchandise, id_creator, id_konten, nama, harga, sto
 INSERT INTO Merchandise (id_merchandise, id_creator, id_konten, nama, harga, stok, deskripsi) VALUES ('446', 'WDB', '542', 'Compact pencil case', '5306', '91', 'Tempat pensil yang kompak dan kuat, menjaga alat tulis tetap teratur dan mudah dijangkau.');
 INSERT INTO Merchandise (id_merchandise, id_creator, id_konten, nama, harga, stok, deskripsi) VALUES ('662', 'ZHC', '997', 'Soft sandals', '2274', '61', 'Sandal untuk dipakai di dalam commah dengan bantalan empuk yang menjaga kaki tetap nyaman saat berjalan santai.');
 
+
 -- BeliMerchandise
 CREATE TABLE BeliMerchandise (
     id_suporter	VARCHAR(3) NOT NULL,
     id_merchandise	VARCHAR(3) NOT NULL,
-    jumlah	INT NOT NULL CHECK (jumlah >= 0),
+    jumlah	INT NOT NULL,
     tanggal_beli	VARCHAR(512),
     total_harga	INT,
     metode_bayar	VARCHAR(20) NOT NULL,
@@ -2140,6 +1969,62 @@ CREATE TABLE BeliMerchandise (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
+
+DELIMITER //
+
+CREATE PROCEDURE hitung_total_harga (
+    IN beli_id_merchandise VARCHAR(3),
+    IN beli_jumlah INT,
+    OUT harga_total DECIMAL(10,2)
+)
+BEGIN
+    DECLARE harga_unit DECIMAL(10,2);
+
+    SELECT harga INTO harga_unit
+    FROM Merchandise
+    WHERE id_merchandise = beli_id_merchandise;
+
+    SET harga_total = harga_unit * beli_jumlah;
+END;
+//
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE TRIGGER isi_total_harga_beli
+BEFORE INSERT ON BeliMerchandise
+FOR EACH ROW
+BEGIN
+    DECLARE harga_unit DECIMAL(10,2);
+
+    SELECT harga INTO harga_unit
+    FROM Merchandise
+    WHERE id_merchandise = NEW.id_merchandise;
+
+    SET NEW.total_harga = harga_unit * NEW.jumlah;
+END;
+//
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE TRIGGER update_total_harga_beli
+BEFORE UPDATE ON BeliMerchandise
+FOR EACH ROW
+BEGIN
+    DECLARE harga_unit DECIMAL(10,2);
+
+    SELECT harga INTO harga_unit
+    FROM Merchandise
+    WHERE id_merchandise = NEW.id_merchandise;
+
+    SET NEW.total_harga = harga_unit * NEW.jumlah;
+END;
+//
+
+DELIMITER ;
 
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('13', '494', '25', '27-07-2024', '638200', 'Bank Transfer');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('10', '214', '11', '10-6-2024', '38775', 'Debit Card');
@@ -2298,79 +2183,19 @@ SET tanggal_beli = STR_TO_DATE(tanggal_beli, '%d-%m-%Y');
 ALTER TABLE BeliMerchandise
 MODIFY COLUMN tanggal_beli DATE;
 
+
+-- Aktivitas Pendukung
 CREATE TABLE AktivitasPendukung (
     idAktivitas INT AUTO_INCREMENT PRIMARY KEY,
     idPendukung VARCHAR(3) NOT NULL,
     jenis_aktivitas ENUM('Langganan', 'Komentar', 'Beli_Merchandise') NOT NULL,
     id_referensi VARCHAR(30) NOT NULL,
     deskripsi VARCHAR(512),
-    tanggal_aktivitas DATETIME NOT NULL,
+    tanggal_aktivitas DATE NOT NULL,
     FOREIGN KEY (idPendukung) REFERENCES Suporter(id_suporter)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
-
-INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas) VALUES
-('13', 'Beli_Merchandise', '494', 'Pendukung Ferris membeli merchandise ''Home toaster'' sebanyak 25 unit.', '2024-07-27'),
-('17', 'Komentar', '1', 'Pendukung Meaghan memberikan apresiasi pada pemilihan topik konten ''Both 925''.', '2025-03-14'),
-('9', 'Langganan', 'Silver', 'Pendukung Salomi memulai langganan tier ''Silver'' untuk kreator Dewi Persik.', '2024-09-26'),
-('10', 'Beli_Merchandise', '214', 'Pendukung Tcomdi membeli merchandise ''Food container'' sebanyak 11 unit.', '2024-06-10'),
-('21', 'Komentar', '2', 'Pendukung Crichton menemukan wawasan baru dari konten ''The Lion King'' dan memuji struktur paragrafnya.', '2025-02-05'),
-('25', 'Langganan', 'Champion of Creativity', 'Pendukung Nerti memulai langganan tier ''Champion of Creativity'' untuk kreator Pidi Baiq.', '2024-09-26'),
-('22', 'Beli_Merchandise', '544', 'Pendukung Beau membeli merchandise ''Pajamas'' sebanyak 15 unit.', '2024-09-07'),
-('4', 'Komentar', '3', 'Pendukung Darleen merasa konten ''Account 152'' sangat informatif dan engaging.', '2025-05-14'),
-('8', 'Langganan', 'Super Subscribers', 'Pendukung Nowell memulai langganan tier ''Super Subscribers'' untuk kreator Jeon Jungkook.', '2024-11-12'),
-('12', 'Beli_Merchandise', '234', 'Pendukung Francisco membeli merchandise ''Gold ring'' sebanyak 3 unit.', '2024-09-29'),
-('25', 'Komentar', '4', 'Pendukung Nerti menilai alur cerita konten ''Ready 456'' sangat membantu pemahaman.', '2025-04-30'),
-('17', 'Langganan', 'Creative Crew', 'Pendukung Meaghan memulai langganan tier ''Creative Crew'' untuk kreator Denny Sumargo.', '2024-09-28'),
-('6', 'Beli_Merchandise', '224', 'Pendukung Erma membeli merchandise ''Measuring cup'' sebanyak 18 unit.', '2025-03-22'),
-('7', 'Komentar', '7', 'Pendukung Stacee menikmati narasi host pada konten ''Let It Be''.', '2025-04-21'),
-('13', 'Langganan', 'Elite', 'Pendukung Ferris memulai langganan tier ''Elite'' untuk kreator Bob Ross.', '2023-12-29'),
-('23', 'Beli_Merchandise', '138', 'Pendukung Korie membeli merchandise ''Cartoonist socks'' sebanyak 7 unit.', '2025-02-12'),
-('5', 'Komentar', '9', 'Pendukung Christoffer terkesan dengan visual efek pada konten ''comle 236''.', '2025-01-08'),
-('1', 'Langganan', 'Ultimate Superstar', 'Pendukung Augusto memulai langganan tier ''Ultimate Superstar'' untuk kreator Rotten Manggo.', '2024-10-26'),
-('15', 'Beli_Merchandise', '995', 'Pendukung Alexa membeli merchandise ''Vegetable cutter'' sebanyak 7 unit.', '2024-07-12'),
-('2', 'Komentar', '11', 'Pendukung Rebeca tertarik untuk menggali lebih jauh setelah melihat komposisi warna konten ''Your 499''.', '2025-02-27'),
-('20', 'Langganan', 'Super Subscribers', 'Pendukung Harlene memulai langganan tier ''Super Subscribers'' untuk kreator Smosh.', '2024-11-23'),
-('2', 'Beli_Merchandise', '111', 'Pendukung Rebeca membeli merchandise ''Winter jacket'' sebanyak 15 unit.', '2024-07-12'),
-('12', 'Komentar', '12', 'Pendukung Francisco mendapatkan perspektif berbeda dari konten ''Director 136''.', '2024-12-28'),
-('2', 'Langganan', 'Gold', 'Pendukung Rebeca memulai langganan tier ''Gold'' untuk kreator Tung Tung Sahur.', '2023-10-03'),
-('25', 'Beli_Merchandise', '934', 'Pendukung Nerti membeli merchandise ''Many storage box'' sebanyak 18 unit.', '2025-01-29'),
-('8', 'Komentar', '15', 'Pendukung Nowell memuji kejelasan audio pada konten ''Much 760''.', '2024-11-08'),
-('5', 'Langganan', 'Legendary Patron', 'Pendukung Christoffer memulai langganan tier ''Legendary Patron'' untuk kreator Jess No Limit.', '2024-02-14'),
-('20', 'Beli_Merchandise', '214', 'Pendukung Harlene membeli merchandise ''Food container'' sebanyak 12 unit.', '2024-05-18'),
-('15', 'Komentar', '16', 'Pendukung Alexa menilai durasi konten ''Why 762'' sangat pas dan informatif.', '2025-04-30'),
-('19', 'Langganan', 'Diamond', 'Pendukung Araldo memulai langganan tier ''Diamond'' untuk kreator Tomorrow X Together.', '2024-04-18'),
-('1', 'Beli_Merchandise', '358', 'Pendukung Augusto membeli merchandise ''Tote bag'' sebanyak 10 unit.', '2025-05-12'),
-('6', 'Komentar', '20', 'Pendukung Erma mendapatkan wawasan baru dari struktur paragraf konten ''Area 493''.', '2024-09-01'),
-('6', 'Langganan', 'Supreme Benefactor', 'Pendukung Erma memulai langganan tier ''Supreme Benefactor'' untuk kreator Tomorrow X Together.', '2024-08-08'),
-('24', 'Beli_Merchandise', '852', 'Pendukung Boy membeli merchandise ''Fridge magnet'' sebanyak 21 unit.', '2024-10-29'),
-('23', 'Komentar', '22', 'Pendukung Korie menilai alur cerita konten ''Why 762'' sangat membantu.', '2025-04-20'),
-('11', 'Langganan', 'Elite Backer', 'Pendukung Peder memulai langganan tier ''Elite Backer'' untuk kreator Mr Beast.', '2025-03-25'),
-('21', 'Beli_Merchandise', '670', 'Pendukung Crichton membeli merchandise ''Art shirt'' sebanyak 20 unit.', '2024-11-01'),
-('1', 'Komentar', '25', 'Pendukung Augusto memuji visual efek konten ''Attorney 252''.', '2025-05-12'),
-('14', 'Langganan', 'Inovator Hebat', 'Pendukung Stormi memulai langganan tier ''Inovator Hebat'' untuk kreator Dewi Persik.', '2024-06-12'),
-('14', 'Beli_Merchandise', '515', 'Pendukung Stormi membeli merchandise ''Beanie'' sebanyak 15 unit.', '2024-07-04'),
-('19', 'Komentar', '30', 'Pendukung Araldo mengapresiasi struktur pembahasan pada konten ''Energy 237''.', '2025-05-12'),
-('24', 'Langganan', 'Supreme Benefactor', 'Pendukung Boy memulai langganan tier ''Supreme Benefactor'' untuk kreator Windah Basudara.', '2025-05-07'),
-('9', 'Beli_Merchandise', '977', 'Pendukung Salomi membeli merchandise ''Boots'' sebanyak 14 unit.', '2024-11-01'),
-('13', 'Komentar', '31', 'Pendukung Ferris merasa konten ''Lose Yourself'' sangat informatif dengan pembahasan yang baik.', '2024-09-01'),
-('3', 'Langganan', 'Champion of Creativity', 'Pendukung Vittoria memulai langganan tier ''Champion of Creativity'' untuk kreator Tere Liye.', '2024-10-26'),
-('11', 'Beli_Merchandise', '663', 'Pendukung Peder membeli merchandise ''Swimsuit'' sebanyak 22 unit.', '2025-02-21'),
-('20', 'Komentar', '35', 'Pendukung Harlene mengapresiasi kualitas suara pada konten ''Determine 422''.', '2025-02-09'),
-('7', 'Langganan', 'Creative Crew', 'Pendukung Stacee memulai langganan tier ''Creative Crew'' untuk kreator Denny Sumargo.', '2025-04-17'),
-('18', 'Beli_Merchandise', '999', 'Pendukung Lacy membeli merchandise ''Work lamp'' sebanyak 15 unit.', '2025-02-11'),
-('11', 'Komentar', '41', 'Pendukung Peder memuji struktur pembahasan yang engaging pada konten ''Their 742''.', '2025-05-10'),
-('18', 'Langganan', 'Ultimate Superstar', 'Pendukung Lacy memulai langganan tier ''Ultimate Superstar'' untuk kreator Rotten Manggo.', '2023-10-15'),
-('17', 'Beli_Merchandise', '147', 'Pendukung Meaghan membeli merchandise ''Sofa'' sebanyak 8 unit.', '2024-07-04'),
-('24', 'Komentar', '44', 'Pendukung Boy sangat terkesan dengan kreativitas desain konten ''Person 823''.', '2025-05-14'),
-('10', 'Langganan', 'Mitra Kreatif', 'Pendukung Tcomdi memulai langganan tier ''Mitra Kreatif'' untuk kreator Atta Gledek.', '2023-02-17'),
-('8', 'Beli_Merchandise', '148', 'Pendukung Nowell membeli merchandise ''Hoodie'' sebanyak 1 unit.', '2024-10-26'),
-('10', 'Komentar', '159', 'Pendukung Tcomdi menemukan kedalaman riset yang baik pada konten ''Off 323''.', '2025-02-26'),
-('16', 'Langganan', 'Legendary Patron', 'Pendukung Trstram memulai langganan tier ''Legendary Patron'' untuk kreator Denny Sumargo.', '2024-07-01'),
-('16', 'Beli_Merchandise', '951', 'Pendukung Trstram membeli merchandise ''Shoelace'' sebanyak 17 unit.', '2024-05-29'),
-('16', 'Komentar', '118', 'Pendukung Trstram memuji gaya penulisan konten ''Off 323'' yang membuatnya penasaran.', '2025-04-19'),
-('22', 'Langganan', 'Bronze', 'Pendukung Beau memulai langganan tier ''Bronze'' untuk kreator Jeon Jungkook.', '2024-08-31');
 
 DELIMITER //
 -- Trigger yang akan mencatat aktivitas saat pendukung berlangganan tier
@@ -2512,3 +2337,66 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+
+INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas) VALUES
+('13', 'Beli_Merchandise', '494', 'Pendukung Ferris membeli merchandise ''Home toaster'' sebanyak 25 unit.', '2024-07-27'),
+('17', 'Komentar', '1', 'Pendukung Meaghan memberikan apresiasi pada pemilihan topik konten ''Both 925''.', '2025-03-14'),
+('9', 'Langganan', 'Silver', 'Pendukung Salomi memulai langganan tier ''Silver'' untuk kreator Dewi Persik.', '2024-09-26'),
+('10', 'Beli_Merchandise', '214', 'Pendukung Tcomdi membeli merchandise ''Food container'' sebanyak 11 unit.', '2024-06-10'),
+('21', 'Komentar', '2', 'Pendukung Crichton menemukan wawasan baru dari konten ''The Lion King'' dan memuji struktur paragrafnya.', '2025-02-05'),
+('25', 'Langganan', 'Champion of Creativity', 'Pendukung Nerti memulai langganan tier ''Champion of Creativity'' untuk kreator Pidi Baiq.', '2024-09-26'),
+('22', 'Beli_Merchandise', '544', 'Pendukung Beau membeli merchandise ''Pajamas'' sebanyak 15 unit.', '2024-09-07'),
+('4', 'Komentar', '3', 'Pendukung Darleen merasa konten ''Account 152'' sangat informatif dan engaging.', '2025-05-14'),
+('8', 'Langganan', 'Super Subscribers', 'Pendukung Nowell memulai langganan tier ''Super Subscribers'' untuk kreator Jeon Jungkook.', '2024-11-12'),
+('12', 'Beli_Merchandise', '234', 'Pendukung Francisco membeli merchandise ''Gold ring'' sebanyak 3 unit.', '2024-09-29'),
+('25', 'Komentar', '4', 'Pendukung Nerti menilai alur cerita konten ''Ready 456'' sangat membantu pemahaman.', '2025-04-30'),
+('17', 'Langganan', 'Creative Crew', 'Pendukung Meaghan memulai langganan tier ''Creative Crew'' untuk kreator Denny Sumargo.', '2024-09-28'),
+('6', 'Beli_Merchandise', '224', 'Pendukung Erma membeli merchandise ''Measuring cup'' sebanyak 18 unit.', '2025-03-22'),
+('7', 'Komentar', '7', 'Pendukung Stacee menikmati narasi host pada konten ''Let It Be''.', '2025-04-21'),
+('13', 'Langganan', 'Elite', 'Pendukung Ferris memulai langganan tier ''Elite'' untuk kreator Bob Ross.', '2023-12-29'),
+('23', 'Beli_Merchandise', '138', 'Pendukung Korie membeli merchandise ''Cartoonist socks'' sebanyak 7 unit.', '2025-02-12'),
+('5', 'Komentar', '9', 'Pendukung Christoffer terkesan dengan visual efek pada konten ''comle 236''.', '2025-01-08'),
+('1', 'Langganan', 'Ultimate Superstar', 'Pendukung Augusto memulai langganan tier ''Ultimate Superstar'' untuk kreator Rotten Manggo.', '2024-10-26'),
+('15', 'Beli_Merchandise', '995', 'Pendukung Alexa membeli merchandise ''Vegetable cutter'' sebanyak 7 unit.', '2024-07-12'),
+('2', 'Komentar', '11', 'Pendukung Rebeca tertarik untuk menggali lebih jauh setelah melihat komposisi warna konten ''Your 499''.', '2025-02-27'),
+('20', 'Langganan', 'Super Subscribers', 'Pendukung Harlene memulai langganan tier ''Super Subscribers'' untuk kreator Smosh.', '2024-11-23'),
+('2', 'Beli_Merchandise', '111', 'Pendukung Rebeca membeli merchandise ''Winter jacket'' sebanyak 15 unit.', '2024-07-12'),
+('12', 'Komentar', '12', 'Pendukung Francisco mendapatkan perspektif berbeda dari konten ''Director 136''.', '2024-12-28'),
+('2', 'Langganan', 'Gold', 'Pendukung Rebeca memulai langganan tier ''Gold'' untuk kreator Tung Tung Sahur.', '2023-10-03'),
+('25', 'Beli_Merchandise', '934', 'Pendukung Nerti membeli merchandise ''Many storage box'' sebanyak 18 unit.', '2025-01-29'),
+('8', 'Komentar', '15', 'Pendukung Nowell memuji kejelasan audio pada konten ''Much 760''.', '2024-11-08'),
+('5', 'Langganan', 'Legendary Patron', 'Pendukung Christoffer memulai langganan tier ''Legendary Patron'' untuk kreator Jess No Limit.', '2024-02-14'),
+('20', 'Beli_Merchandise', '214', 'Pendukung Harlene membeli merchandise ''Food container'' sebanyak 12 unit.', '2024-05-18'),
+('15', 'Komentar', '16', 'Pendukung Alexa menilai durasi konten ''Why 762'' sangat pas dan informatif.', '2025-04-30'),
+('19', 'Langganan', 'Diamond', 'Pendukung Araldo memulai langganan tier ''Diamond'' untuk kreator Tomorrow X Together.', '2024-04-18'),
+('1', 'Beli_Merchandise', '358', 'Pendukung Augusto membeli merchandise ''Tote bag'' sebanyak 10 unit.', '2025-05-12'),
+('6', 'Komentar', '20', 'Pendukung Erma mendapatkan wawasan baru dari struktur paragraf konten ''Area 493''.', '2024-09-01'),
+('6', 'Langganan', 'Supreme Benefactor', 'Pendukung Erma memulai langganan tier ''Supreme Benefactor'' untuk kreator Tomorrow X Together.', '2024-08-08'),
+('24', 'Beli_Merchandise', '852', 'Pendukung Boy membeli merchandise ''Fridge magnet'' sebanyak 21 unit.', '2024-10-29'),
+('23', 'Komentar', '22', 'Pendukung Korie menilai alur cerita konten ''Why 762'' sangat membantu.', '2025-04-20'),
+('11', 'Langganan', 'Elite Backer', 'Pendukung Peder memulai langganan tier ''Elite Backer'' untuk kreator Mr Beast.', '2025-03-25'),
+('21', 'Beli_Merchandise', '670', 'Pendukung Crichton membeli merchandise ''Art shirt'' sebanyak 20 unit.', '2024-11-01'),
+('1', 'Komentar', '25', 'Pendukung Augusto memuji visual efek konten ''Attorney 252''.', '2025-05-12'),
+('14', 'Langganan', 'Inovator Hebat', 'Pendukung Stormi memulai langganan tier ''Inovator Hebat'' untuk kreator Dewi Persik.', '2024-06-12'),
+('14', 'Beli_Merchandise', '515', 'Pendukung Stormi membeli merchandise ''Beanie'' sebanyak 15 unit.', '2024-07-04'),
+('19', 'Komentar', '30', 'Pendukung Araldo mengapresiasi struktur pembahasan pada konten ''Energy 237''.', '2025-05-12'),
+('24', 'Langganan', 'Supreme Benefactor', 'Pendukung Boy memulai langganan tier ''Supreme Benefactor'' untuk kreator Windah Basudara.', '2025-05-07'),
+('9', 'Beli_Merchandise', '977', 'Pendukung Salomi membeli merchandise ''Boots'' sebanyak 14 unit.', '2024-11-01'),
+('13', 'Komentar', '31', 'Pendukung Ferris merasa konten ''Lose Yourself'' sangat informatif dengan pembahasan yang baik.', '2024-09-01'),
+('3', 'Langganan', 'Champion of Creativity', 'Pendukung Vittoria memulai langganan tier ''Champion of Creativity'' untuk kreator Tere Liye.', '2024-10-26'),
+('11', 'Beli_Merchandise', '663', 'Pendukung Peder membeli merchandise ''Swimsuit'' sebanyak 22 unit.', '2025-02-21'),
+('20', 'Komentar', '35', 'Pendukung Harlene mengapresiasi kualitas suara pada konten ''Determine 422''.', '2025-02-09'),
+('7', 'Langganan', 'Creative Crew', 'Pendukung Stacee memulai langganan tier ''Creative Crew'' untuk kreator Denny Sumargo.', '2025-04-17'),
+('18', 'Beli_Merchandise', '999', 'Pendukung Lacy membeli merchandise ''Work lamp'' sebanyak 15 unit.', '2025-02-11'),
+('11', 'Komentar', '41', 'Pendukung Peder memuji struktur pembahasan yang engaging pada konten ''Their 742''.', '2025-05-10'),
+('18', 'Langganan', 'Ultimate Superstar', 'Pendukung Lacy memulai langganan tier ''Ultimate Superstar'' untuk kreator Rotten Manggo.', '2023-10-15'),
+('17', 'Beli_Merchandise', '147', 'Pendukung Meaghan membeli merchandise ''Sofa'' sebanyak 8 unit.', '2024-07-04'),
+('24', 'Komentar', '44', 'Pendukung Boy sangat terkesan dengan kreativitas desain konten ''Person 823''.', '2025-05-14'),
+('10', 'Langganan', 'Mitra Kreatif', 'Pendukung Tcomdi memulai langganan tier ''Mitra Kreatif'' untuk kreator Atta Gledek.', '2023-02-17'),
+('8', 'Beli_Merchandise', '148', 'Pendukung Nowell membeli merchandise ''Hoodie'' sebanyak 1 unit.', '2024-10-26'),
+('10', 'Komentar', '159', 'Pendukung Tcomdi menemukan kedalaman riset yang baik pada konten ''Off 323''.', '2025-02-26'),
+('16', 'Langganan', 'Legendary Patron', 'Pendukung Trstram memulai langganan tier ''Legendary Patron'' untuk kreator Denny Sumargo.', '2024-07-01'),
+('16', 'Beli_Merchandise', '951', 'Pendukung Trstram membeli merchandise ''Shoelace'' sebanyak 17 unit.', '2024-05-29'),
+('16', 'Komentar', '118', 'Pendukung Trstram memuji gaya penulisan konten ''Off 323'' yang membuatnya penasaran.', '2025-04-19'),
+('22', 'Langganan', 'Bronze', 'Pendukung Beau memulai langganan tier ''Bronze'' untuk kreator Jeon Jungkook.', '2024-08-31');
