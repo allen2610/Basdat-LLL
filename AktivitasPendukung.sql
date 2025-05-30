@@ -4,15 +4,112 @@ CREATE TABLE AktivitasPendukung (
     jenis_aktivitas ENUM('Langganan', 'Komentar', 'Beli_Merchandise') NOT NULL,
     id_referensi VARCHAR(30) NOT NULL,
     deskripsi VARCHAR(512),
-    tanggal_aktivitas DATETIME NOT NULL,
+    tanggal_aktivitas DATE NOT NULL,
     FOREIGN KEY (idPendukung) REFERENCES Suporter(id_suporter)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
 
--- Seeding untuk AktivitasPendukung (Revisi - Diacak)
+DELIMITER //
+-- Trigger yang akan mencatat aktivitas saat pendukung berlangganan tier
+CREATE TRIGGER trigger_catat_langganan
+AFTER INSERT ON Subscribe
+FOR EACH ROW
+BEGIN
+    DECLARE nama_suporter VARCHAR(20) DEFAULT NULL;
+    DECLARE nama_kreator VARCHAR(25) DEFAULT NULL;
+    DECLARE deskripsi_final VARCHAR(512);
+    DECLARE ref_nama_suporter VARCHAR(25);
+    DECLARE ref_nama_kreator VARCHAR(25);
 
--- Data diacak dari 20 Langganan, 20 Komentar, 20 Beli Merchandise
+    SELECT nama INTO nama_suporter FROM Suporter WHERE id_suporter = NEW.id_suporter;
+    SELECT nama INTO nama_kreator FROM Creator WHERE id_creator = NEW.id_creator;
+
+    IF nama_suporter IS NULL THEN
+        SET ref_nama_suporter = NEW.id_suporter;
+    ELSE
+        SET ref_nama_suporter = nama_suporter;
+    END IF;
+
+    IF nama_kreator IS NULL THEN
+        SET ref_nama_kreator = NEW.id_creator;
+    ELSE
+        SET ref_nama_kreator = nama_kreator;
+    END IF;
+
+    SET deskripsi_final = CONCAT('Pendukung ', ref_nama_suporter, ' memulai langganan tier ''', NEW.nama_tier, ''' untuk kreator ', ref_nama_kreator, '.');
+
+    INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas)
+    VALUES (NEW.id_suporter, 'Langganan', NEW.nama_tier, deskripsi_final, NEW.tanggal_mulai);
+END;
+//
+DELIMITER ;
+
+DELIMITER //
+-- Trigger yang akan mencatat aktivitas saat pendukung memberikan komentar pada konten
+CREATE TRIGGER trigger_catat_komentar
+AFTER INSERT ON Komentar
+FOR EACH ROW
+BEGIN
+    DECLARE nama_suporter VARCHAR(20) DEFAULT NULL;
+    DECLARE judul_konten VARCHAR(512) DEFAULT NULL;
+    DECLARE deskripsi_final VARCHAR(512);
+    DECLARE isi_komentar_singkat VARCHAR(100);
+    DECLARE ref_nama_suporter VARCHAR(20);
+    DECLARE ref_judul_konten VARCHAR(512);
+    SELECT nama INTO nama_suporter FROM Suporter WHERE id_suporter = NEW.id_suporter;
+    SELECT judul INTO judul_konten FROM Konten WHERE id_konten = NEW.id_konten;
+    IF nama_suporter IS NULL THEN
+        SET ref_nama_suporter = NEW.id_suporter;
+    ELSE
+        SET ref_nama_suporter = nama_suporter;
+    END IF;
+    IF judul_konten IS NULL THEN
+        SET ref_judul_konten = NEW.id_konten; -- Menggunakan ID konten sebagai fallback jika judul tidak ada
+    ELSE
+        SET ref_judul_konten = judul_konten;
+    END IF;
+    SET isi_komentar_singkat = LEFT(NEW.isi, 100);
+    IF LENGTH(NEW.isi) > 100 THEN
+        SET isi_komentar_singkat = CONCAT(isi_komentar_singkat, '...');
+    END IF;
+    SET deskripsi_final = CONCAT('Pendukung ', ref_nama_suporter, ' memberikan komentar pada konten ''', ref_judul_konten, '''. Isi: ', isi_komentar_singkat);
+    INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas)
+    VALUES (NEW.id_suporter, 'Komentar', NEW.id_komentar, deskripsi_final, DATE(NEW.waktu)); -- Mengambil hanya bagian tanggal dari DATETIME
+END;
+//
+DELIMITER ;
+
+DELIMITER //
+-- Trigger yang akan mencatat aktivitas saat pendukung membeli merchandise
+CREATE TRIGGER trigger_catat_beli_merchandise
+AFTER INSERT ON BeliMerchandise
+FOR EACH ROW
+BEGIN
+    DECLARE nama_suporter VARCHAR(20) DEFAULT NULL;
+    DECLARE nama_merch VARCHAR(40) DEFAULT NULL;
+    DECLARE deskripsi_final VARCHAR(512);
+    DECLARE ref_nama_suporter VARCHAR(20);
+    DECLARE ref_nama_merch VARCHAR(40);
+    SELECT nama INTO nama_suporter FROM Suporter WHERE id_suporter = NEW.id_suporter;
+    SELECT nama INTO nama_merch FROM Merchandise WHERE id_merchandise = NEW.id_merchandise;
+    IF nama_suporter IS NULL THEN
+        SET ref_nama_suporter = NEW.id_suporter;
+    ELSE
+        SET ref_nama_suporter = nama_suporter;
+    END IF;
+    IF nama_merch IS NULL THEN
+        SET ref_nama_merch = NEW.id_merchandise; -- Menggunakan ID merchandise sebagai fallback jika nama tidak ada
+    ELSE
+        SET ref_nama_merch = nama_merch;
+    END IF;
+    SET deskripsi_final = CONCAT('Pendukung ', ref_nama_suporter, ' membeli merchandise ''', ref_nama_merch, ''' sebanyak ', NEW.jumlah, ' unit.');
+    INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas)
+    VALUES (NEW.id_suporter, 'Beli_Merchandise', NEW.id_merchandise, deskripsi_final, NEW.tanggal_beli);
+END;
+//
+DELIMITER ;
+
 INSERT INTO AktivitasPendukung (idPendukung, jenis_aktivitas, id_referensi, deskripsi, tanggal_aktivitas) VALUES
 ('13', 'Beli_Merchandise', '494', 'Pendukung Ferris membeli merchandise ''Home toaster'' sebanyak 25 unit.', '2024-07-27'),
 ('17', 'Komentar', '1', 'Pendukung Meaghan memberikan apresiasi pada pemilihan topik konten ''Both 925''.', '2025-03-14'),
