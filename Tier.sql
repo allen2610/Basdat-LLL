@@ -1,9 +1,9 @@
 CREATE TABLE Tier (
     id_creator	VARCHAR(4) NOT NULL,
-    nama_tier	VARCHAR(30) NOT NULL,
+    nama	VARCHAR(30) NOT NULL,
     deskripsi	VARCHAR(512),
-    harga	INT,
-    PRIMARY KEY (id_creator, nama_tier),
+    harga	INT CHECK (harga >= 0 AND harga <= 1000000),
+    PRIMARY KEY (id_creator, nama),
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
 );
 
