@@ -1,11 +1,33 @@
 CREATE TABLE Tier (
     id_creator	VARCHAR(4) NOT NULL,
-    nama	VARCHAR(30) NOT NULL,
+    nama_tier	VARCHAR(30) NOT NULL,
     deskripsi	VARCHAR(512),
     harga	INT CHECK (harga >= 0 AND harga <= 1000000),
-    PRIMARY KEY (id_creator, nama),
+    PRIMARY KEY (id_creator, nama_tier),
     FOREIGN KEY (id_creator) REFERENCES Creator(id_creator)
 );
+
+DELIMITER //
+
+CREATE TRIGGER max_tier
+BEFORE INSERT ON Tier
+FOR EACH ROW
+BEGIN
+    DECLARE tier_count INT;
+
+    SELECT COUNT(*) INTO tier_count
+    FROM Tier
+    WHERE id_creator = NEW.id_creator;
+
+    IF tier_count >= 5 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Constraint dilanggar: Satu kreator hanya boleh memiliki maksimal 5 tier.';
+    END IF;
+END;
+//
+
+DELIMITER ;
+
 
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Pahlawan Seni', 'Untuk pecinta penulisan, \'Pahlawan Seni\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '787448');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Champion Chums', 'Untuk pecinta penulisan, \'Champion Chums\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '212540');
