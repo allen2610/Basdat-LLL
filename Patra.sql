@@ -2411,7 +2411,7 @@ WITH
         FROM
             Subscribe s
         WHERE
-            s.status = 'Aktif'
+            s.status = 'active'
         GROUP BY
             s.id_creator
     ),
