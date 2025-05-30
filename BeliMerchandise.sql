@@ -14,6 +14,62 @@ CREATE TABLE BeliMerchandise (
         ON UPDATE CASCADE
 );
 
+DELIMITER //
+
+CREATE PROCEDURE hitung_total_harga (
+    IN beli_id_merchandise VARCHAR(3),
+    IN beli_jumlah INT,
+    OUT harga_total DECIMAL(10,2)
+)
+BEGIN
+    DECLARE harga_unit DECIMAL(10,2);
+
+    SELECT harga INTO harga_unit
+    FROM Merchandise
+    WHERE id_merchandise = beli_id_merchandise;
+
+    SET harga_total = harga_unit * beli_jumlah;
+END;
+//
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE TRIGGER isi_total_harga_beli
+BEFORE INSERT ON BeliMerchandise
+FOR EACH ROW
+BEGIN
+    DECLARE harga_unit DECIMAL(10,2);
+
+    SELECT harga INTO harga_unit
+    FROM Merchandise
+    WHERE id_merchandise = NEW.id_merchandise;
+
+    SET NEW.total_harga = harga_unit * NEW.jumlah;
+END;
+//
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE TRIGGER update_total_harga_beli
+BEFORE UPDATE ON BeliMerchandise
+FOR EACH ROW
+BEGIN
+    DECLARE harga_unit DECIMAL(10,2);
+
+    SELECT harga INTO harga_unit
+    FROM Merchandise
+    WHERE id_merchandise = NEW.id_merchandise;
+
+    SET NEW.total_harga = harga_unit * NEW.jumlah;
+END;
+//
+
+DELIMITER ;
+
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('13', '494', '25', '27-07-2024', '638200', 'Bank Transfer');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('10', '214', '11', '10-6-2024', '38775', 'Debit Card');
 INSERT INTO BeliMerchandise (id_suporter, id_merchandise, jumlah, tanggal_beli, total_harga, metode_bayar) VALUES ('13', '934', '7', '31-12-2024', '131600', 'Debit Card');
