@@ -1771,8 +1771,7 @@ CREATE TABLE Subscribe (
     tanggal_bayar  DATE NOT NULL,
     PRIMARY KEY (id_suporter, id_creator, nama_tier),
     FOREIGN KEY (id_suporter)  REFERENCES Suporter(id_suporter) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (id_creator)    REFERENCES Tier(id_creator) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (nama_tier)     REFERENCES Tier(nama) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_creator, nama_tier)    REFERENCES Tier(id_creator, nama) ON DELETE CASCADE ON UPDATE CASCADE,
     CHECK (tanggal_bayar >= tanggal_mulai)
 );
 
