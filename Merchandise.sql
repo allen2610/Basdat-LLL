@@ -3,13 +3,10 @@ CREATE TABLE Merchandise (
     id_creator	VARCHAR(3) NOT NULL,
     id_konten	VARCHAR(3) NOT NULL,
     nama	VARCHAR(40),
-    harga	INT,
+    harga	INT CHECK (harga >= 0 AND harga <= 1500000),
     stok	INT,
     deskripsi	VARCHAR(512),
-    FOREIGN KEY (id_creator) REFERENCES Membuat(id_creator)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    FOREIGN KEY (id_konten) REFERENCES Membuat(id_konten)
+    FOREIGN KEY (id_konten, id_creator) REFERENCES Membuat(id_konten, id_creator)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
