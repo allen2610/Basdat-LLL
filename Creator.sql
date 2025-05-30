@@ -1,10 +1,11 @@
 CREATE TABLE Creator (
     id_creator	VARCHAR(4) PRIMARY KEY NOT NULL,
     nama	VARCHAR(25),
-    email	VARCHAR(30),
+    email	VARCHAR(100),
     deskripsi	VARCHAR(512),
     bidang	VARCHAR(15),
-    tanggal_gabung	VARCHAR(15)
+    tanggal_gabung	VARCHAR(15),
+    CHECK (bidang IN('Seni visual', 'Penulisan', 'Game', 'Video', 'Podcast', 'Musik'))
 );
 
 INSERT INTO Creator (id_creator, nama, email, deskripsi, bidang, tanggal_gabung) VALUES ('AGT', 'Agatha Christie', 'poirot@addtoany.com', 'Menulis cerita pendek, artikel, dan opini dengan gaya bahasa yang tajam dan personal.', 'Penulisan', '11/27/2021');
