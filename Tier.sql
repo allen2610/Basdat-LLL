@@ -28,6 +28,20 @@ END;
 
 DELIMITER ;
 
+DELIMITER //
+
+CREATE TRIGGER TC1
+BEFORE UPDATE ON Tier
+FOR EACH ROW
+BEGIN
+    IF NEW.harga < OLD.harga THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Harga tidak boleh turun.';
+    END IF;
+END;
+//
+
+DELIMITER ;
 
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Pahlawan Seni', 'Untuk pecinta penulisan, \'Pahlawan Seni\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '787448');
 INSERT INTO Tier (id_creator, nama_tier, deskripsi, harga) VALUES ('AGT', 'Champion Chums', 'Untuk pecinta penulisan, \'Champion Chums\' menawarkan manfaat eksklusif dan koneksi lebih dekat dengan kreator.', '212540');

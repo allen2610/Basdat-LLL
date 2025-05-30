@@ -1,6 +1,6 @@
 CREATE TABLE Konten (
     id_konten	VARCHAR(3) PRIMARY KEY NOT NULL,
-    judul	VARCHAR(512),
+    judul	VARCHAR(512) UNIQUE,
     jenis	VARCHAR(512) CHECK (jenis IN ('Teks', 'Gambar', 'Audio', 'Video')),
     deskripsi	VARCHAR(512),
     tanggal_publikasi	VARCHAR(512)
